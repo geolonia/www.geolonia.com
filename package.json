@@ -1,0 +1,30 @@
+{
+  "name": "www.geolonia.com",
+  "version": "1.0.0",
+  "description": "株式会社Geoloniaのウェブサイト",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "geolonia",
+    "maps",
+    "location"
+  ],
+  "author": "Geolonia",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.17.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "puppeteer": "^24.37.2",
+    "typescript": "^5.9.3"
+  }
+}

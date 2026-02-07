@@ -1,0 +1,438 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="株式会社Geolonia">
+  <div class="hero-cover">
+    <div class="hero-background">
+      <img src="/images/slider-bg.png" alt="" class="hero-image" />
+      <span class="hero-gradient" aria-hidden="true"></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-spacer"></div>
+      <div class="hero-inner">
+        <h2 class="hero-heading">
+          <strong>私たちは、地理の知恵で<br>社会をしなやかにします</strong>
+        </h2>
+        <div class="hero-spacer-xs"></div>
+        <p class="hero-description">世界の地理空間情報を構造化し、安心して使えるデータ基盤を提供します。</p>
+        <div class="hero-spacer-xs"></div>
+        <a href="/contact/" class="hero-cta-button" target="_blank" rel="noopener">
+          <span>導入のご相談・お問い合わせはこちら</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+            <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+          </svg>
+        </a>
+        <div class="hero-spacer-sm"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Heading -->
+  <section class="products-heading">
+    <div class="container">
+      <h2 class="section-title">プロダクト</h2>
+      <p class="section-subtitle">PRODUCTS</p>
+    </div>
+  </section>
+
+  <!-- Geolonia Maps Section -->
+  <section class="product-section product-section--reverse">
+    <div class="product-bg-offset product-bg-offset--left"></div>
+    <div class="product-container">
+      <div class="product-content">
+        <div class="product-text">
+          <h2 class="product-title">Geolonia Maps</h2>
+          <h3 class="product-subtitle">ウェブ地図に求められる機能がそろっています。</h3>
+          <p class="product-description">マーカーが大量でもサクサク表示、自由なライセンスで印刷も可能、プログラミングが簡単なデジタル地図APIです。</p>
+          <p class="product-description">直感的にシンプルに開発をしたいデベロッパー、開発工数を小さくしたいマネージャー、高度なプログラミングをしたい技術者に喜ばれています。</p>
+          <div class="product-buttons">
+            <a href="/maps/" class="product-button">
+              <span>Geolonia Maps を見る</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+              </svg>
+            </a>
+            <a href="/maps-dev/" class="product-button">
+              <span>コードサンプルを見る</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="product-image">
+          <img src="/images/geolonia-maps.png" alt="Geolonia Maps" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Geolonia Maps for SmartCity Section -->
+  <section class="product-section">
+    <div class="product-bg-offset product-bg-offset--right"></div>
+    <div class="product-container">
+      <div class="product-content">
+        <div class="product-image">
+          <img src="/images/smartcity.png" alt="Geolonia Maps for SmartCity" />
+        </div>
+        <div class="product-text">
+          <h2 class="product-title">Geolonia Maps for SmartCity</h2>
+          <h3 class="product-subtitle">自治体向けのスマートシティ基盤</h3>
+          <p class="product-description">地方自治体がデータを作成・管理・公開し、地図を使って便利な業務アプリケーションや市民サービスを、手軽に量産するための基盤です。</p>
+          <p class="product-description">都市計画情報、施設データ、ハザードマップ、センサー情報を一つの地図にまとめます。地理院地図や空間IDの仕組み、オープンソースの技術を使って、上手にスマートシティを構築しましょう。</p>
+          <div class="product-buttons">
+            <a href="/geolonia-maps-for-smartcity/" class="product-button">
+              <span>Geolonia Maps for SmartCity を見る</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Address Solutions Section -->
+  <section class="product-section product-section--reverse">
+    <div class="product-bg-offset product-bg-offset--left"></div>
+    <div class="product-container">
+      <div class="product-content">
+        <div class="product-text">
+          <h2 class="product-title">住所ソリューション</h2>
+          <h3 class="product-subtitle">住所の正規化でビジネスを最大限に効率化する、住所ソリューション</h3>
+          <p class="product-description">住所を含むデータを正規化・クレンジングするサービスです。表記ゆれを解消し、重複のないデータにまとめます。住所のクレンジングや名寄せとしてご利用いただけます。</p>
+          <div class="product-buttons">
+            <a href="https://quicknja.com/" class="product-button" target="_blank" rel="noopener">
+              <span>クイック住所変換</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+              </svg>
+            </a>
+            <a href="/address-normalization/" class="product-button">
+              <span>住所ソリューションを見る</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="product-image">
+          <img src="/images/address-normalization.png" alt="住所ソリューション" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-cover {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 20px;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(1deg, rgba(242, 153, 19, 0) 0%, rgb(243, 152, 19) 52%, rgb(238, 115, 13) 76%, rgb(2, 1, 0) 100%);
+    opacity: 0.9;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .hero-spacer {
+    height: 60px;
+  }
+
+  .hero-spacer-xs {
+    height: 10px;
+  }
+
+  .hero-spacer-sm {
+    height: 20px;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: var(--vk-color-primary);
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+  }
+
+  .hero-cta-button:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-cta-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin: 1rem 0 0;
+    line-height: 1.4;
+  }
+
+  .hero-heading strong {
+    font-weight: 700;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Products Heading */
+  .products-heading {
+    padding: 4rem 0 2rem;
+    background: #fff;
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    color: #666;
+    text-align: center;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    font-size: 1.12rem;
+    color: #a3a3a3;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  /* Product Sections */
+  .product-section {
+    position: relative;
+    padding: 4rem 0;
+    margin: 4rem 0;
+  }
+
+  .product-bg-offset {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .product-bg-offset--left {
+    left: 0;
+    background-color: #fff7ea;
+  }
+
+  .product-bg-offset--right {
+    right: 0;
+    background-color: #f8f3ef;
+  }
+
+  .product-container {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    background-color: #f3f4f5;
+  }
+
+  .product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    max-width: 100%;
+  }
+
+  .product-section--reverse .product-content {
+    direction: rtl;
+  }
+
+  .product-section--reverse .product-text {
+    direction: ltr;
+  }
+
+  .product-text {
+    padding: 3em;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .product-title {
+    font-size: 2.5rem;
+    color: #f39813;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .product-subtitle {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 0 1.5rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .product-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .product-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #ffa714;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    width: fit-content;
+    min-width: 250px;
+  }
+
+  .product-button:hover {
+    background: #ff9500;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-cover {
+      min-height: 400px;
+    }
+
+    .hero-heading {
+      font-size: 2rem;
+    }
+
+    .hero-spacer {
+      height: 40px;
+    }
+
+    .product-content {
+      grid-template-columns: 1fr;
+    }
+
+    .product-section--reverse .product-content {
+      direction: ltr;
+    }
+
+    .product-text {
+      padding: 2em;
+    }
+
+    .product-title {
+      font-size: 2rem;
+    }
+
+    .product-subtitle {
+      font-size: 1.5rem;
+    }
+
+    .product-bg-offset {
+      display: none;
+    }
+
+    .product-button {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+</style>
