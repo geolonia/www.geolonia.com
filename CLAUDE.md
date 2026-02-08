@@ -586,9 +586,18 @@ npm run test:ci
 
 ## デプロイ
 
-### GitHub Pages へのデプロイ
+### デプロイ環境
 
-このサイトはGitHub Pagesに自動デプロイされます。
+このプロジェクトは2つのデプロイ環境があります：
+
+| 環境 | 用途 | URL | デプロイ方法 |
+|------|------|-----|-------------|
+| **ステージング** | 確認・テスト | https://geolonia.github.io/www.geolonia.com/ | GitHub Pages（自動） |
+| **本番** | 公開サイト | https://www.geolonia.com/ | Netlify（自動） |
+
+### GitHub Pages（ステージング環境）
+
+mainブランチへのプッシュで自動的にステージング環境がデプロイされます。
 
 #### 自動デプロイの仕組み
 
@@ -631,6 +640,41 @@ gh workflow run deploy.yml
 #### デプロイ設定ファイル
 
 `.github/workflows/deploy.yml` - GitHub Actionsワークフロー
+
+### Netlify（本番環境）
+
+mainブランチへのプッシュで自動的に本番環境がデプロイされます。
+
+#### 初回セットアップ
+
+1. **Netlifyにサインイン**
+   - https://app.netlify.com/
+
+2. **新しいサイトを作成**
+   - "Add new site" → "Import an existing project"
+   - GitHubを選択して `geolonia/www.geolonia.com` を選択
+
+3. **ビルド設定**
+   - Build command: `npm run build:production`
+   - Publish directory: `dist`
+   - （`netlify.toml` があるので自動設定されます）
+
+4. **カスタムドメイン設定**
+   - Site settings → Domain management
+   - Custom domain: `www.geolonia.com` を追加
+   - DNS設定を行う
+
+#### デプロイ状況の確認
+
+Netlifyダッシュボードで確認：
+- https://app.netlify.com/
+
+#### デプロイ設定ファイル
+
+`netlify.toml` - Netlify設定ファイル
+- ビルドコマンド: `build:production`（base pathなし）
+- セキュリティヘッダー設定
+- キャッシュ設定
 
 ### デプロイ前チェックリスト
 

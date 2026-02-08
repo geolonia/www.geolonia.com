@@ -1,0 +1,46 @@
+# Netlify Configuration
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # 本番ビルドコマンド（base path なし）
+  command = "npm run build:production"
+  # ビルド結果の出力ディレクトリ
+  publish = "dist"
+
+[build.environment]
+  # Node.jsのバージョン
+  NODE_VERSION = "20"
+
+# リダイレクト設定（必要に応じて追加）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+# ヘッダー設定
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 静的ファイルのキャッシュ設定
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# llms.txt ファイルは頻繁に更新される可能性があるのでキャッシュ時間を短く
+[[headers]]
+  for = "/llms*.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "text/plain; charset=utf-8"
