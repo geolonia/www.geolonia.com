@@ -1,0 +1,44 @@
+# www.geolonia.com
+
+## Project Overview
+Corporate website for Geolonia Inc., a Japanese company specializing in location-based technology and open-source solutions.
+
+## Tech Stack
+- Framework: Astro 5.x (Static Site Generator)
+- Content: Markdown/MDX with Astro Content Collections
+- Testing: Cucumber + Playwright (E2E)
+- Language: Japanese (Primary), English (Technical docs)
+
+## Key Features
+- Dual header design (transparent on home, white on child pages)
+- Markdown-based content management
+- Comprehensive E2E test coverage
+- Responsive design for desktop and mobile
+
+## Directory Structure
+- `src/content/pages/` - Markdown content for all pages
+- `src/components/` - Reusable Astro components (Header, Footer)
+- `src/layouts/` - Layout components (BaseLayout, MarkdownPageLayout)
+- `features/` - Cucumber E2E tests
+
+## Content Management
+All page content is managed via Markdown files in `src/content/pages/`.
+Edit these files to update website content - changes are automatically reflected.
+
+## Development
+```bash
+npm run dev    # Start dev server (port 8080)
+npm test       # Run E2E tests
+npm run build  # Build for production
+```
+
+## License
+- Source Code: MIT License
+- Content: © 2024 Geolonia Inc. All Rights Reserved
+- Trademarks: Geolonia® is a registered trademark
+
+## Repository
+https://github.com/geolonia/www.geolonia.com
+
+---
+Last updated: 2024-02-08
