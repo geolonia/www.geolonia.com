@@ -11,6 +11,244 @@ interface Props {
 }
 
 const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.props;
+
+const siteUrl = Astro.site || 'https://www.geolonia.com';
+const currentPath = Astro.url.pathname;
+
+// ページパスに基づいて構造化データを生成
+const structuredData: any[] = [];
+
+// プロダクトページの場合
+if (currentPath === '/products/' || currentPath === '/products') {
+  // Geolonia Maps - Product
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Geolonia Maps",
+    "description": "ウェブサイトやアプリケーションに簡単に組み込める、高性能な地図表示ライブラリです。",
+    "brand": {
+      "@type": "Brand",
+      "name": "Geolonia"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "JPY",
+      "url": new URL("/maps/", siteUrl).toString()
+    },
+    "category": "地図表示ライブラリ",
+    "url": new URL("/maps/", siteUrl).toString()
+  });
+
+  // スマートシティ基盤 - Product
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "スマートシティのための地理空間データ連携基盤",
+    "description": "自治体が保有する地理空間データを統合・管理し、住民サービスの向上や業務効率化を実現するプラットフォームです。",
+    "brand": {
+      "@type": "Brand",
+      "name": "Geolonia"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "JPY",
+      "url": new URL("/geolonia-maps-for-smartcity/", siteUrl).toString()
+    },
+    "category": "自治体向けプラットフォーム",
+    "url": new URL("/geolonia-maps-for-smartcity/", siteUrl).toString()
+  });
+
+  // スマートマップ - SoftwareApplication
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "公開型GIS「スマートマップ」",
+    "description": "専門知識がなくても、直感的な操作で地図を作成・公開できる公開型GISシステムです。",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "url": new URL("/smartmap/", siteUrl).toString()
+  });
+
+  // 住所正規化 - Service
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "住所正規化ソリューション",
+    "description": "企業や自治体が保有する住所データを統一された形式に変換し、データの品質を向上させるソリューションです。",
+    "provider": {
+      "@type": "Organization",
+      "name": "株式会社Geolonia"
+    },
+    "serviceType": "住所データ品質向上",
+    "areaServed": "JP",
+    "url": new URL("/address-normalization/", siteUrl).toString()
+  });
+
+  // FAQPage
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "商用利用は可能ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、すべてのプロダクトで商用利用が可能です。プランによってライセンス条件が異なりますので、詳細はお問い合わせください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "サポートはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、メールサポート、技術ドキュメント、コードサンプルなどを提供しています。エンタープライズプランでは専任サポート担当が対応します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "オンプレミス環境での利用は可能ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、エンタープライズプランではオンプレミス環境での導入も可能です。詳しくはお問い合わせください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "データの更新頻度は？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "地図データは定期的に更新されます。詳細な更新スケジュールについてはお問い合わせください。"
+        }
+      }
+    ]
+  });
+}
+
+// 会社概要ページの場合
+if (currentPath === '/company/' || currentPath === '/company') {
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Corporation",
+    "name": "株式会社Geolonia",
+    "alternateName": "Geolonia Inc.",
+    "url": siteUrl,
+    "foundingDate": "2019",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "東京都",
+      "addressCountry": "JP"
+    },
+    "description": "位置情報テクノロジーとオープンソースを通じて社会の課題を解決する企業",
+    "sameAs": [
+      "https://twitter.com/geoloniamaps",
+      "https://github.com/geolonia"
+    ]
+  });
+}
+
+// 個別製品ページの場合
+if (currentPath === '/maps/' || currentPath === '/maps') {
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Geolonia Maps",
+    "description": "ウェブサイトやアプリケーションに簡単に組み込める、高性能な地図表示ライブラリです。",
+    "brand": {
+      "@type": "Brand",
+      "name": "Geolonia"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "JPY"
+    },
+    "category": "地図表示ライブラリ"
+  });
+}
+
+if (currentPath === '/geolonia-maps-for-smartcity/' || currentPath === '/geolonia-maps-for-smartcity') {
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "スマートシティのための地理空間データ連携基盤",
+    "description": "自治体が保有する地理空間データを統合・管理し、住民サービスの向上や業務効率化を実現するプラットフォームです。",
+    "brand": {
+      "@type": "Brand",
+      "name": "Geolonia"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "JPY"
+    },
+    "category": "自治体向けプラットフォーム"
+  });
+}
+
+if (currentPath === '/smartmap/' || currentPath === '/smartmap') {
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "公開型GIS「スマートマップ」",
+    "description": "専門知識がなくても、直感的な操作で地図を作成・公開できる公開型GISシステムです。",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    }
+  });
+}
+
+if (currentPath === '/address-normalization/' || currentPath === '/address-normalization') {
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "住所正規化ソリューション",
+    "description": "企業や自治体が保有する住所データを統一された形式に変換し、データの品質を向上させるソリューションです。",
+    "provider": {
+      "@type": "Organization",
+      "name": "株式会社Geolonia"
+    },
+    "serviceType": "住所データ品質向上",
+    "areaServed": "JP"
+  });
+}
+
+// FAQページの場合
+if (currentPath === '/products/faq/' || currentPath === '/products/faq') {
+  structuredData.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "商用利用は可能ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、すべてのプロダクトで商用利用が可能です。プランによってライセンス条件が異なりますので、詳細はお問い合わせください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "サポートはありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、メールサポート、技術ドキュメント、コードサンプルなどを提供しています。エンタープライズプランでは専任サポート担当が対応します。"
+        }
+      }
+    ]
+  });
+}
 ---
 
 <BaseLayout
@@ -19,6 +257,7 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
   ogTitle={ogTitle}
   ogDescription={ogDescription}
   ogImage={ogImage}
+  structuredData={structuredData}
 >
   <div class="page-container">
     <div class="hero-section">
