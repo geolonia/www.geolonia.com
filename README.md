@@ -36,6 +36,14 @@ src/content/pages/
 
 Markdownファイルを編集すると、自動的にページに反映されます。
 
+**📖 詳しい記述方法は [CONTENT_GUIDE.md](./CONTENT_GUIDE.md) を参照してください。**
+
+- フロントマターの設定方法
+- マークダウン記法
+- OGP設定
+- ページ追加方法
+- ベストプラクティス
+
 ## テスト
 
 E2Eテストは[Cucumber](https://cucumber.io/)と[Playwright](https://playwright.dev/)を使用しています。
