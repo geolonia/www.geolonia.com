@@ -43,6 +43,8 @@
 ```
 www.geolonia.com/
 ├── public/                          # 静的ファイル（画像、フォントなど）
+│   ├── llms.txt                     # AI向けサイト概要（/llms.txt でアクセス可能）
+│   ├── llms-full.txt                # AI向けサイト詳細（/llms-full.txt でアクセス可能）
 │   └── images/
 │       ├── geolonia_logo.png        # カラーロゴ（子ページ用）
 │       ├── geolonia_logo_white.png  # 白ロゴ（ホーム用）
@@ -129,9 +131,7 @@ www.geolonia.com/
 ├── tsconfig.json                    # TypeScript設定
 ├── LICENSE                          # ライセンス（MIT + コンテンツ保護）
 ├── README.md                        # プロジェクト説明
-├── CLAUDE.md                        # このファイル（開発ガイド）
-├── llms.txt                         # AI向けサイト概要
-└── llms-full.txt                    # AI向けサイト詳細
+└── CLAUDE.md                        # このファイル（開発ガイド）
 ```
 
 ---
@@ -605,8 +605,8 @@ npm test
 #### ✅ 3. ドキュメント更新（重要）
 
 **llms.txt と llms-full.txt の更新:**
-- [ ] `llms.txt` - サイトコンテンツの概要を反映
-- [ ] `llms-full.txt` - サイトコンテンツの詳細情報を反映
+- [ ] `public/llms.txt` - サイトコンテンツの概要を反映（`/llms.txt` でアクセス可能）
+- [ ] `public/llms-full.txt` - サイトコンテンツの詳細情報を反映（`/llms-full.txt` でアクセス可能）
 
 **⚠️ 重要なルール:**
 - これらのファイルは `src/content/pages/` 配下のマークダウンコンテンツから生成すること
