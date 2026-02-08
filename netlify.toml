@@ -18,14 +18,22 @@
   status = 200
   conditions = {Role = ["admin"]}
 
-# ヘッダー設定
+# セキュリティヘッダー設定
 [[headers]]
   for = "/*"
   [headers.values]
+    # クリックジャッキング対策
     X-Frame-Options = "DENY"
+    # XSS対策（非推奨だがレガシーブラウザ対応）
     X-XSS-Protection = "1; mode=block"
+    # MIMEタイプスニッフィング対策
     X-Content-Type-Options = "nosniff"
+    # リファラーポリシー
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # Permissions Policy（機能の制限）
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    # Strict-Transport-Security（HTTPS強制）
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
 # 静的ファイルのキャッシュ設定
 [[headers]]
