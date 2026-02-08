@@ -6,6 +6,22 @@ const isHome = currentPath === '/' || currentPath === base || currentPath === ba
 // ロゴ画像のパス（baseを考慮）
 const logoWhite = `${base}images/geolonia_logo_white.png`;
 const logoColor = `${base}images/geolonia_logo.png`;
+
+// 内部リンク用ヘルパー関数
+const internalLink = (path: string): string => {
+  // 外部リンク（http(s)://で始まる）はそのまま返す
+  if (path.startsWith('http://') || path.startsWith('https://')) {
+    return path;
+  }
+  // 本番環境（base === '/'）の場合はそのまま返す
+  if (base === '/') {
+    return path;
+  }
+  // ステージング環境の場合、スラッシュの重複を避けてbaseを追加
+  // base: '/www.geolonia.com/', path: '/products/' -> '/www.geolonia.com/products/'
+  const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
+  return `${cleanBase}${path}`;
+};
 ---
 
 <header id="site-header" class={`site-header site-header--layout--nav-float ${isHome ? 'site-header--home' : 'site-header--page'}`}>
@@ -31,87 +47,87 @@ const logoColor = `${base}images/geolonia_logo.png`;
     <nav id="global-nav" class="global-nav global-nav--layout--float-right">
       <ul class="menu vk-menu-acc global-nav-list nav">
         <li class={currentPath === '/' ? 'menu-item current-menu-item' : 'menu-item'}>
-          <a href="/">
+          <a href={internalLink('/')}>
             <strong class="global-nav-name">ホーム</strong>
             <span class="global-nav-description">Home</span>
           </a>
         </li>
 
         <li class="menu-item menu-item-has-children">
-          <a href="/products/">
+          <a href={internalLink('/products/')}>
             <strong class="global-nav-name">プロダクト</strong>
             <span class="global-nav-description">Products</span>
           </a>
           <ul class="sub-menu">
             <li class="menu-item menu-item-has-children">
-              <a href="/maps/">Geolonia Maps</a>
+              <a href={internalLink('/maps/')}>Geolonia Maps</a>
               <ul class="sub-menu">
-                <li class="menu-item"><a href="/maps-dev/">コードサンプル</a></li>
+                <li class="menu-item"><a href={internalLink('/maps-dev/')}>コードサンプル</a></li>
               </ul>
             </li>
             <li class="menu-item menu-item-has-children">
-              <a href="/geolonia-maps-for-smartcity/">スマートシティのための「地理空間データ連携基盤」</a>
+              <a href={internalLink('/geolonia-maps-for-smartcity/')}>スマートシティのための「地理空間データ連携基盤」</a>
               <ul class="sub-menu">
-                <li class="menu-item"><a href="/geolonia-maps-for-smartcity/seminar2025/">自治体職員向け「地理空間情報を使った課題解決セミナー」のご案内</a></li>
+                <li class="menu-item"><a href={internalLink('/geolonia-maps-for-smartcity/seminar2025/')}>自治体職員向け「地理空間情報を使った課題解決セミナー」のご案内</a></li>
               </ul>
             </li>
-            <li class="menu-item"><a href="/smartmap/">公開型GIS「スマートマップ」</a></li>
-            <li class="menu-item"><a href="https://quicknja.com/">クイック住所変換</a></li>
-            <li class="menu-item"><a href="/address-normalization/">住所正規化ソリューション</a></li>
-            <li class="menu-item"><a href="https://chizubouken-lab.jp">地図ぼうけんラボ</a></li>
-            <li class="menu-item"><a href="/products/faq/">FAQ</a></li>
+            <li class="menu-item"><a href={internalLink('/smartmap/')}>公開型GIS「スマートマップ」</a></li>
+            <li class="menu-item"><a href={internalLink('https://quicknja.com/')}>クイック住所変換</a></li>
+            <li class="menu-item"><a href={internalLink('/address-normalization/')}>住所正規化ソリューション</a></li>
+            <li class="menu-item"><a href={internalLink('https://chizubouken-lab.jp')}>地図ぼうけんラボ</a></li>
+            <li class="menu-item"><a href={internalLink('/products/faq/')}>FAQ</a></li>
           </ul>
         </li>
 
         <li class="menu-item menu-item-has-children">
-          <a href="/developer/">
+          <a href={internalLink('/developer/')}>
             <strong class="global-nav-name">開発者向け</strong>
             <span class="global-nav-description">Developers</span>
           </a>
           <ul class="sub-menu">
-            <li class="menu-item"><a href="https://docs.geolonia.com/">Geolonia Maps ドキュメント</a></li>
-            <li class="menu-item"><a href="/maps-dev/">コードサンプル</a></li>
-            <li class="menu-item"><a href="https://blog.geolonia.com/">開発者 blog</a></li>
+            <li class="menu-item"><a href={internalLink('https://docs.geolonia.com/')}>Geolonia Maps ドキュメント</a></li>
+            <li class="menu-item"><a href={internalLink('/maps-dev/')}>コードサンプル</a></li>
+            <li class="menu-item"><a href={internalLink('https://blog.geolonia.com/')}>開発者 blog</a></li>
           </ul>
         </li>
 
         <li class="menu-item menu-item-has-children">
-          <a href="/company">
+          <a href={internalLink('/company')}>
             <strong class="global-nav-name">会社情報</strong>
             <span class="global-nav-description">Company</span>
           </a>
           <ul class="sub-menu">
-            <li class="menu-item"><a href="/company/">会社概要</a></li>
-            <li class="menu-item"><a href="/company/recruit/">採用情報</a></li>
+            <li class="menu-item"><a href={internalLink('/company/')}>会社概要</a></li>
+            <li class="menu-item"><a href={internalLink('/company/recruit/')}>採用情報</a></li>
           </ul>
         </li>
 
         <li class="menu-item menu-item-has-children">
-          <a href="/resources/">
+          <a href={internalLink('/resources/')}>
             <strong class="global-nav-name">各種DX資料</strong>
             <span class="global-nav-description">Resources</span>
           </a>
           <ul class="sub-menu">
-            <li class="menu-item"><a href="/resources/geolonia-maps-for-smartcity/">スマートシティ実現のための地理空間データ連携基盤</a></li>
-            <li class="menu-item"><a href="/resources/wp-jad-dx/">日本の住所におけるデジタル化の課題</a></li>
-            <li class="menu-item"><a href="/resources/github-for-governments/">GitHub for Governments</a></li>
+            <li class="menu-item"><a href={internalLink('/resources/geolonia-maps-for-smartcity/')}>スマートシティ実現のための地理空間データ連携基盤</a></li>
+            <li class="menu-item"><a href={internalLink('/resources/wp-jad-dx/')}>日本の住所におけるデジタル化の課題</a></li>
+            <li class="menu-item"><a href={internalLink('/resources/github-for-governments/')}>GitHub for Governments</a></li>
           </ul>
         </li>
 
         <li class="menu-item menu-item-has-children">
-          <a href="/information">
+          <a href={internalLink('/information')}>
             <strong class="global-nav-name">新着情報</strong>
             <span class="global-nav-description">Information</span>
           </a>
           <ul class="sub-menu">
-            <li class="menu-item"><a href="/newsrelease/">ニュースリリース</a></li>
-            <li class="menu-item"><a href="/information/">お知らせ</a></li>
-            <li class="menu-item"><a href="/blog/">スマートシティブログ</a></li>
+            <li class="menu-item"><a href={internalLink('/newsrelease/')}>ニュースリリース</a></li>
+            <li class="menu-item"><a href={internalLink('/information/')}>お知らせ</a></li>
+            <li class="menu-item"><a href={internalLink('/blog/')}>スマートシティブログ</a></li>
           </ul>
         </li>
 
         <li class="menu-item menu-item-contact">
-          <a href="/contact/">
+          <a href={internalLink('/contact/')}>
             <strong class="global-nav-name">お問い合わせ</strong>
           </a>
         </li>
@@ -130,61 +146,61 @@ const logoColor = `${base}images/geolonia_logo.png`;
     <nav class="mobile-nav">
       <ul class="mobile-nav-list">
         <li class="mobile-menu-item">
-          <a href="/">ホーム</a>
+          <a href={internalLink('/')}>ホーム</a>
         </li>
         <li class="mobile-menu-item mobile-menu-item-has-children">
-          <a href="/products/" class="mobile-menu-toggle">プロダクト</a>
+          <a href={internalLink('/products/')} class="mobile-menu-toggle">プロダクト</a>
           <ul class="mobile-sub-menu">
-            <li><a href="/maps/">Geolonia Maps</a></li>
-            <li><a href="/maps-dev/">コードサンプル</a></li>
-            <li><a href="/geolonia-maps-for-smartcity/">スマートシティのための「地理空間データ連携基盤」</a></li>
-            <li><a href="/geolonia-maps-for-smartcity/seminar2025/">自治体職員向けセミナー</a></li>
-            <li><a href="/smartmap/">公開型GIS「スマートマップ」</a></li>
-            <li><a href="https://quicknja.com/">クイック住所変換</a></li>
-            <li><a href="/address-normalization/">住所正規化ソリューション</a></li>
-            <li><a href="https://chizubouken-lab.jp">地図ぼうけんラボ</a></li>
-            <li><a href="/products/faq/">FAQ</a></li>
+            <li><a href={internalLink('/maps/')}>Geolonia Maps</a></li>
+            <li><a href={internalLink('/maps-dev/')}>コードサンプル</a></li>
+            <li><a href={internalLink('/geolonia-maps-for-smartcity/')}>スマートシティのための「地理空間データ連携基盤」</a></li>
+            <li><a href={internalLink('/geolonia-maps-for-smartcity/seminar2025/')}>自治体職員向けセミナー</a></li>
+            <li><a href={internalLink('/smartmap/')}>公開型GIS「スマートマップ」</a></li>
+            <li><a href={internalLink('https://quicknja.com/')}>クイック住所変換</a></li>
+            <li><a href={internalLink('/address-normalization/')}>住所正規化ソリューション</a></li>
+            <li><a href={internalLink('https://chizubouken-lab.jp')}>地図ぼうけんラボ</a></li>
+            <li><a href={internalLink('/products/faq/')}>FAQ</a></li>
           </ul>
         </li>
         <li class="mobile-menu-item mobile-menu-item-has-children">
-          <a href="/developer/" class="mobile-menu-toggle">開発者向け</a>
+          <a href={internalLink('/developer/')} class="mobile-menu-toggle">開発者向け</a>
           <ul class="mobile-sub-menu">
-            <li><a href="https://docs.geolonia.com/">Geolonia Maps ドキュメント</a></li>
-            <li><a href="/maps-dev/">コードサンプル</a></li>
-            <li><a href="https://blog.geolonia.com/">開発者 blog</a></li>
+            <li><a href={internalLink('https://docs.geolonia.com/')}>Geolonia Maps ドキュメント</a></li>
+            <li><a href={internalLink('/maps-dev/')}>コードサンプル</a></li>
+            <li><a href={internalLink('https://blog.geolonia.com/')}>開発者 blog</a></li>
           </ul>
         </li>
         <li class="mobile-menu-item mobile-menu-item-has-children">
-          <a href="/company" class="mobile-menu-toggle">会社情報</a>
+          <a href={internalLink('/company')} class="mobile-menu-toggle">会社情報</a>
           <ul class="mobile-sub-menu">
-            <li><a href="/company/">会社概要</a></li>
-            <li><a href="/company/recruit/">採用情報</a></li>
+            <li><a href={internalLink('/company/')}>会社概要</a></li>
+            <li><a href={internalLink('/company/recruit/')}>採用情報</a></li>
           </ul>
         </li>
         <li class="mobile-menu-item mobile-menu-item-has-children">
-          <a href="/resources/" class="mobile-menu-toggle">各種DX資料</a>
+          <a href={internalLink('/resources/')} class="mobile-menu-toggle">各種DX資料</a>
           <ul class="mobile-sub-menu">
-            <li><a href="/resources/geolonia-maps-for-smartcity/">スマートシティ実現のための地理空間データ連携基盤</a></li>
-            <li><a href="/resources/wp-jad-dx/">日本の住所におけるデジタル化の課題</a></li>
-            <li><a href="/resources/github-for-governments/">GitHub for Governments</a></li>
+            <li><a href={internalLink('/resources/geolonia-maps-for-smartcity/')}>スマートシティ実現のための地理空間データ連携基盤</a></li>
+            <li><a href={internalLink('/resources/wp-jad-dx/')}>日本の住所におけるデジタル化の課題</a></li>
+            <li><a href={internalLink('/resources/github-for-governments/')}>GitHub for Governments</a></li>
           </ul>
         </li>
         <li class="mobile-menu-item mobile-menu-item-has-children">
-          <a href="/information" class="mobile-menu-toggle">新着情報</a>
+          <a href={internalLink('/information')} class="mobile-menu-toggle">新着情報</a>
           <ul class="mobile-sub-menu">
-            <li><a href="/newsrelease/">ニュースリリース</a></li>
-            <li><a href="/information/">お知らせ</a></li>
-            <li><a href="/blog/">スマートシティブログ</a></li>
+            <li><a href={internalLink('/newsrelease/')}>ニュースリリース</a></li>
+            <li><a href={internalLink('/information/')}>お知らせ</a></li>
+            <li><a href={internalLink('/blog/')}>スマートシティブログ</a></li>
           </ul>
         </li>
         <li class="mobile-menu-item">
-          <a href="/contact/" class="mobile-contact-btn">お問い合わせ</a>
+          <a href={internalLink('/contact/')} class="mobile-contact-btn">お問い合わせ</a>
         </li>
         <li class="mobile-menu-item">
-          <a href="https://app.geolonia.com/?lang=ja#/signin">サインイン</a>
+          <a href={internalLink('https://app.geolonia.com/?lang=ja#/signin')}>サインイン</a>
         </li>
         <li class="mobile-menu-item">
-          <a href="https://app.geolonia.com/?lang=ja#/signup">ユーザー登録</a>
+          <a href={internalLink('https://app.geolonia.com/?lang=ja#/signup')}>ユーザー登録</a>
         </li>
       </ul>
     </nav>

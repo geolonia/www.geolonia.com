@@ -8,14 +8,24 @@ import { visit } from 'unist-util-visit';
 const isStaging = process.env.STAGING === 'true';
 const base = isStaging ? '/www.geolonia.com' : '';
 
-// マークダウン内の画像パスにbaseパスを追加するrehypeプラグイン
+// マークダウン内の画像とリンクパスにbaseパスを追加するrehypeプラグイン
 function rehypeAddBasePath() {
   return (tree) => {
     visit(tree, 'element', (node) => {
+      // 画像のsrc属性を処理
       if (node.tagName === 'img' && node.properties?.src) {
         const src = node.properties.src;
         if (typeof src === 'string' && src.startsWith('/images/')) {
           node.properties.src = base + src;
+        }
+      }
+
+      // リンクのhref属性を処理（内部リンクのみ）
+      if (node.tagName === 'a' && node.properties?.href) {
+        const href = node.properties.href;
+        // 内部リンク（/で始まり、http(s)://で始まらない）のみ処理
+        if (typeof href === 'string' && href.startsWith('/') && !href.startsWith('//')) {
+          node.properties.href = base + href;
         }
       }
     });
