@@ -1,6 +1,11 @@
 ---
 const currentPath = Astro.url.pathname;
-const isHome = currentPath === '/';
+const base = import.meta.env.BASE_URL;
+const isHome = currentPath === '/' || currentPath === base || currentPath === base + '/';
+
+// ロゴ画像のパス（baseを考慮）
+const logoWhite = `${base}images/geolonia_logo_white.png`;
+const logoColor = `${base}images/geolonia_logo.png`;
 ---
 
 <header id="site-header" class={`site-header site-header--layout--nav-float ${isHome ? 'site-header--home' : 'site-header--page'}`}>
@@ -18,8 +23,8 @@ const isHome = currentPath === '/';
 
   <div id="site-header-container" class="site-header-container container">
     <h1 class="site-header-logo">
-      <a href="/">
-        <span><img src={isHome ? "/images/geolonia_logo_white.png" : "/images/geolonia_logo.png"} alt="株式会社 Geolonia - ジオロニア" /></span>
+      <a href={base}>
+        <span><img src={isHome ? logoWhite : logoColor} alt="株式会社 Geolonia - ジオロニア" /></span>
       </a>
     </h1>
 
