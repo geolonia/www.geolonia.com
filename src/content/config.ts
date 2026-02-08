@@ -22,4 +22,13 @@ const news = defineCollection({
   }),
 });
 
-export const collections = { blog, news };
+const pages = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    layout: z.string().optional(),
+  }),
+});
+
+export const collections = { blog, news, pages };

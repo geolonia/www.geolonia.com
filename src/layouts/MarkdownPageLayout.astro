@@ -1,0 +1,192 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  lead?: string;
+}
+
+const { title, description, lead } = Astro.props;
+---
+
+<BaseLayout title={`${title} | Geolonia`} description={description}>
+  <div class="page-container">
+    <div class="hero-section">
+      <div class="container">
+        <h1>{title}</h1>
+        {lead && <p class="lead">{lead}</p>}
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div class="container markdown-content">
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    padding-top: 0;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #f39813 0%, #eb5722 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.5rem;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .content-section {
+    padding: 0 0 80px 0;
+  }
+
+  .markdown-content :global(h2) {
+    color: #f39813;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .markdown-content :global(h2:first-child) {
+    margin-top: 0;
+  }
+
+  .markdown-content :global(h3) {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .markdown-content :global(h4) {
+    color: #333;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .markdown-content :global(p) {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .markdown-content :global(ul),
+  .markdown-content :global(ol) {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  .markdown-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .markdown-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  .markdown-content :global(th),
+  .markdown-content :global(td) {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  .markdown-content :global(th) {
+    background-color: #f5f5f5;
+    font-weight: 700;
+  }
+
+  .markdown-content :global(td) {
+    line-height: 1.8;
+  }
+
+  .markdown-content :global(a) {
+    color: #f39813;
+    text-decoration: none;
+  }
+
+  .markdown-content :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  .markdown-content :global(hr) {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 3rem 0;
+  }
+
+  .markdown-content :global(blockquote) {
+    border-left: 4px solid #f39813;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    color: #666;
+  }
+
+  .markdown-content :global(code) {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  .markdown-content :global(pre) {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  .markdown-content :global(pre code) {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+    }
+
+    .markdown-content :global(h2) {
+      font-size: 1.6rem;
+    }
+
+    .markdown-content :global(h3) {
+      font-size: 1.3rem;
+    }
+
+    .markdown-content :global(th),
+    .markdown-content :global(td) {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

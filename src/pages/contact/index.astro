@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="お問い合わせ | Geolonia" description="Geoloniaへのお問い合わせ">
+  <div class="page-container">
+    <div class="hero-section">
+      <div class="container">
+        <h1>お問い合わせ</h1>
+        <p class="lead">Contact Us</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div class="container">
+        <h2>お問い合わせフォーム</h2>
+        <p>製品・サービスに関するご質問、お見積りのご依頼、その他お問い合わせは、下記フォームよりお気軽にご連絡ください。</p>
+
+        <form class="contact-form" action="#" method="post">
+          <div class="form-group">
+            <label for="company">会社名・団体名 <span class="required">必須</span></label>
+            <input type="text" id="company" name="company" required>
+          </div>
+
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">電話番号</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">お問い合わせ種別 <span class="required">必須</span></label>
+            <select id="subject" name="subject" required>
+              <option value="">選択してください</option>
+              <option value="product">製品・サービスについて</option>
+              <option value="estimate">お見積りのご依頼</option>
+              <option value="support">技術サポート</option>
+              <option value="partnership">業務提携について</option>
+              <option value="recruit">採用について</option>
+              <option value="media">メディア・取材について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+            <textarea id="message" name="message" rows="8" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="submit-btn">送信する</button>
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <h3>その他のお問い合わせ方法</h3>
+          <p>お急ぎの場合やその他のご連絡方法をご希望の場合は、以下の情報をご参照ください。</p>
+          <ul>
+            <li><strong>技術サポート：</strong> <a href="https://docs.geolonia.com/" target="_blank" rel="noopener">ドキュメント</a>をご確認ください</li>
+            <li><strong>営業時間：</strong> 平日 10:00-18:00（土日祝日を除く）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    padding-top: 0;
+  }
+
+  .hero-section {
+    background: linear-gradient(135deg, #f39813 0%, #eb5722 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+  }
+
+  .lead {
+    font-size: 1.5rem;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .content-section {
+    padding: 0 0 80px 0;
+  }
+
+  .content-section h2 {
+    color: #f39813;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-section h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-section > .container > p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .required {
+    color: #e53935;
+    font-size: 0.85rem;
+    font-weight: normal;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #f39813;
+  }
+
+  .submit-btn {
+    background: #f39813;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #d67f0a;
+  }
+
+  .contact-info {
+    background: #f0f0f0;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+  }
+
+  .contact-info h3 {
+    margin-top: 0;
+  }
+
+  .contact-info p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info ul {
+    line-height: 1.8;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .page-container {
+      padding-top: 0;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+    }
+
+    .contact-form {
+      padding: 1.5rem;
+    }
+
+    .submit-btn {
+      width: 100%;
+    }
+  }
+</style>

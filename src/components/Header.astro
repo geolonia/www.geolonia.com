@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/';
 ---
 
-<header id="site-header" class="site-header site-header--layout--nav-float">
+<header id="site-header" class={`site-header site-header--layout--nav-float ${isHome ? 'site-header--home' : 'site-header--page'}`}>
   <div class="header-top" id="header-top">
     <div class="container">
       <p class="header-top-description">位置情報テクノロジーとオープンソースを通じて社会の課題を解決します。</p>
@@ -19,7 +19,7 @@ const isHome = currentPath === '/';
   <div id="site-header-container" class="site-header-container container">
     <h1 class="site-header-logo">
       <a href="/">
-        <span><img src="/images/geolonia_logo_white.png" alt="株式会社 Geolonia - ジオロニア" /></span>
+        <span><img src={isHome ? "/images/geolonia_logo_white.png" : "/images/geolonia_logo.png"} alt="株式会社 Geolonia - ジオロニア" /></span>
       </a>
     </h1>
 
@@ -133,10 +133,22 @@ const isHome = currentPath === '/';
     width: 100%;
     overflow: visible;
     z-index: 9999;
+  }
+
+  /* Home page header - transparent overlay */
+  .site-header--home {
     position: absolute;
     background-color: transparent;
     box-shadow: none;
     border-bottom: none;
+  }
+
+  /* Child page header - solid white background */
+  .site-header--page {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
 
   .site-header::after {
@@ -152,6 +164,11 @@ const isHome = currentPath === '/';
     background-color: rgba(235, 87, 34, 0.5);
     margin-top: -7px;
     border-bottom: none;
+  }
+
+  /* Hide header-top on child pages */
+  .site-header--page .header-top {
+    display: none;
   }
 
   .header-top .container {
@@ -269,8 +286,13 @@ const isHome = currentPath === '/';
     flex-wrap: nowrap;
   }
 
-  .global-nav-list a {
+  /* Navigation link colors */
+  .site-header--home .global-nav-list a {
     color: #fff;
+  }
+
+  .site-header--page .global-nav-list > li > a {
+    color: #444;
   }
 
   .global-nav-list li {
