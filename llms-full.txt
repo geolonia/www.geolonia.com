@@ -1,299 +1,283 @@
-# www.geolonia.com - Complete Project Documentation
+# 株式会社Geolonia - 完全ガイド
 
-## Project Information
-- **Name**: www.geolonia.com
-- **Type**: Corporate Website
-- **Company**: Geolonia Inc. (株式会社Geolonia)
-- **Purpose**: Public-facing corporate website showcasing products, services, and company information
-- **Language**: Primarily Japanese, with English in technical documentation
-- **Repository**: https://github.com/geolonia/www.geolonia.com
+## 会社情報
 
-## Technical Architecture
+### 会社概要
+株式会社Geoloniaは、位置情報テクノロジーとオープンソースを通じて社会の課題を解決することをミッションとしています。
 
-### Framework & Build System
-- **Framework**: Astro 5.17.1
-- **Type**: Static Site Generator (SSG)
-- **Build Output**: Static HTML, CSS, JavaScript
-- **Development Server**: Port 8080
-- **Node.js**: ES Modules (`"type": "module"` in package.json)
+**基本情報:**
+- 会社名: 株式会社Geolonia
+- 設立: 2019年
+- 所在地: 東京都
+- 事業内容:
+  - 地図・位置情報サービスの提供
+  - 地理空間データ基盤の開発
+  - オープンソースソフトウェアの開発
 
-### Content Management
-- **System**: Astro Content Collections
-- **Format**: Markdown (.md) with YAML frontmatter
-- **Location**: `src/content/pages/`
-- **Collections**: pages, blog, news
+### ビジョン
+位置情報テクノロジーを活用し、より便利で持続可能な社会の実現に貢献します。
 
-### Testing
-- **Framework**: Cucumber.js 12.6.0 (BDD)
-- **Browser Automation**: Playwright 1.58.2
-- **Test Language**: Japanese (Gherkin)
-- **Test Files**: `.cjs` extension (CommonJS in ES module project)
+### ミッション
+オープンソースの力で、地理空間データをすべての人が活用できるようにします。
 
-## Key Design Patterns
+## プロダクト・サービス
 
-### 1. Dynamic Header Styling
-The header component (`src/components/Header.astro`) automatically adapts based on the current page:
+### Geolonia Maps
+高性能な地図表示ライブラリ。ウェブサイトやアプリケーションに簡単に組み込めます。
 
-**Home Page (`/`):**
-- Background: Transparent
-- Text Color: White (#fff)
-- Logo: `geolonia_logo_white.png`
-- Position: Absolute (overlays hero image)
-- Class: `site-header--home`
+**主な特徴:**
+- シンプルで使いやすいAPI
+- 高速なレンダリング
+- 豊富なカスタマイズオプション
+- モバイル対応
+- 充実したドキュメント
 
-**Child Pages (`/company/`, `/products/`, etc.):**
-- Background: White (#fff)
-- Text Color: Dark (#444)
-- Logo: `geolonia_logo.png` (color)
-- Position: Relative (normal flow)
-- Box Shadow: `0 1px 3px rgba(0,0,0,0.05)`
-- Class: `site-header--page`
+**使用例:**
+- 店舗検索
+- 配送ルート表示
+- エリアマーケティング
+- 観光案内
 
-Implementation uses `Astro.url.pathname` to detect current page.
+**技術サポート:**
+- ドキュメントの提供
+- コードサンプル
+- メールサポート
+- コミュニティフォーラム
 
-### 2. Markdown Content Flow
-1. Content is written in `src/content/pages/*.md`
-2. Frontmatter defines metadata (title, description)
-3. Page routes in `src/pages/*.astro` use `getEntry()` to load content
-4. `MarkdownPageLayout.astro` provides consistent styling
-5. Content is rendered via `<Content />` component
+### スマートシティのための地理空間データ連携基盤
+自治体のDXを推進する地理空間データ基盤。
 
-### 3. Content Collections Schema
-Defined in `src/content/config.ts`:
-- **pages**: title (string), description (string, optional)
-- **blog**: title, description, pubDate, updatedDate, author, tags
-- **news**: title, description, pubDate, category
+**主な機能:**
+- 地理空間データの一元管理
+- 部署間のデータ連携
+- オープンデータとしての公開
+- 住民向けサービスへの活用
+- 防災・減災への活用
 
-## File Structure Details
+**導入のメリット:**
+- データの重複管理の解消
+- 業務の効率化とコスト削減
+- 住民サービスの向上
+- データ駆動型の政策立案
+- オープンガバメントの推進
 
-### Source Files (`src/`)
-```
-src/
-├── components/
-│   ├── Header.astro          # Adaptive header with home/child page styles
-│   └── Footer.astro          # Site footer with company info
-├── layouts/
-│   ├── BaseLayout.astro      # Base HTML structure, global styles
-│   └── MarkdownPageLayout.astro  # Layout for markdown-based pages
-├── content/
-│   ├── config.ts             # Content collection definitions
-│   ├── pages/                # Markdown content for all pages
-│   │   ├── company/
-│   │   │   ├── index.md      # Company overview
-│   │   │   └── recruit.md    # Recruitment info
-│   │   ├── products.md
-│   │   ├── developer.md
-│   │   └── ...
-│   ├── blog/                 # Blog posts (MDX)
-│   └── news/                 # News articles
-└── pages/                    # Route definitions
-    ├── index.astro           # Homepage
-    ├── company/
-    │   └── index.astro       # Loads content from content/pages/company/index.md
-    └── ...
-```
+**対象:**
+- 自治体のDX推進担当者
+- スマートシティ構想に関わる方
+- 都市計画・まちづくり担当者
+- ITベンダー
 
-### Test Files (`features/`)
-```
-features/
-├── navigation.feature         # Menu and page access tests
-├── header-styles.feature     # Header styling verification
-├── content.feature           # Content rendering tests
-├── responsive.feature        # Responsive design tests
-├── step_definitions/
-│   └── steps.cjs             # Step implementations (CommonJS)
-└── support/
-    └── world.cjs             # Test context and browser setup
-```
+### 公開型GIS「スマートマップ」
+誰でも使える地図システム。専門知識不要で地図の作成・公開が可能です。
 
-## Testing Strategy
+**主な特徴:**
+- 専門知識不要の簡単操作
+- 豊富なデータ形式に対応
+- レスポンシブデザイン
+- 高速な地図表示
+- カスタマイズ可能なデザイン
 
-### Test Scenarios (Cucumber/Japanese)
-1. **Navigation Tests** (`navigation.feature`)
-   - All menu pages are accessible
-   - Submenu hover functionality
-   - Page title verification
+**活用シーン:**
+- 施設情報の公開
+- イベント会場案内
+- 観光情報の提供
+- 防災マップ
+- ハザードマップ
 
-2. **Header Style Tests** (`header-styles.feature`)
-   - Home page: transparent background, white text
-   - Child pages: white background, dark text
-   - Logo image switching (white vs color)
+### 住所正規化ソリューション
+住所データの標準化・整備を支援。
 
-3. **Content Tests** (`content.feature`)
-   - Markdown rendering (headings, lists, tables)
-   - Link functionality
-   - Table display
+**住所データの課題:**
+- 全角・半角の混在
+- 番地表記のばらつき
+- 建物名の有無
+- 旧住所表記の混在
+- 略称・正式名称の混在
 
-4. **Responsive Tests** (`responsive.feature`)
-   - Desktop layout (1440x900)
-   - Mobile layout (375x667)
-   - Content width constraints
+**ソリューションの特徴:**
+- 高精度な住所正規化
+- 大量データの一括処理
+- API経由での連携
+- 緯度経度の付与
+- 継続的なデータメンテナンス
 
-### Running Tests
-```bash
-# Start dev server first
-npm run dev
+**導入効果:**
+- データ品質の向上
+- 検索精度の向上
+- 業務効率化
+- 配送業務の最適化
+- マーケティング分析の高度化
 
-# In separate terminal
-npm test           # Run all tests
-npm run test:ci    # CI mode with JSON output
-```
+## 開発者向けリソース
 
-## Styling Guidelines
+### 提供リソース
+- Geolonia Maps ドキュメント（APIリファレンス、チュートリアル）
+- コードサンプル（実装例とサンプルコード）
+- 開発者ブログ（技術情報と最新ニュース）
 
-### CSS Variables
-- Primary Color: `#f39813`
-- Primary Dark: `#c2790f`
-- Primary Vivid: `#ffa714`
-- Text Header: `#444`
-- Text Body: `#333`
-- Text Light: `#666`
+### 開発の始め方
+1. アカウント登録（無料プランあり）
+2. APIキーの取得
+3. ドキュメントを参照して実装
+4. デプロイ
 
-### Container & Breakpoints
-- Max Container Width: `1140px`
-- Mobile: `max-width: 768px`
-- Tablet: `max-width: 991px`
-- Desktop: `min-width: 992px`
+### オープンソース
+Geoloniaは、オープンソースコミュニティを積極的にサポートしています。GitHubで公開しているプロジェクトへの貢献を歓迎します。
 
-### Spacing
-- Hero Section Padding: `60px 0`
-- Content Section: Bottom padding `80px`
-- Container Padding: `0 15px`
+## DX推進支援
 
-## Development Workflow
+### 各種資料
 
-### Starting Development
-```bash
-npm install        # Install dependencies
-npm run dev        # Start dev server (http://localhost:8080)
-```
+#### スマートシティ実現のための地理空間データ連携基盤
+自治体がスマートシティを実現するために必要な地理空間データ連携基盤について解説したホワイトペーパー。
 
-### Editing Content
-1. Locate markdown file in `src/content/pages/`
-2. Edit frontmatter (YAML) and/or content (Markdown)
-3. Save file
-4. Changes auto-reload in browser
+**目次:**
+1. スマートシティとは
+2. 地理空間データの重要性
+3. データ連携基盤の概要
+4. 導入事例（防災・減災、住民サービス、都市計画）
+5. システム構築のポイント
+6. オープンソース活用のメリット
+7. 今後の展望
 
-### Adding New Page
-1. Create markdown file: `src/content/pages/new-page.md`
-2. Add frontmatter with title and description
-3. Create route: `src/pages/new-page/index.astro`
-4. Use `getEntry('pages', 'new-page')` to load content
-5. Wrap in `MarkdownPageLayout`
+#### 日本の住所におけるデジタル化の課題
+日本の住所データが抱える課題と解決策についてのホワイトペーパー。
 
-### Building for Production
-```bash
-npm run build      # Type check + build
-npm run preview    # Preview build output
-```
+**主な内容:**
+1. 日本の住所の特徴と課題
+2. デジタル化における障壁
+3. 解決に向けたアプローチ
+4. 実際の導入事例
+5. 今後の展望
 
-## License Structure
+#### GitHub for Governments
+行政機関におけるGitHub活用ガイド。
 
-### Three-Part License
-1. **Source Code**: MIT License
-   - Covers: HTML, CSS, JavaScript, Astro components
-   - Allows: Commercial use, modification, distribution
-   - Requires: Attribution
+**内容:**
+1. GitHubとは
+2. 行政機関での活用事例（国内・海外・自治体）
+3. 導入のメリット（透明性、協働、効率化、コスト削減）
+4. 導入のステップ
+5. よくある質問
 
-2. **Content**: All Rights Reserved
-   - Covers: Text, images, company info, product descriptions
-   - Requires: Written permission for use
+### セミナー
 
-3. **Trademarks**: Registered Trademark Protection
-   - **Geolonia®** is a registered trademark
-   - Logo and brand assets protected
-   - Requires: Written permission for use
+#### 自治体職員向け「地理空間情報を使った課題解決セミナー」
+地理空間情報を活用した課題解決の手法を紹介するセミナー。
 
-See `LICENSE` file for complete terms.
+**対象:**
+- 自治体のDX推進担当者
+- 地理空間データの活用を検討されている方
+- オープンデータの推進担当者
+- 住民サービスの向上を目指している方
+- スマートシティ構想に関わる方
 
-## Dependencies
+**内容:**
+- 地理空間データ連携基盤の概要
+- 自治体における活用事例
+- 導入のステップと注意点
+- オープンソースの活用方法
+- 質疑応答・個別相談
 
-### Production
-- `astro`: 5.17.1
-- `@astrojs/mdx`: 4.3.13
-- `@astrojs/sitemap`: 3.7.0
+**開催形式:**
+- オンライン開催
+- オフライン開催（東京）
 
-### Development
-- `@astrojs/check`: 0.9.6 (Type checking)
-- `@cucumber/cucumber`: 12.6.0 (BDD testing)
-- `@playwright/test`: 1.58.2 (Browser automation)
-- `typescript`: 5.9.3
+**参加費:** 無料
 
-## Configuration Files
+## よくあるご質問
 
-### astro.config.mjs
-- Site URL: `https://www.geolonia.com`
-- Server port: 8080
-- Integrations: MDX, Sitemap
-- Markdown theme: `github-dark`
+### Q. Geolonia Mapsの利用料金は？
+A. ご利用プランによって異なります。詳しくはお問い合わせください。無料プランもご用意しています。
 
-### cucumber.cjs
-- Requires: `features/step_definitions/**/*.cjs`, `features/support/**/*.cjs`
-- Format: Progress + HTML report
-- Output: `test-results/cucumber-report.html`
+### Q. 商用利用は可能ですか？
+A. はい、可能です。商用利用に対応したライセンスをご用意しています。
 
-### package.json
-- Type: ES Module (`"type": "module"`)
-- Scripts: dev, build, preview, test, test:ci
-- License: MIT
+### Q. どのような技術サポートがありますか？
+A. メールでのサポート、技術ドキュメント、コードサンプルなどを提供しています。プランによっては専任のサポート担当が対応いたします。
 
-## Important Notes
+### Q. オンプレミス環境での利用は可能ですか？
+A. はい、オンプレミス環境での導入も可能です。詳しくはお問い合わせください。
 
-### File Extensions
-- Test files use `.cjs` (CommonJS) due to `"type": "module"` in package.json
-- Astro components use `.astro`
-- Content uses `.md` or `.mdx`
+### Q. データの更新頻度は？
+A. 地図データは定期的に更新されます。詳細な更新スケジュールについてはお問い合わせください。
 
-### Git Workflow
-- Main branch: `main`
-- Commit before testing
-- Test before deploying
-- Use semantic commit messages
+## 採用情報
 
-### Performance Considerations
-- Static HTML generation (no client-side JavaScript by default)
-- Optimize images before adding to `public/images/`
-- Minimize CSS (scoped styles in Astro components)
+### Geoloniaで働く
+位置情報テクノロジーで社会課題を解決する、やりがいのある仕事です。
 
-## Deployment Checklist
-See CLAUDE.md for complete deployment checklist including:
-1. Code quality checks
-2. Test execution
-3. **llms.txt and llms-full.txt updates** (REQUIRED)
-4. Build verification
-5. Final checks
-6. Deployment execution
-7. Post-deployment verification
-8. Rollback procedures
+**求める人物像:**
+- オープンソースに情熱を持っている方
+- 地図・位置情報技術に興味がある方
+- チームワークを大切にできる方
+- 新しい技術の習得に意欲的な方
+- 社会課題の解決に貢献したい方
 
-## Troubleshooting
+**募集職種:**
+- ソフトウェアエンジニア（フロントエンド）
+- ソフトウェアエンジニア（バックエンド）
+- GISエンジニア
+- セールス・ビジネス開発
+- カスタマーサクセス
 
-### Port 8080 in use
-```bash
-lsof -ti:8080 | xargs kill
-```
+**働く環境:**
+- リモートワーク可
+- フレックスタイム制
+- 最新の開発ツール・環境
+- 技術書籍購入支援
+- カンファレンス参加支援
 
-### Build errors
-```bash
-rm -rf .astro dist node_modules package-lock.json
-npm install
-npm run build
-```
+**応募方法:**
+履歴書・職務経歴書を添えてお問い合わせページからご連絡ください。カジュアル面談も歓迎します。
 
-### Test failures
-1. Ensure dev server is running (`npm run dev`)
-2. Verify http://localhost:8080 is accessible
-3. Check browser manually
-4. Re-run tests
+## お問い合わせ
 
-## Contact & Resources
-- Website: https://www.geolonia.com
-- Contact: https://www.geolonia.com/contact/
-- GitHub: https://github.com/geolonia/www.geolonia.com
-- Astro Docs: https://docs.astro.build/
-- Cucumber Docs: https://cucumber.io/docs/cucumber/
-- Playwright Docs: https://playwright.dev/
+### ご連絡方法
+製品・サービスに関するご質問、お見積りのご依頼、その他お問い合わせは、お問い合わせフォームよりお気軽にご連絡ください。
+
+**お問い合わせ種別:**
+- 製品・サービスについて
+- お見積りのご依頼
+- 技術サポート
+- 業務提携について
+- 採用について
+- メディア・取材について
+- その他
+
+**営業時間:**
+平日 10:00-18:00（土日祝日を除く）
+
+**ウェブサイト:**
+https://www.geolonia.com
+
+**お問い合わせフォーム:**
+https://www.geolonia.com/contact/
+
+## 最新情報
+
+### ニュースリリース
+- 新サービス「スマートマップ Pro」をリリース
+- 〇〇市と地理空間データ連携基盤の実証実験を開始
+- 住所正規化APIの精度向上について
+- シリーズAラウンドの資金調達を実施
+
+### お知らせ
+- サービスメンテナンスのお知らせ
+- 新機能追加のお知らせ
+- セミナー開催のお知らせ
+
+最新の情報は、ウェブサイトをご確認ください。
+
+## 商標・著作権
+
+**商標:**
+Geolonia® および Geoloniaロゴは、株式会社Geoloniaの登録商標です。
+
+**著作権:**
+© 2024 Geolonia Inc. All Rights Reserved.
+
+本サイトのコンテンツ（文章、画像、会社情報、製品説明など）は、株式会社Geoloniaが著作権を保持しています。無断での使用・複製・配布を禁じます。
 
 ---
-Last updated: 2024-02-08
-Version: 1.0.0
+最終更新: 2024-02-08

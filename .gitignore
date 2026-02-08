@@ -22,3 +22,6 @@ pnpm-debug.log*
 test-results/
 playwright-report/
 .astro/
+
+# claude settings
+.claude/settings.local.json
