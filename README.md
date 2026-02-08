@@ -15,7 +15,7 @@
 npm install
 
 # 開発サーバーの起動（ポート8080）
-npm run dev
+npm start
 ```
 
 開発サーバーは http://localhost:8080 で起動します。
@@ -43,7 +43,7 @@ E2Eテストは[Cucumber](https://cucumber.io/)と[Playwright](https://playwrigh
 ### テストの実行
 
 ```bash
-# 開発サーバーが起動していることを確認（別ターミナルで npm run dev）
+# 開発サーバーが起動していることを確認（別ターミナルで npm start）
 
 # テストの実行
 npm test
