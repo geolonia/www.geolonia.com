@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import MarkdownPageLayout from '../layouts/MarkdownPageLayout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+
+  return pages.map(page => {
+    // Remove .md extension
+    let slug = page.id.replace(/\.md$/, '');
+
+    // Remove trailing /index for cleaner URLs
+    slug = slug.replace(/\/index$/, '');
+
+    return {
+      params: { slug },
+      props: { page },
+    };
+  });
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+---
+
+<MarkdownPageLayout
+  title={page.data.title}
+  description={page.data.description}
+  lead={page.data.lead}
+>
+  <Content />
+</MarkdownPageLayout>
