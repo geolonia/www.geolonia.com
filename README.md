@@ -1,4 +1,4 @@
-# Geolonia Corporate Website
+# www.geolonia.com
 
 株式会社Geoloniaのコーポレートサイト
 
