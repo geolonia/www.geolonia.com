@@ -98,4 +98,8 @@ npm run preview
 
 ## ライセンス
 
-ISC
+- **ソースコード**: MIT License
+- **コンテンツ**: © 2024 Geolonia Inc. All Rights Reserved
+- **商標**: Geolonia® は株式会社Geoloniaの登録商標です
+
+詳細は [LICENSE](./LICENSE) ファイルをご覧ください。
