@@ -132,20 +132,141 @@ ogImage: "/images/recruit-og-image.png"
 
 ### 画像
 
-```markdown
-![代替テキスト](/images/example.png)
+#### 画像の配置場所
 
-[![画像リンク](/images/example.png)](https://example.com/)
+画像ファイルは **`public/images/`** ディレクトリに配置してください。
+
+```
+プロジェクトルート/
+├── public/
+│   └── images/
+│       ├── geolonia_logo.png
+│       ├── products/
+│       │   ├── maps-screenshot.png
+│       │   └── smartcity-diagram.png
+│       └── company/
+│           └── office-photo.jpg
+└── src/
+    └── content/
+        └── pages/
 ```
 
-**画像ファイルの配置:**
-- 画像は `public/images/` ディレクトリに配置
-- パスは `/images/ファイル名` と記述
+**推奨ディレクトリ構造:**
 
-**画像のベストプラクティス:**
-- ファイル名は英数字とハイフンのみ（日本語NG）
-- 適切なサイズに最適化してから配置
-- 代替テキストは必ず設定（アクセシビリティ）
+```
+public/images/
+├── products/        # 製品関連の画像
+├── company/         # 会社関連の画像
+├── blog/           # ブログ記事の画像
+├── ogp/            # OGP専用画像
+└── icons/          # アイコン類
+```
+
+#### 基本的な書き方
+
+```markdown
+![代替テキスト](/images/ファイル名.png)
+```
+
+**重要:** パスは必ず `/images/` で始める絶対パスを使用します。
+
+#### 実例
+
+**ルート直下の画像:**
+```markdown
+<!-- ファイル配置: public/images/geolonia_logo.png -->
+![Geoloniaロゴ](/images/geolonia_logo.png)
+```
+
+**サブディレクトリ内の画像:**
+```markdown
+<!-- ファイル配置: public/images/products/maps-screenshot.png -->
+![Geolonia Maps画面](/images/products/maps-screenshot.png)
+```
+
+**画像にリンクを付ける:**
+```markdown
+<!-- クリックするとリンク先に遷移 -->
+[![Geolonia Mapsデモ](/images/products/maps-demo.png)](https://maps.geolonia.com/)
+```
+
+#### よくある間違い
+
+❌ **相対パスを使う（動作しません）**
+```markdown
+![画像](../../../public/images/example.png)  # NG
+![画像](./images/example.png)                # NG
+```
+
+❌ **publicを含める（不要）**
+```markdown
+![画像](/public/images/example.png)  # NG
+```
+
+✅ **正しい書き方**
+```markdown
+![画像](/images/example.png)  # OK
+```
+
+#### OGP画像の配置
+
+OGP用画像も `public/images/` に配置します。専用サブディレクトリを作ると管理しやすいです。
+
+```markdown
+---
+title: "プロダクト"
+description: "製品一覧"
+ogImage: "/images/ogp/products-og.png"
+---
+```
+
+ファイル配置: `public/images/ogp/products-og.png`
+
+#### 画像の推奨仕様
+
+**一般的なコンテンツ画像:**
+- 最大幅: 1200px
+- 形式: PNG, JPG, WebP
+- 最適化: TinyPNG等で圧縮推奨
+
+**OGP画像:**
+- サイズ: 1200 × 630 px
+- 形式: PNG, JPG
+- 配置: `/images/ogp/` など
+
+**アイコン・ロゴ:**
+- 形式: SVG推奨（ベクター形式）
+- 代替: PNG（透過背景）
+
+#### ファイル名の命名規則
+
+✅ **良い例:**
+- `product-screenshot.png` - 英数字とハイフン
+- `geolonia-maps.png` - 小文字推奨
+- `office-photo-2024.jpg` - わかりやすい名前
+
+❌ **悪い例:**
+- `製品画像.png` - 日本語NG
+- `product image.png` - スペースNG
+- `img1.png` - 意味不明な名前
+
+#### 画像のベストプラクティス
+
+1. **適切なサブディレクトリに配置**
+   - 関連する画像をまとめる
+   - わかりやすい構造を保つ
+
+2. **ファイルを最適化**
+   - 不必要に大きい画像は避ける
+   - TinyPNG等で圧縮
+
+3. **代替テキストを必ず設定**
+   - アクセシビリティのため重要
+   - 画像の内容を簡潔に説明
+
+4. **わかりやすいファイル名**
+   - 後から見てもわかる名前をつける
+   - 連番よりも説明的な名前
 
 ### テーブル
 
