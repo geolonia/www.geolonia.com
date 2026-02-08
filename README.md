@@ -1,50 +1,77 @@
-# 株式会社Geolonia ウェブサイト
+# Geolonia Corporate Website
 
-株式会社Geoloniaの公式ウェブサイトです。Astroを使用した静的サイトジェネレーターで構築されています。
+株式会社Geoloniaのコーポレートサイト
 
-## 特徴
+## 技術スタック
 
-- **マークダウンベースのコンテンツ管理**: すべてのブログ記事やニュースはマークダウンファイルで管理
-- **AIフレンドリー**: ClaudeなどのAIツールを活用して効率的にコンテンツを更新可能
-- **高速**: Astroによる静的サイト生成で高速な表示を実現
-- **型安全**: TypeScriptとAstroのコンテンツコレクション機能で型安全なコンテンツ管理
+- [Astro](https://astro.build/) - 静的サイトジェネレーター
+- Markdown/MDX - コンテンツ管理
+- Cucumber + Playwright - E2Eテスト
 
-## プロジェクト構造
-
-```
-/
-├── public/              # 静的ファイル（画像、favicon など）
-├── src/
-│   ├── content/         # マークダウンコンテンツ
-│   │   ├── blog/        # ブログ記事
-│   │   └── news/        # ニュース記事
-│   ├── layouts/         # レイアウトコンポーネント
-│   ├── pages/           # ページファイル（ルーティング）
-│   └── components/      # 再利用可能なコンポーネント
-├── astro.config.mjs     # Astro設定ファイル
-└── package.json
-```
-
-## 開発方法
-
-### 必要要件
-
-- Node.js 18以上
-- npm または yarn
-
-### セットアップ
+## 開発環境のセットアップ
 
 ```bash
 # 依存関係のインストール
 npm install
 
-# 開発サーバーの起動
+# 開発サーバーの起動（ポート8080）
 npm run dev
 ```
 
-開発サーバーは `http://localhost:4321` で起動します。
+開発サーバーは http://localhost:8080 で起動します。
 
-### ビルド
+## コンテンツの編集
+
+すべてのページコンテンツは `src/content/pages/` ディレクトリ内のMarkdownファイルで管理されています。
+
+```
+src/content/pages/
+├── company/
+│   ├── index.md          # 会社概要
+│   └── recruit.md        # 採用情報
+├── products.md           # プロダクト
+├── developer.md          # 開発者向け
+└── ...
+```
+
+Markdownファイルを編集すると、自動的にページに反映されます。
+
+## テスト
+
+E2Eテストは[Cucumber](https://cucumber.io/)と[Playwright](https://playwright.dev/)を使用しています。
+
+### テストの実行
+
+```bash
+# 開発サーバーが起動していることを確認（別ターミナルで npm run dev）
+
+# テストの実行
+npm test
+
+# CI用（JSON形式のレポート出力）
+npm run test:ci
+```
+
+### テストの構成
+
+```
+features/
+├── navigation.feature      # ナビゲーションテスト
+├── header-styles.feature   # ヘッダースタイルテスト
+├── content.feature         # コンテンツ表示テスト
+├── responsive.feature      # レスポンシブデザインテスト
+├── step_definitions/       # ステップ定義
+└── support/                # テストサポートファイル
+```
+
+### テストシナリオ
+
+- **ナビゲーション**: 全メニューページへのアクセス、サブメニューの動作
+- **ヘッダースタイル**: ホームページと子ページでのヘッダースタイルの違い
+- **コンテンツ**: Markdownコンテンツの正しいレンダリング、リンクの動作
+- **レスポンシブ**: デスクトップとモバイルでの表示
+
+## ビルド
 
 ```bash
 # 本番用ビルド
@@ -54,51 +81,21 @@ npm run build
 npm run preview
 ```
 
-## コンテンツの追加方法
+## ディレクトリ構造
 
-### ブログ記事の追加
-
-`src/content/blog/` ディレクトリに新しいマークダウンファイルを作成します。
-
-```markdown
----
-title: '記事のタイトル'
-description: '記事の概要'
-pubDate: 2024-02-08
-author: '著者名'
-tags: ['タグ1', 'タグ2']
----
-
-# 記事の本文
-
-ここに記事の内容を書きます。
 ```
-
-### ニュースの追加
-
-`src/content/news/` ディレクトリに新しいマークダウンファイルを作成します。
-
-```markdown
----
-title: 'ニュースのタイトル'
-description: 'ニュースの概要'
-pubDate: 2024-02-08
-category: 'カテゴリ'
----
-
-# ニュースの本文
-
-ここにニュースの内容を書きます。
+.
+├── public/              # 静的ファイル（画像など）
+├── src/
+│   ├── components/      # 再利用可能なコンポーネント
+│   ├── content/         # Markdownコンテンツ
+│   │   └── pages/       # ページコンテンツ
+│   ├── layouts/         # レイアウトコンポーネント
+│   └── pages/           # ページルーティング
+├── features/            # E2Eテスト（Cucumber）
+└── package.json
 ```
-
-## AIを活用したコンテンツ管理
-
-このサイトは、ClaudeなどのAIツールを活用してコンテンツを効率的に管理できるように設計されています。
-
-- マークダウン形式での記述
-- 明確なファイル構造
-- 型定義による厳密なスキーマ管理
 
 ## ライセンス
 
-Copyright © 2024 株式会社Geolonia. All rights reserved.
+ISC

@@ -18,12 +18,7 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folders
-.idea/
-
-# vscode
-.vscode/
-*.code-workspace
-
-# astro
+# test results
+test-results/
+playwright-report/
 .astro/

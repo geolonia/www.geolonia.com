@@ -5,7 +5,12 @@
       "Bash(npm init:*)",
       "Bash(npm install:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(.gitignore << 'EOF'\n# build output\ndist/\n.output/\n\n# dependencies\nnode_modules/\n\n# logs\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\n\n# environment variables\n.env\n.env.production\n\n# macOS-specific files\n.DS_Store\n\n# test results\ntest-results/\nplaywright-report/\nEOF)",
+      "Bash(README.md << 'EOF'\n# Geolonia Corporate Website\n\n株式会社Geoloniaのコーポレートサイト\n\n## 技術スタック\n\n- [Astro]\\(https://astro.build/\\) - 静的サイトジェネレーター\n- Markdown/MDX - コンテンツ管理\n- Cucumber + Playwright - E2Eテスト\n\n## 開発環境のセットアップ\n\n```bash\n# 依存関係のインストール\nnpm install\n\n# 開発サーバーの起動（ポート8080）\nnpm run dev\n```\n\n開発サーバーは http://localhost:8080 で起動します。\n\n## コンテンツの編集\n\nすべてのページコンテンツは `src/content/pages/` ディレクトリ内のMarkdownファイルで管理されています。\n\n```\nsrc/content/pages/\n├── company/\n│   ├── index.md          # 会社概要\n│   └── recruit.md        # 採用情報\n├── products.md           # プロダクト\n├── developer.md          # 開発者向け\n└── ...\n```\n\nMarkdownファイルを編集すると、自動的にページに反映されます。\n\n## テスト\n\nE2Eテストは[Cucumber]\\(https://cucumber.io/\\)と[Playwright]\\(https://playwright.dev/\\)を使用しています。\n\n### テストの実行\n\n```bash\n# 開発サーバーが起動していることを確認（別ターミナルで npm run dev）\n\n# テストの実行\nnpm test\n\n# CI用（JSON形式のレポート出力）\nnpm run test:ci\n```\n\n### テストの構成\n\n```\nfeatures/\n├── navigation.feature      # ナビゲーションテスト\n├── header-styles.feature   # ヘッダースタイルテスト\n├── content.feature         # コンテンツ表示テスト\n├── responsive.feature      # レスポンシブデザインテスト\n├── step_definitions/       # ステップ定義\n└── support/                # テストサポートファイル\n```\n\n### テストシナリオ\n\n- **ナビゲーション**: 全メニューページへのアクセス、サブメニューの動作\n- **ヘッダースタイル**: ホームページと子ページでのヘッダースタイルの違い\n- **コンテンツ**: Markdownコンテンツの正しいレンダリング、リンクの動作\n- **レスポンシブ**: デスクトップとモバイルでの表示\n\n## ビルド\n\n```bash\n# 本番用ビルド\nnpm run build\n\n# ビルド結果のプレビュー\nnpm run preview\n```\n\n## ディレクトリ構造\n\n```\n.\n├── public/              # 静的ファイル（画像など）\n├── src/\n│   ├── components/      # 再利用可能なコンポーネント\n│   ├── content/         # Markdownコンテンツ\n│   │   └── pages/       # ページコンテンツ\n│   ├── layouts/         # レイアウトコンポーネント\n│   └── pages/           # ページルーティング\n├── features/            # E2Eテスト（Cucumber）\n└── package.json\n```\n\n## ライセンス\n\nISC\nEOF)",
+      "Bash(npm test:*)",
+      "Bash(lsof:*)"
     ]
   }
 }
