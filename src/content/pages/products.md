@@ -31,7 +31,6 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 .feature-block {
   background: #f8f9fa;
   padding: 1.5rem;
-  border-radius: 8px;
   border-left: 4px solid #f39813;
 }
 
