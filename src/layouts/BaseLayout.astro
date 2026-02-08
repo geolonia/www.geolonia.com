@@ -8,7 +8,6 @@ interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  structuredData?: any[]; // ページ固有の構造化データ
 }
 
 const {
@@ -16,8 +15,7 @@ const {
   description = '株式会社Geoloniaは、地図・位置情報サービスを提供しています。',
   ogTitle,
   ogDescription,
-  ogImage = '/images/geolonia_logo.png',
-  structuredData = []
+  ogImage = '/images/geolonia_logo.png'
 } = Astro.props;
 
 const siteName = '株式会社Geolonia';
@@ -106,9 +104,6 @@ const websiteSchema = {
     <!-- 構造化データ (JSON-LD) -->
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    {structuredData.map((schema) => (
-      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-    ))}
 
     <title>{title}</title>
   </head>
