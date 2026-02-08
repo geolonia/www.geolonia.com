@@ -308,3 +308,58 @@ When('サブメニューで {string} をクリック', async function(linkText) 
   await link.click();
   await this.page.waitForLoadState('networkidle');
 });
+
+// Common components steps
+Then('ヘッダーにロゴが表示される', async function() {
+  const logo = await this.page.locator('.site-header-logo img');
+  await expect(logo).toBeVisible();
+});
+
+Then('ヘッダーに {string} メニューが表示される', async function(menuText) {
+  const menu = await this.page.locator('.global-nav-list');
+  const content = await menu.textContent();
+  expect(content).toContain(menuText);
+});
+
+Then('お問い合わせボタンにオレンジの枠線が表示される', async function() {
+  const contactLink = await this.page.locator('.menu-item-contact a');
+  const borderColor = await contactLink.evaluate(el => window.getComputedStyle(el).borderColor);
+  // Orange color - rgb(243, 152, 19)
+  expect(borderColor).toMatch(/rgb\(243,\s*152,\s*19\)/);
+});
+
+Then('お問い合わせボタンに白の枠線が表示される', async function() {
+  const contactLink = await this.page.locator('.menu-item-contact a');
+  const borderColor = await contactLink.evaluate(el => window.getComputedStyle(el).borderColor);
+  // White color
+  expect(borderColor).toMatch(/rgb\(255,\s*255,\s*255\)/);
+});
+
+Then('フッターに {string} リンクが表示される', async function(linkText) {
+  const footer = await this.page.locator('footer');
+  const content = await footer.textContent();
+  expect(content).toContain(linkText);
+});
+
+Then('フッターに著作権表記が表示される', async function() {
+  const footer = await this.page.locator('footer');
+  const content = await footer.textContent();
+  expect(content).toMatch(/©|Copyright/);
+});
+
+When('ヘッダーのロゴをクリックする', async function() {
+  const logo = await this.page.locator('.site-header-logo a');
+  await logo.click();
+  await this.page.waitForLoadState('networkidle');
+});
+
+Given('画面サイズを {int}x{int} に設定する', async function(width, height) {
+  await this.page.setViewportSize({ width, height });
+  await this.page.waitForTimeout(300);
+});
+
+Then('モバイルメニューボタンが表示される', async function() {
+  const btn = await this.page.locator('.vk-mobile-nav-menu-btn');
+  const display = await btn.evaluate(el => window.getComputedStyle(el).display);
+  expect(display).toBe('flex');
+});

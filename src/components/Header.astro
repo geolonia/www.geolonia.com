@@ -446,14 +446,22 @@ const internalLink = (path: string): string => {
 
   /* Contact Button Styling */
   .global-nav-list > li.menu-item-contact > a {
-    border: 2px solid #fff;
+    border: 2px solid #f39813;
     border-radius: 4px;
     padding: 10px 20px !important;
     margin-left: 10px;
     transition: all 0.3s ease;
   }
 
+  .site-header--home .global-nav-list > li.menu-item-contact > a {
+    border-color: #fff;
+  }
+
   .global-nav-list > li.menu-item-contact > a:hover {
+    background-color: rgba(243, 152, 19, 0.1);
+  }
+
+  .site-header--home .global-nav-list > li.menu-item-contact > a:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
