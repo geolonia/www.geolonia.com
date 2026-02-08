@@ -8,7 +8,7 @@ import { visit } from 'unist-util-visit';
 const isStaging = process.env.STAGING === 'true';
 const base = isStaging ? '/www.geolonia.com' : '';
 
-// マークダウン内の画像とリンクパスにbaseパスを追加し、画像を最適化するrehypeプラグイン
+// マークダウン内の画像とリンクパスにbaseパスを追加するrehypeプラグイン
 function rehypeAddBasePath() {
   return (tree) => {
     visit(tree, 'element', (node) => {
@@ -17,14 +17,6 @@ function rehypeAddBasePath() {
         const src = node.properties.src;
         if (typeof src === 'string' && src.startsWith('/images/')) {
           node.properties.src = base + src;
-        }
-        // 遅延読み込みを追加（loading属性が未設定の場合）
-        if (!node.properties.loading) {
-          node.properties.loading = 'lazy';
-        }
-        // デコード最適化
-        if (!node.properties.decoding) {
-          node.properties.decoding = 'async';
         }
       }
 
@@ -55,11 +47,5 @@ export default defineConfig({
       theme: 'github-dark',
     },
     rehypePlugins: [rehypeAddBasePath],
-  },
-  // HTML圧縮を有効化
-  compressHTML: true,
-  build: {
-    // インラインスタイルシートも圧縮
-    inlineStylesheets: 'auto',
   },
 });
