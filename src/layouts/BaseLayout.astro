@@ -5,9 +5,58 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
 }
 
-const { title, description = '株式会社Geoloniaは、地図・位置情報サービスを提供しています。' } = Astro.props;
+const {
+  title,
+  description = '株式会社Geoloniaは、地図・位置情報サービスを提供しています。',
+  ogTitle,
+  ogDescription,
+  ogImage = '/images/geolonia_logo.png'
+} = Astro.props;
+
+const siteName = '株式会社Geolonia';
+const siteUrl = Astro.site || 'https://www.geolonia.com';
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const fullOgImage = new URL(ogImage, siteUrl).toString();
+
+// OGPのタイトルと説明：指定があればそれを使用、なければデフォルト値
+const finalOgTitle = ogTitle || title;
+const finalOgDescription = ogDescription || description;
+
+// 構造化データ（JSON-LD）
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "株式会社Geolonia",
+  "url": siteUrl,
+  "logo": new URL("/images/geolonia_logo.png", siteUrl).toString(),
+  "description": "地図・位置情報テクノロジーを提供する企業",
+  "sameAs": [
+    "https://twitter.com/geoloniamaps",
+    "https://github.com/geolonia"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": new URL("/contact/", siteUrl).toString()
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": siteName,
+  "url": siteUrl,
+  "description": "株式会社Geoloniaは、地図・位置情報サービスを提供しています。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社Geolonia"
+  }
+};
 ---
 
 <!doctype html>
@@ -17,10 +66,45 @@ const { title, description = '株式会社Geoloniaは、地図・位置情報サ
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={currentUrl} />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={finalOgTitle} />
+    <meta property="og:description" content={finalOgDescription} />
+    <meta property="og:image" content={fullOgImage} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={currentUrl} />
+    <meta name="twitter:title" content={finalOgTitle} />
+    <meta name="twitter:description" content={finalOgDescription} />
+    <meta name="twitter:image" content={fullOgImage} />
+    <meta name="twitter:site" content="@geoloniamaps" />
+    <meta name="twitter:creator" content="@geoloniamaps" />
+
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Load Google Fonts asynchronously with font-display: swap -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
     <title>{title}</title>
   </head>
   <body>
@@ -32,7 +116,7 @@ const { title, description = '株式会社Geoloniaは、地図・位置情報サ
   </body>
 </html>
 
-<style is:global>
+<style is:inline is:global>
   * {
     box-sizing: border-box;
   }

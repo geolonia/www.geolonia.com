@@ -18,7 +18,7 @@
   status = 200
   conditions = {Role = ["admin"]}
 
-# ヘッダー設定
+# セキュリティヘッダー設定
 [[headers]]
   for = "/*"
   [headers.values]
@@ -26,6 +26,8 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
 # 静的ファイルのキャッシュ設定
 [[headers]]
@@ -37,10 +39,3 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-# llms.txt ファイルは頻繁に更新される可能性があるのでキャッシュ時間を短く
-[[headers]]
-  for = "/llms*.txt"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-    Content-Type = "text/plain; charset=utf-8"

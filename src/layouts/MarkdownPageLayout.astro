@@ -5,12 +5,21 @@ interface Props {
   title: string;
   description?: string;
   lead?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
 }
 
-const { title, description, lead } = Astro.props;
+const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.props;
 ---
 
-<BaseLayout title={`${title} | Geolonia`} description={description}>
+<BaseLayout
+  title={`${title} | Geolonia`}
+  description={description}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogImage={ogImage}
+>
   <div class="page-container">
     <div class="hero-section">
       <div class="container">
@@ -27,7 +36,7 @@ const { title, description, lead } = Astro.props;
   </div>
 </BaseLayout>
 
-<style>
+<style is:inline>
   .page-container {
     padding-top: 0;
   }
