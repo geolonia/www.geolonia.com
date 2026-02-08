@@ -1,74 +1,301 @@
-# www.geolonia.com - プロジェクト構成
+# www.geolonia.com - プロジェクト構成ドキュメント
 
 株式会社Geoloniaのコーポレートサイト
 
+## 📋 目次
+
+1. [プロジェクト概要](#プロジェクト概要)
+2. [ディレクトリ構造](#ディレクトリ構造)
+3. [コンテンツタイプ](#コンテンツタイプ)
+4. [重要な設計パターン](#重要な設計パターン)
+5. [開発ワークフロー](#開発ワークフロー)
+6. [テスト](#テスト)
+7. [デプロイ](#デプロイ)
+8. [トラブルシューティング](#トラブルシューティング)
+
+---
+
 ## プロジェクト概要
 
-- **フレームワーク**: Astro 5.x（静的サイトジェネレーター）
-- **コンテンツ管理**: Markdown/MDX（Astro Content Collections）
-- **テスト**: Cucumber + Playwright（E2Eテスト）
-- **開発サーバー**: ポート8080で起動
-- **デプロイ**: 静的ファイル生成
+### 技術スタック
+
+| 項目 | 技術 |
+|------|------|
+| **フレームワーク** | Astro 5.x（静的サイトジェネレーター） |
+| **コンテンツ管理** | Markdown/MDX（Astro Content Collections） |
+| **テスト** | Cucumber + Playwright（E2Eテスト） |
+| **言語** | TypeScript / JavaScript |
+| **開発サーバー** | ポート8080 |
+| **デプロイ** | 静的ファイル生成 |
+
+### 特徴
+
+- ✅ **マークダウンベース** - コンテンツをマークダウンで管理
+- ✅ **自動ページ生成** - マークダウン追加だけでページ生成
+- ✅ **型安全** - Astro Content Collectionsによる型チェック
+- ✅ **高速** - 静的HTML生成で高速表示
+- ✅ **テスト自動化** - E2Eテストで品質保証
+
+---
 
 ## ディレクトリ構造
 
 ```
 www.geolonia.com/
-├── public/                          # 静的ファイル
-│   └── images/                      # 画像ファイル
+├── public/                          # 静的ファイル（画像、フォントなど）
+│   └── images/
 │       ├── geolonia_logo.png        # カラーロゴ（子ページ用）
-│       └── geolonia_logo_white.png  # 白ロゴ（ホームページ用）
+│       ├── geolonia_logo_white.png  # 白ロゴ（ホーム用）
+│       └── ...
 │
 ├── src/
 │   ├── components/                  # 再利用可能なコンポーネント
-│   │   ├── Header.astro             # ヘッダー（ホーム/子ページで自動切替）
+│   │   ├── Header.astro             # ヘッダー（ホーム/子で自動切替）
 │   │   └── Footer.astro             # フッター
 │   │
 │   ├── layouts/                     # レイアウトコンポーネント
 │   │   ├── BaseLayout.astro         # 基本レイアウト
-│   │   └── MarkdownPageLayout.astro # マークダウンページ用レイアウト
+│   │   └── MarkdownPageLayout.astro # マークダウン用レイアウト
 │   │
-│   ├── content/                     # コンテンツコレクション
-│   │   ├── config.ts                # コレクション定義
-│   │   ├── pages/                   # 静的ページ（Markdown）
+│   ├── content/                     # ★コンテンツコレクション
+│   │   ├── config.ts                # コレクション定義（型安全）
+│   │   │
+│   │   ├── pages/                   # 📄 静的ページ（日付なし）
 │   │   │   ├── company/
-│   │   │   │   ├── index.md         # 会社概要
-│   │   │   │   └── recruit.md       # 採用情報
-│   │   │   ├── products.md
-│   │   │   ├── developer.md
-│   │   │   └── ...
-│   │   ├── blog/                    # ブログ記事（日付順）
-│   │   ├── news/                    # お知らせ（日付順）
-│   │   └── press/                   # プレスリリース（日付順）
+│   │   │   │   ├── index.md         # /company/
+│   │   │   │   └── recruit.md       # /company/recruit/
+│   │   │   ├── products.md          # /products/
+│   │   │   ├── developer.md         # /developer/
+│   │   │   ├── contact.md           # /contact/
+│   │   │   ├── maps/
+│   │   │   │   ├── index.md         # /maps/
+│   │   │   │   └── dev.md           # /maps/dev/
+│   │   │   ├── products/
+│   │   │   │   └── faq.md           # /products/faq/
+│   │   │   ├── resources/
+│   │   │   │   ├── index.md
+│   │   │   │   ├── github-for-governments.md
+│   │   │   │   ├── geolonia-maps-for-smartcity.md
+│   │   │   │   └── wp-jad-dx.md
+│   │   │   ├── geolonia-maps-for-smartcity/
+│   │   │   │   ├── index.md
+│   │   │   │   └── seminar2025.md
+│   │   │   ├── address-normalization.md
+│   │   │   ├── smartmap.md
+│   │   │   ├── information.md       # お知らせ一覧ページ
+│   │   │   └── newsrelease.md       # プレスリリース一覧ページ
+│   │   │
+│   │   ├── blog/                    # 📝 ブログ記事（日付順）
+│   │   │   └── .gitkeep             # 空ディレクトリ保持用
+│   │   │
+│   │   ├── news/                    # 📢 お知らせ（日付順）
+│   │   │   └── .gitkeep
+│   │   │
+│   │   └── press/                   # 📰 プレスリリース（日付順）
+│   │       └── .gitkeep
 │   │
-│   └── pages/                       # ページルーティング
+│   └── pages/                       # ★ページルーティング
 │       ├── index.astro              # トップページ
+│       │
 │       ├── [...slug].astro          # 静的ページ（動的ルート）
+│       │                            # src/content/pages/ から自動生成
+│       │
 │       ├── blog/
-│       │   ├── index.astro          # ブログ一覧
-│       │   └── [slug].astro         # ブログ記事詳細
+│       │   ├── index.astro          # /blog/ - 一覧
+│       │   └── [slug].astro         # /blog/記事名/ - 詳細
+│       │
 │       ├── news/
-│       │   ├── index.astro          # お知らせ一覧
-│       │   └── [slug].astro         # お知らせ詳細
+│       │   ├── index.astro          # /news/ - 一覧
+│       │   └── [slug].astro         # /news/お知らせ名/ - 詳細
+│       │
 │       └── press/
-│           ├── index.astro          # プレスリリース一覧
-│           └── [slug].astro         # プレスリリース詳細
+│           ├── index.astro          # /press/ - 一覧
+│           └── [slug].astro         # /press/リリース名/ - 詳細
 │
-├── features/                        # E2Eテスト（Cucumber）
+├── features/                        # ★E2Eテスト（Cucumber）
 │   ├── navigation.feature           # ナビゲーションテスト
 │   ├── header-styles.feature        # ヘッダースタイルテスト
 │   ├── content.feature              # コンテンツテスト
 │   ├── responsive.feature           # レスポンシブテスト
 │   ├── step_definitions/
-│   │   └── steps.cjs                # ステップ定義
+│   │   └── steps.cjs                # ステップ定義（日本語Gherkin）
 │   └── support/
-│       └── world.cjs                # テストコンテキスト
+│       └── world.cjs                # テストコンテキスト（Playwright）
 │
+├── .gitignore                       # Git除外設定
 ├── astro.config.mjs                 # Astro設定
 ├── cucumber.cjs                     # Cucumber設定
 ├── package.json                     # 依存関係とスクリプト
-└── README.md                        # プロジェクトドキュメント
+├── tsconfig.json                    # TypeScript設定
+├── LICENSE                          # ライセンス（MIT + コンテンツ保護）
+├── README.md                        # プロジェクト説明
+├── CLAUDE.md                        # このファイル（開発ガイド）
+├── llms.txt                         # AI向けサイト概要
+└── llms-full.txt                    # AI向けサイト詳細
 ```
+
+---
+
+## コンテンツタイプ
+
+このサイトには**4種類のコンテンツタイプ**があります。
+
+### コンテンツタイプ比較表
+
+| タイプ | ディレクトリ | 用途 | ソート | URL例 |
+|--------|------------|------|--------|-------|
+| **📄 Pages** | `src/content/pages/` | 会社概要、製品紹介など固定コンテンツ | なし | `/company/`, `/products/` |
+| **📝 Blog** | `src/content/blog/` | 技術記事、開発者向けブログ | 日付降順 | `/blog/new-feature/` |
+| **📢 News** | `src/content/news/` | お知らせ、更新情報 | 日付降順 | `/news/maintenance/` |
+| **📰 Press** | `src/content/press/` | プレスリリース、メディア向け | 日付降順 | `/press/funding/` |
+
+### 1. 静的ページ（Pages）
+
+**概要:**
+- 日付に依存しない固定コンテンツ
+- マークダウンファイルを追加するだけで自動的にページ生成
+- `src/pages/[...slug].astro` が動的にルーティング
+
+**スキーマ:**
+```typescript
+{
+  title: string;           // 必須: ページタイトル
+  description?: string;    // 任意: ページ説明
+  lead?: string;          // 任意: リード文
+}
+```
+
+**追加方法:**
+```bash
+# 例: /services/ ページを作成
+cat > src/content/pages/services.md <<EOF
+---
+title: "サービス"
+description: "Geoloniaが提供するサービス一覧"
+lead: "お客様の課題を解決します"
+---
+
+## サービス内容
+
+...
+EOF
+```
+
+→ 自動的に `/services/` でアクセス可能になります
+
+**URL生成ルール:**
+- `pages/company/index.md` → `/company/`
+- `pages/products.md` → `/products/`
+- `pages/maps/dev.md` → `/maps/dev/`
+
+### 2. ブログ（Blog）
+
+**概要:**
+- 技術記事、開発者向けブログ
+- 日付順に自動ソート
+- タグ機能あり
+
+**スキーマ:**
+```typescript
+{
+  title: string;           // 必須: 記事タイトル
+  description: string;     // 必須: 記事説明
+  pubDate: Date;          // 必須: 公開日
+  author?: string;        // 任意: 著者名
+  tags?: string[];        // 任意: タグ配列
+}
+```
+
+**追加方法:**
+```bash
+cat > src/content/blog/2024-02-08-new-feature.md <<EOF
+---
+title: "新機能をリリースしました"
+description: "○○機能の追加について"
+pubDate: 2024-02-08
+author: "Geolonia"
+tags: ["お知らせ", "新機能"]
+---
+
+## 新機能について
+
+...
+EOF
+```
+
+→ `/blog/` に日付順で表示、`/blog/2024-02-08-new-feature/` でアクセス可能
+
+### 3. お知らせ（News）
+
+**概要:**
+- 一般的なお知らせ、更新情報
+- 日付順に自動ソート
+- カテゴリ機能あり
+
+**スキーマ:**
+```typescript
+{
+  title: string;           // 必須: お知らせタイトル
+  description: string;     // 必須: お知らせ説明
+  pubDate: Date;          // 必須: 公開日
+  category?: string;      // 任意: カテゴリ
+}
+```
+
+**追加方法:**
+```bash
+cat > src/content/news/2024-02-08-maintenance.md <<EOF
+---
+title: "メンテナンスのお知らせ"
+description: "定期メンテナンス実施について"
+pubDate: 2024-02-08
+category: "メンテナンス"
+---
+
+## メンテナンス内容
+
+...
+EOF
+```
+
+→ `/news/` に日付順で表示、`/news/2024-02-08-maintenance/` でアクセス可能
+
+### 4. プレスリリース（Press）
+
+**概要:**
+- 正式なプレスリリース、メディア向け発表
+- 日付順に自動ソート
+- カテゴリ機能あり
+
+**スキーマ:**
+```typescript
+{
+  title: string;           // 必須: リリースタイトル
+  description: string;     // 必須: リリース説明
+  pubDate: Date;          // 必須: 公開日
+  category?: string;      // 任意: カテゴリ
+}
+```
+
+**追加方法:**
+```bash
+cat > src/content/press/2024-02-08-funding.md <<EOF
+---
+title: "シリーズA資金調達を実施"
+description: "○○億円の資金調達について"
+pubDate: 2024-02-08
+category: "資金調達"
+---
+
+## 概要
+
+...
+EOF
+```
+
+→ `/press/` に日付順で表示、`/press/2024-02-08-funding/` でアクセス可能
+
+---
 
 ## 重要な設計パターン
 
@@ -76,81 +303,61 @@ www.geolonia.com/
 
 `src/components/Header.astro` は、ホームページと子ページで自動的にスタイルを切り替えます。
 
-- **ホームページ** (`/`)
-  - 透明背景（`background-color: transparent`）
-  - 白色のテキスト
-  - 白色のロゴ（`geolonia_logo_white.png`）
-  - `position: absolute`（ヒーロー画像の上に重なる）
+#### ホームページ (`/`)
+- **背景**: 透明（`transparent`）
+- **テキスト**: 白色
+- **ロゴ**: 白色（`geolonia_logo_white.png`）
+- **配置**: `position: absolute`（ヒーロー画像の上に重なる）
 
-- **子ページ** (`/company/`, `/products/` など)
-  - 白背景（`background-color: #fff`）
-  - 暗いテキスト（`#444`）
-  - カラーロゴ（`geolonia_logo.png`）
-  - `position: relative`（通常のフロー）
-  - Box-shadow付き
+#### 子ページ (`/company/`, `/products/` など)
+- **背景**: 白色（`#fff`）
+- **テキスト**: 暗色（`#444`）
+- **ロゴ**: カラー（`geolonia_logo.png`）
+- **配置**: `position: relative`（通常のフロー）
+- **効果**: Box-shadow付き
 
-実装:
+#### 実装コード
 ```astro
+---
 const isHome = Astro.url.pathname === '/';
+---
 <header class={`site-header ${isHome ? 'site-header--home' : 'site-header--page'}`}>
+  <h1 class="site-header-logo">
+    <a href="/">
+      <img src={isHome ? "/images/geolonia_logo_white.png" : "/images/geolonia_logo.png"} />
+    </a>
+  </h1>
+</header>
 ```
 
-### 2. コンテンツタイプ
+### 2. 静的ページの自動生成
 
-このサイトには4種類のコンテンツタイプがあります：
+`src/pages/[...slug].astro` が `src/content/pages/` 内のすべてのマークダウンファイルを読み取り、自動的にページを生成します。
 
-#### 静的ページ（Pages）
-`src/content/pages/` - 会社概要、製品紹介など、日付に依存しないページ
+#### 動作フロー
+1. `src/content/pages/` にマークダウンファイルを作成
+2. Astroがビルド時にファイルを検出
+3. `[...slug].astro` が動的にルートを生成
+4. URLが自動的に割り当てられる
 
-**特徴:**
-- マークダウンファイルを追加するだけで自動的にページ生成
-- `src/pages/[...slug].astro` が動的にルーティング
-- URL: `/company/`, `/products/` など
-
-**新規ページの追加方法:**
-```bash
-# 例: /services/ ページを作成
-cat > src/content/pages/services.md <<EOF
----
-title: "サービス"
-description: "提供サービス一覧"
----
-
-## サービス内容
-...
-EOF
+#### URL生成ルール
+```
+src/content/pages/company/index.md  → /company/
+src/content/pages/products.md       → /products/
+src/content/pages/maps/dev.md       → /maps/dev/
 ```
 
-#### ブログ（Blog）
-`src/content/blog/` - 技術ブログ、開発者向け記事
+**重要:** `src/pages/` にファイルを追加する必要はありません！
 
-**特徴:**
-- 日付順にソート表示
-- タグ、カテゴリ機能
-- URL: `/blog/`, `/blog/post-name/`
+### 3. Content Collections（型安全）
 
-#### お知らせ（News）
-`src/content/news/` - 一般的なお知らせ、更新情報
+Astro Content Collectionsにより、コンテンツのフロントマターが型チェックされます。
 
-**特徴:**
-- 日付順にソート表示
-- カテゴリ機能
-- URL: `/news/`, `/news/announcement-name/`
+**設定ファイル:** `src/content/config.ts`
 
-#### プレスリリース（Press）
-`src/content/press/` - 正式なプレスリリース
-
-**特徴:**
-- 日付順にソート表示
-- カテゴリ機能
-- URL: `/press/`, `/press/release-name/`
-
-### 3. Content Collections
-
-Astro Content Collectionsを使用してコンテンツを管理しています。
-
-**定義:** `src/content/config.ts`
 ```typescript
+import { defineCollection, z } from 'astro:content';
+
 // 静的ページ
 const pages = defineCollection({
   type: 'content',
@@ -194,7 +401,17 @@ const press = defineCollection({
     category: z.string().optional(),
   }),
 });
+
+export const collections = { pages, blog, news, press };
 ```
+
+**メリット:**
+- ✅ フロントマターの型チェック
+- ✅ 必須フィールドの検証
+- ✅ IDEの自動補完
+- ✅ ビルド時エラー検出
+
+---
 
 ## 開発ワークフロー
 
@@ -204,88 +421,101 @@ const press = defineCollection({
 npm run dev
 ```
 
-- ポート8080で起動
-- ファイル変更を自動検知
-- ホットリロード有効
+- **URL**: http://localhost:8080
+- **ホットリロード**: 有効
+- **自動検知**: ファイル変更を自動で反映
 
 ### コンテンツの追加・編集
 
-#### 静的ページの追加
-マークダウンファイルを追加するだけで自動的にページが生成されます。
+#### 静的ページの編集
+
+既存ページを編集する場合：
 
 ```bash
-# 例: /services/ ページを作成
-cat > src/content/pages/services.md <<EOF
+# ファイルを開いて編集
+vim src/content/pages/company/index.md
+```
+
+保存すると自動的に反映されます。
+
+#### 静的ページの追加
+
+新しいページを追加する場合：
+
+```bash
+# 例: /partners/ ページを作成
+cat > src/content/pages/partners.md <<EOF
 ---
-title: "サービス"
-description: "提供サービス一覧"
-lead: "Geoloniaが提供するサービス"
+title: "パートナー"
+description: "パートナー企業一覧"
+lead: "Geoloniaのパートナー企業"
 ---
 
-## サービス内容
-...
+## パートナー企業
+
+- 株式会社A
+- 株式会社B
 EOF
 ```
 
-→ 自動的に `/services/` でアクセス可能になります
+自動的に `/partners/` でアクセス可能になります。
 
 #### ブログ記事の追加
+
 ```bash
-cat > src/content/blog/2024-02-08-new-feature.md <<EOF
+cat > src/content/blog/2024-02-15-ai-integration.md <<EOF
 ---
-title: "新機能をリリースしました"
-description: "○○機能の追加について"
-pubDate: 2024-02-08
-author: "Geolonia"
-tags: ["お知らせ", "新機能"]
+title: "AIを活用した新機能"
+description: "AIによる住所自動補完機能をリリース"
+pubDate: 2024-02-15
+author: "Geolonia開発チーム"
+tags: ["AI", "新機能", "住所正規化"]
 ---
 
-## 新機能について
-...
+## 概要
+
+AIを活用した住所自動補完機能をリリースしました。
+
+## 主な特徴
+
+1. リアルタイム補完
+2. 高精度な候補表示
+3. ...
 EOF
 ```
 
 #### お知らせの追加
+
 ```bash
-cat > src/content/news/2024-02-08-maintenance.md <<EOF
+cat > src/content/news/2024-02-15-office-move.md <<EOF
 ---
-title: "メンテナンスのお知らせ"
-description: "定期メンテナンス実施について"
-pubDate: 2024-02-08
-category: "メンテナンス"
+title: "オフィス移転のお知らせ"
+description: "2024年3月1日より新オフィスに移転します"
+pubDate: 2024-02-15
+category: "お知らせ"
 ---
 
-## メンテナンス内容
-...
+## 移転先住所
+
+東京都...
 EOF
 ```
 
 #### プレスリリースの追加
+
 ```bash
-cat > src/content/press/2024-02-08-funding.md <<EOF
+cat > src/content/press/2024-02-15-partnership.md <<EOF
 ---
-title: "シリーズA資金調達を実施"
-description: "○○億円の資金調達について"
-pubDate: 2024-02-08
-category: "資金調達"
+title: "○○社との業務提携を発表"
+description: "スマートシティ事業における業務提携について"
+pubDate: 2024-02-15
+category: "業務提携"
 ---
 
-## 概要
+## 提携の概要
+
 ...
 EOF
-```
-
-### テストの実行
-
-```bash
-# 開発サーバーを起動（別ターミナル）
-npm run dev
-
-# テスト実行
-npm test
-
-# CI用（JSON形式のレポート出力）
-npm run test:ci
 ```
 
 ### ビルド
@@ -298,16 +528,70 @@ npm run build
 npm run preview
 ```
 
-### デプロイチェックリスト
+ビルド結果は `dist/` ディレクトリに出力されます。
 
-デプロイ前に以下を必ず確認してください：
+---
 
-#### 1. **コード品質チェック**
+## テスト
+
+### E2Eテスト（Cucumber + Playwright）
+
+すべてのテストは日本語（Gherkin）で記述されています。
+
+#### テストの実行
+
+```bash
+# 開発サーバーを起動（別ターミナル）
+npm run dev
+
+# テスト実行
+npm test
+
+# CI用（JSON形式のレポート出力）
+npm run test:ci
+```
+
+#### テストカテゴリ
+
+| ファイル | テスト内容 |
+|---------|----------|
+| `features/navigation.feature` | すべてのメニューページへのアクセス、サブメニュー動作 |
+| `features/header-styles.feature` | ヘッダースタイル（ホーム/子ページの切り替え） |
+| `features/content.feature` | Markdownレンダリング、テーブル、リンク動作 |
+| `features/responsive.feature` | デスクトップ/モバイル表示、コンテンツ幅 |
+
+#### テストの追加
+
+新しいテストシナリオを追加する場合：
+
+1. `features/` に `.feature` ファイルを作成
+2. 必要に応じて `features/step_definitions/steps.cjs` にステップを追加
+3. `npm test` で動作確認
+
+**例:**
+```gherkin
+# features/my-test.feature
+機能: 新機能のテスト
+
+  シナリオ: ○○が正しく動作する
+    前提 "/" ページを開く
+    ならば "○○" が表示される
+```
+
+---
+
+## デプロイ
+
+### デプロイ前チェックリスト
+
+デプロイ前に以下を**必ず**確認してください：
+
+#### ✅ 1. コード品質チェック
 - [ ] すべての変更をコミット済み
 - [ ] `git status` がクリーン
 - [ ] コードレビュー完了（該当する場合）
 
-#### 2. **テスト実行**
+#### ✅ 2. テスト実行
 ```bash
 # 開発サーバーを起動
 npm run dev
@@ -318,8 +602,7 @@ npm test
 - [ ] すべてのE2Eテストがパス
 - [ ] 手動で主要ページを確認
 
-#### 3. **ドキュメント更新（重要）**
-以下のファイルを**必ず**更新してください：
+#### ✅ 3. ドキュメント更新（重要）
 
 **llms.txt と llms-full.txt の更新:**
 - [ ] `llms.txt` - サイトコンテンツの概要を反映
@@ -332,11 +615,11 @@ npm test
 - 開発者向けの情報ではなく、サイト訪問者向けの情報を含める
 
 **含めるべき情報:**
-- 会社概要（`src/content/pages/company/index.md` から）
-- プロダクト情報（`src/content/pages/products.md` から）
-- サービス内容（各製品ページから）
-- 会社のミッションとビジョン
-- お問い合わせ情報
+- ✅ 会社概要（`src/content/pages/company/index.md` から）
+- ✅ プロダクト情報（`src/content/pages/products.md` から）
+- ✅ サービス内容（各製品ページから）
+- ✅ 会社のミッションとビジョン
+- ✅ お問い合わせ情報
 
 **含めてはいけない情報:**
 - ❌ npm コマンドや開発手順
@@ -344,10 +627,9 @@ npm test
 - ❌ ディレクトリ構造の技術的詳細
 - ❌ ビルドシステムの情報
 
-これらのファイルは、AIがウェブサイトの**内容**を正しく理解し、
-訪問者の質問に適切に答えられるようにするためのものです。
+これらのファイルは、AIがウェブサイトの**内容**を正しく理解し、訪問者の質問に適切に答えられるようにするためのものです。
 
-#### 4. **ビルド確認**
+#### ✅ 4. ビルド確認
 ```bash
 # ビルド実行
 npm run build
@@ -360,13 +642,13 @@ npm run preview
 - [ ] 画像やアセットが正しく読み込まれる
 - [ ] リンクが正しく機能する
 
-#### 5. **最終チェック**
+#### ✅ 5. 最終チェック
 - [ ] README.md が最新
 - [ ] CHANGELOG.md を更新（該当する場合）
 - [ ] package.json のバージョンを更新（該当する場合）
 - [ ] 環境変数の確認（本番環境）
 
-#### 6. **デプロイ実行**
+#### ✅ 6. デプロイ実行
 ```bash
 # mainブランチにマージ
 git checkout main
@@ -374,103 +656,55 @@ git merge [feature-branch]
 git push origin main
 ```
 
-#### 7. **デプロイ後確認**
+#### ✅ 7. デプロイ後確認
 - [ ] 本番サイトが正しく表示される
 - [ ] すべてのページにアクセス可能
 - [ ] ヘッダー・フッターが正しく表示される
 - [ ] レスポンシブデザインが機能している
 - [ ] Analytics/モニタリングツールが動作している（該当する場合）
 
-#### 8. **ロールバック手順**
+### ロールバック手順
+
 問題が発生した場合：
+
 ```bash
 # 前のコミットに戻す
 git revert HEAD
 git push origin main
 ```
 
+---
+
 ## コーディング規約
 
 ### Astroコンポーネント
 
-- ファイル名: PascalCase（例: `Header.astro`, `BaseLayout.astro`）
-- スタイルは `<style>` タグ内にスコープ化して記述
-- グローバルスタイルは `is:global` を使用
+- **ファイル名**: PascalCase（例: `Header.astro`, `BaseLayout.astro`）
+- **スタイル**: `<style>` タグ内にスコープ化して記述
+- **グローバルスタイル**: `is:global` を使用
 
 ### Markdownコンテンツ
 
-- ファイル名: kebab-case（例: `index.md`, `recruit.md`）
-- フロントマターは必須（`title`, `description`）
-- 見出しレベル: `##` から開始（`#` はページタイトル用に予約）
+- **ファイル名**: kebab-case（例: `index.md`, `recruit.md`）
+- **フロントマター**: 必須（`title`, `description` など）
+- **見出しレベル**: `##` から開始（`#` はページタイトル用に予約）
 
 ### CSS/スタイル
 
-- カラー変数:
-  - プライマリ: `#f39813`
-  - プライマリダーク: `#c2790f`
-  - プライマリビビッド: `#ffa714`
+**カラー変数:**
+- プライマリ: `#f39813`
+- プライマリダーク: `#c2790f`
+- プライマリビビッド: `#ffa714`
+
+**レイアウト:**
 - コンテナ幅: 最大 `1140px`
-- ブレークポイント:
-  - モバイル: `max-width: 768px`
-  - タブレット: `max-width: 991px`
-  - デスクトップ: `min-width: 992px`
 
-## テスト構成
+**ブレークポイント:**
+- モバイル: `max-width: 768px`
+- タブレット: `max-width: 991px`
+- デスクトップ: `min-width: 992px`
 
-### Cucumberテストシナリオ
-
-すべてのテストは日本語（Gherkin）で記述されています。
-
-**主要テストカテゴリ:**
-
-1. **ナビゲーション** (`features/navigation.feature`)
-   - すべてのメニューページへのアクセス
-   - サブメニューの動作
-   - ページ遷移
-
-2. **ヘッダースタイル** (`features/header-styles.feature`)
-   - ホームページ: 透明背景 + 白テキスト
-   - 子ページ: 白背景 + 暗いテキスト
-   - ロゴ画像の切り替え
-
-3. **コンテンツ** (`features/content.feature`)
-   - Markdownのレンダリング
-   - テーブル表示
-   - リンクの動作
-
-4. **レスポンシブ** (`features/responsive.feature`)
-   - デスクトップ表示
-   - モバイル表示
-   - コンテンツ幅
-
-### テストの追加
-
-新しいテストシナリオを追加する場合:
-
-1. `features/` に `.feature` ファイルを作成
-2. 必要に応じて `features/step_definitions/steps.cjs` にステップを追加
-3. `npm test` で動作確認
-
-## 注意事項
-
-### 重要なファイル
-
-以下のファイルは直接編集しないでください:
-- `.astro/` - Astroが自動生成するファイル
-- `dist/` - ビルド出力（`.gitignore`済み）
-- `node_modules/` - 依存関係
-
-### Git管理
-
-- コミット前に必ずテストを実行
-- コミットメッセージは簡潔に、変更内容を明確に
-- 大きな変更は機能ごとに分割してコミット
-
-### パフォーマンス
-
-- 画像は適切なサイズに最適化
-- 不要なJavaScriptは含めない（Astroは静的HTML生成）
-- CSSは必要最小限に
+---
 
 ## トラブルシューティング
 
@@ -482,6 +716,9 @@ lsof -ti:8080
 
 # プロセスを終了
 kill $(lsof -ti:8080)
+
+# または別のポートを使用
+npm run dev -- --port 8081
 ```
 
 ### テストが失敗する
@@ -489,6 +726,7 @@ kill $(lsof -ti:8080)
 1. 開発サーバーが起動しているか確認（`npm run dev`）
 2. ポート8080でアクセスできるか確認（`http://localhost:8080`）
 3. ブラウザで手動確認してから再テスト
+4. Playwrightブラウザを再インストール: `npx playwright install`
 
 ### ビルドエラー
 
@@ -504,9 +742,66 @@ npm install
 npm run build
 ```
 
+### Markdownが反映されない
+
+1. ファイル名が正しいか確認
+2. フロントマターの形式が正しいか確認
+3. Content Collectionsスキーマに準拠しているか確認
+4. 開発サーバーを再起動
+
+### 型エラーが出る
+
+```bash
+# Astroの型定義を再生成
+npm run astro sync
+
+# TypeScriptの型チェック
+npm run astro check
+```
+
+---
+
 ## 参考リンク
 
 - [Astro Documentation](https://docs.astro.build/)
 - [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/)
 - [Cucumber.js](https://cucumber.io/docs/cucumber/)
 - [Playwright](https://playwright.dev/)
+- [Zod（スキーマ検証）](https://zod.dev/)
+
+---
+
+## Git管理
+
+### コミットメッセージ
+
+- 簡潔に、変更内容を明確に記述
+- 大きな変更は機能ごとに分割してコミット
+- Co-Authored-Byは追加しない（CLAUDE.mdの global rules参照）
+
+### ブランチ戦略
+
+- `main` - 本番環境
+- `feature/*` - 機能開発
+- `fix/*` - バグ修正
+
+---
+
+## パフォーマンス最適化
+
+- ✅ 画像は適切なサイズに最適化
+- ✅ 不要なJavaScriptは含めない（Astroは静的HTML生成）
+- ✅ CSSは必要最小限に
+- ✅ フォントは必要なウェイトのみ読み込み
+
+---
+
+## セキュリティ
+
+- ✅ 環境変数は `.env` で管理（`.gitignore` 済み）
+- ✅ APIキーはコミットしない
+- ✅ 依存関係は定期的に更新（`npm audit`）
+
+---
+
+**最終更新: 2024-02-08**
