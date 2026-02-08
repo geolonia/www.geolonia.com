@@ -12,9 +12,7 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 
 ## Geolonia Maps
 
-<p align="center">
-  <img src="/images/icon-map-api.svg" alt="Geolonia Maps" width="150" />
-</p>
+![Geolonia Maps](/images/icon-map-api.svg)
 
 ### 高性能な地図表示ライブラリ
 
@@ -49,9 +47,7 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 
 ## スマートシティのための地理空間データ連携基盤
 
-<p align="center">
-  <img src="/images/icon-smartcity.svg" alt="スマートシティ基盤" width="150" />
-</p>
+![スマートシティ基盤](/images/icon-smartcity.svg)
 
 ### 自治体DXを推進する地理空間データプラットフォーム
 
@@ -94,9 +90,7 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 
 ## 公開型GIS「スマートマップ」
 
-<p align="center">
-  <img src="/images/icon-gis.svg" alt="スマートマップ" width="150" />
-</p>
+![スマートマップ](/images/icon-gis.svg)
 
 ### 誰でも使える地図作成・公開システム
 
@@ -133,9 +127,7 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 
 ## 住所正規化ソリューション
 
-<p align="center">
-  <img src="/images/icon-address.svg" alt="住所正規化" width="150" />
-</p>
+![住所正規化](/images/icon-address.svg)
 
 ### 住所データの品質を向上させるソリューション
 

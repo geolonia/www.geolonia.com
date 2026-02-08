@@ -31,6 +31,8 @@
     "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.58.2",
     "puppeteer": "^24.37.2",
-    "typescript": "^5.9.3"
+    "rehype-rewrite": "^4.0.4",
+    "typescript": "^5.9.3",
+    "unist-util-visit": "^5.1.0"
   }
 }
