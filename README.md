@@ -15,10 +15,10 @@
 npm install
 
 # 開発サーバーの起動（ポート8080）
-npm run dev
+npm start
 ```
 
-開発サーバーは http://localhost:8080 で起動します。
+開発サーバーは http://localhost:8080 で起動し、ブラウザが自動的に開きます。
 
 ## コンテンツの編集
 
@@ -51,7 +51,7 @@ E2Eテストは[Cucumber](https://cucumber.io/)と[Playwright](https://playwrigh
 ### テストの実行
 
 ```bash
-# 開発サーバーが起動していることを確認（別ターミナルで npm run dev）
+# 開発サーバーが起動していることを確認（別ターミナルで npm start）
 
 # テストの実行
 npm test
@@ -64,12 +64,14 @@ npm run test:ci
 
 ```
 features/
-├── navigation.feature      # ナビゲーションテスト
-├── header-styles.feature   # ヘッダースタイルテスト
-├── content.feature         # コンテンツ表示テスト
-├── responsive.feature      # レスポンシブデザインテスト
-├── step_definitions/       # ステップ定義
-└── support/                # テストサポートファイル
+├── navigation.feature         # ナビゲーションテスト
+├── header-styles.feature      # ヘッダースタイルテスト
+├── content.feature            # コンテンツ表示テスト
+├── responsive.feature         # レスポンシブデザインテスト
+├── hamburger-menu.feature     # ハンバーガーメニューテスト
+├── common-components.feature  # 共通コンポーネントテスト
+├── step_definitions/          # ステップ定義
+└── support/                   # テストサポートファイル
 ```
 
 ### テストシナリオ
@@ -78,6 +80,8 @@ features/
 - **ヘッダースタイル**: ホームページと子ページでのヘッダースタイルの違い
 - **コンテンツ**: Markdownコンテンツの正しいレンダリング、リンクの動作
 - **レスポンシブ**: デスクトップとモバイルでの表示
+- **ハンバーガーメニュー**: モバイルメニューの開閉、サブメニュー展開
+- **共通コンポーネント**: ヘッダー・フッターの表示、ロゴリンク、お問い合わせボタン
 
 ## ビルド
 

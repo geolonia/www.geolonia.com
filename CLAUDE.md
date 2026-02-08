@@ -119,6 +119,8 @@ www.geolonia.com/
 │   ├── header-styles.feature        # ヘッダースタイルテスト
 │   ├── content.feature              # コンテンツテスト
 │   ├── responsive.feature           # レスポンシブテスト
+│   ├── hamburger-menu.feature       # ハンバーガーメニューテスト
+│   ├── common-components.feature    # 共通コンポーネントテスト
 │   ├── step_definitions/
 │   │   └── steps.cjs                # ステップ定義（日本語Gherkin）
 │   └── support/
@@ -320,6 +322,10 @@ EOF
 - **配置**: `position: relative`（通常のフロー）
 - **効果**: Box-shadow付き
 
+#### お問い合わせボタンの枠線
+- **ホームページ**: 白色の枠線（`#fff`）
+- **子ページ**: オレンジの枠線（`#f39813`）
+
 #### 実装コード
 ```astro
 ---
@@ -332,6 +338,20 @@ const isHome = Astro.url.pathname === '/';
     </a>
   </h1>
 </header>
+```
+
+```css
+/* お問い合わせボタンの基本スタイル */
+.global-nav-list > li.menu-item-contact > a {
+  border: 2px solid #f39813;
+  border-radius: 4px;
+  padding: 10px 20px !important;
+}
+
+/* ホームページでは白い枠線 */
+.site-header--home .global-nav-list > li.menu-item-contact > a {
+  border-color: #fff;
+}
 ```
 
 ### 2. 静的ページの自動生成
@@ -422,12 +442,13 @@ export const collections = { pages, blog, news, press };
 ### 開発サーバーの起動
 
 ```bash
-npm run dev
+npm start
 ```
 
 - **URL**: http://localhost:8080
 - **ホットリロード**: 有効
 - **自動検知**: ファイル変更を自動で反映
+- **自動ブラウザ起動**: 有効（`--open` フラグ）
 
 ### コンテンツの追加・編集
 
@@ -546,7 +567,7 @@ npm run preview
 
 ```bash
 # 開発サーバーを起動（別ターミナル）
-npm run dev
+npm start
 
 # テスト実行
 npm test
@@ -563,6 +584,8 @@ npm run test:ci
 | `features/header-styles.feature` | ヘッダースタイル（ホーム/子ページの切り替え） |
 | `features/content.feature` | Markdownレンダリング、テーブル、リンク動作 |
 | `features/responsive.feature` | デスクトップ/モバイル表示、コンテンツ幅 |
+| `features/hamburger-menu.feature` | モバイルメニューの開閉、サブメニュー展開、オーバーレイ動作 |
+| `features/common-components.feature` | ヘッダー・フッター表示、ロゴリンク、お問い合わせボタン枠線 |
 
 #### テストの追加
 
@@ -688,7 +711,7 @@ Netlifyダッシュボードで確認：
 #### ✅ 2. テスト実行
 ```bash
 # 開発サーバーを起動
-npm run dev
+npm start
 
 # 別ターミナルでテスト実行
 npm test
@@ -833,7 +856,7 @@ npm run dev -- --port 8081
 
 ### テストが失敗する
 
-1. 開発サーバーが起動しているか確認（`npm run dev`）
+1. 開発サーバーが起動しているか確認（`npm start`）
 2. ポート8080でアクセスできるか確認（`http://localhost:8080`）
 3. ブラウザで手動確認してから再テスト
 4. Playwrightブラウザを再インストール: `npx playwright install`
@@ -914,4 +937,4 @@ npm run astro check
 
 ---
 
-**最終更新: 2024-02-08**
+**最終更新: 2026-02-08**
