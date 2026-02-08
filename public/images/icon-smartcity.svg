@@ -1,0 +1,42 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- スマートシティアイコン -->
+  <defs>
+    <linearGradient id="cityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景円 -->
+  <circle cx="100" cy="100" r="90" fill="url(#cityGradient)" opacity="0.1"/>
+
+  <!-- ビル1 -->
+  <rect x="45" y="90" width="30" height="60" rx="3" fill="url(#cityGradient)" opacity="0.7"/>
+  <rect x="50" y="95" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="60" y="95" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="50" y="105" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="60" y="105" width="5" height="5" fill="#fff" opacity="0.6"/>
+
+  <!-- ビル2（高い） -->
+  <rect x="85" y="70" width="30" height="80" rx="3" fill="url(#cityGradient)"/>
+  <rect x="90" y="75" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="100" y="75" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="90" y="85" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="100" y="85" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="90" y="95" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="100" y="95" width="5" height="5" fill="#fff" opacity="0.6"/>
+
+  <!-- ビル3 -->
+  <rect x="125" y="95" width="30" height="55" rx="3" fill="url(#cityGradient)" opacity="0.7"/>
+  <rect x="130" y="100" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="140" y="100" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="130" y="110" width="5" height="5" fill="#fff" opacity="0.6"/>
+  <rect x="140" y="110" width="5" height="5" fill="#fff" opacity="0.6"/>
+
+  <!-- データ接続線 -->
+  <circle cx="60" cy="80" r="3" fill="#f39813"/>
+  <circle cx="100" cy="60" r="3" fill="#f39813"/>
+  <circle cx="140" cy="85" r="3" fill="#f39813"/>
+  <line x1="60" y1="80" x2="100" y2="60" stroke="#f39813" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="100" y1="60" x2="140" y2="85" stroke="#f39813" stroke-width="1.5" stroke-dasharray="3,3"/>
+</svg>

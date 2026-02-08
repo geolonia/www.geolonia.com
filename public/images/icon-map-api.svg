@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Geolonia Maps API アイコン -->
+  <defs>
+    <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景円 -->
+  <circle cx="100" cy="100" r="90" fill="url(#mapGradient)" opacity="0.1"/>
+
+  <!-- 地図レイヤー1 -->
+  <rect x="40" y="60" width="120" height="80" rx="8" fill="url(#mapGradient)" opacity="0.3"/>
+
+  <!-- 地図レイヤー2 -->
+  <rect x="50" y="70" width="100" height="60" rx="6" fill="url(#mapGradient)" opacity="0.5"/>
+
+  <!-- 地図ピン -->
+  <circle cx="100" cy="95" r="15" fill="#f39813"/>
+  <path d="M 100 80 L 100 95" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="100" cy="95" r="5" fill="#fff"/>
+
+  <!-- コード記号 </> -->
+  <text x="100" y="155" font-family="monospace" font-size="24" fill="#667eea" text-anchor="middle" font-weight="bold">&lt;/&gt;</text>
+</svg>

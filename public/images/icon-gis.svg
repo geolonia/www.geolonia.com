@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 公開型GISアイコン -->
+  <defs>
+    <linearGradient id="gisGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景円 -->
+  <circle cx="100" cy="100" r="90" fill="url(#gisGradient)" opacity="0.1"/>
+
+  <!-- 地球儀 -->
+  <circle cx="100" cy="100" r="50" fill="none" stroke="url(#gisGradient)" stroke-width="3"/>
+  <ellipse cx="100" cy="100" rx="50" ry="20" fill="none" stroke="url(#gisGradient)" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="100" cy="100" rx="20" ry="50" fill="none" stroke="url(#gisGradient)" stroke-width="2" opacity="0.5"/>
+  <line x1="50" y1="100" x2="150" y2="100" stroke="url(#gisGradient)" stroke-width="2" opacity="0.5"/>
+
+  <!-- 共有アイコン -->
+  <circle cx="70" cy="60" r="8" fill="#f39813"/>
+  <circle cx="130" cy="60" r="8" fill="#f39813"/>
+  <circle cx="100" cy="140" r="8" fill="#f39813"/>
+
+  <line x1="70" y1="60" x2="130" y2="60" stroke="#f39813" stroke-width="2"/>
+  <line x1="70" y1="60" x2="100" y2="140" stroke="#f39813" stroke-width="2"/>
+  <line x1="130" y1="60" x2="100" y2="140" stroke="#f39813" stroke-width="2"/>
+</svg>
