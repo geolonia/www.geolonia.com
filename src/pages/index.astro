@@ -30,14 +30,6 @@ const base = import.meta.env.BASE_URL;
     </div>
   </div>
 
-  <!-- Products Heading -->
-  <section class="products-heading">
-    <div class="container">
-      <h2 class="section-title">プロダクト</h2>
-      <p class="section-subtitle">PRODUCTS</p>
-    </div>
-  </section>
-
   <!-- Geolonia Maps Section -->
   <section class="product-section product-section--reverse">
     <div class="product-bg-offset product-bg-offset--left"></div>
@@ -75,9 +67,6 @@ const base = import.meta.env.BASE_URL;
     <div class="product-bg-offset product-bg-offset--right"></div>
     <div class="product-container">
       <div class="product-content">
-        <div class="product-image">
-          <img src={`${base}images/smartcity.png`} alt="Geolonia Maps for SmartCity" />
-        </div>
         <div class="product-text">
           <h2 class="product-title">Geolonia Maps for SmartCity</h2>
           <h3 class="product-subtitle">自治体向けのスマートシティ基盤</h3>
@@ -91,6 +80,9 @@ const base = import.meta.env.BASE_URL;
               </svg>
             </a>
           </div>
+        </div>
+        <div class="product-image">
+          <img src={`${base}images/smartcity.png`} alt="Geolonia Maps for SmartCity" />
         </div>
       </div>
     </div>
@@ -122,6 +114,77 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="product-image">
           <img src={`${base}images/address-normalization.png`} alt="住所ソリューション" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="achievements-section">
+    <div class="achievements-wrapper">
+      <h2 class="section-title">納入先</h2>
+      <p class="section-subtitle">CLIENTS</p>
+
+      <div class="achievements-content">
+        <h3 class="achievements-category">政府</h3>
+        <div class="achievements-grid">
+          <div class="achievement-item">
+            <a href="https://www.cao.go.jp/" target="_blank" rel="noopener" class="achievement-logo">内閣府</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.mlit.go.jp/" target="_blank" rel="noopener" class="achievement-logo">国土交通省</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.meti.go.jp/" target="_blank" rel="noopener" class="achievement-logo">経済産業省</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.digital.go.jp/" target="_blank" rel="noopener" class="achievement-logo">デジタル庁</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.maff.go.jp/" target="_blank" rel="noopener" class="achievement-logo">農林水産省</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.gsi.go.jp/" target="_blank" rel="noopener" class="achievement-logo">国土地理院</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.ipa.go.jp/" target="_blank" rel="noopener" class="achievement-logo">情報処理推進機構</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="achievements-content">
+        <h3 class="achievements-category">民間企業</h3>
+        <div class="achievements-grid">
+          <div class="achievement-item">
+            <a href="https://www.nhk.or.jp/" target="_blank" rel="noopener" class="achievement-logo">日本放送協会</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.softbank.jp/" target="_blank" rel="noopener" class="achievement-logo">ソフトバンク株式会社</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://jpn.nec.com/" target="_blank" rel="noopener" class="achievement-logo">日本電気株式会社</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.toppan.com/ja/" target="_blank" rel="noopener" class="achievement-logo">TOPPAN株式会社</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.takenaka.co.jp/" target="_blank" rel="noopener" class="achievement-logo">株式会社竹中工務店</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.pwc.com/jp/ja.html" target="_blank" rel="noopener" class="achievement-logo">PwC Japan合同会社</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://sanix.jp/" target="_blank" rel="noopener" class="achievement-logo">サニックス株式会社</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.pasco.co.jp/" target="_blank" rel="noopener" class="achievement-logo">株式会社パスコ</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.axelspace.com/" target="_blank" rel="noopener" class="achievement-logo">株式会社アクセルスペース</a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.aerotoyota.co.jp/" target="_blank" rel="noopener" class="achievement-logo">エアロトヨタ株式会社</a>
+          </div>
         </div>
       </div>
     </div>
@@ -277,7 +340,7 @@ const base = import.meta.env.BASE_URL;
   .product-section {
     position: relative;
     padding: 4rem 0;
-    margin: 4rem 0;
+    margin: 0;
   }
 
   .product-bg-offset {
@@ -306,19 +369,18 @@ const base = import.meta.env.BASE_URL;
   }
 
   .product-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
     gap: 0;
     max-width: 100%;
   }
 
-  .product-section--reverse .product-content {
-    direction: rtl;
+  .product-content > * {
+    flex: 1;
   }
 
-  .product-section--reverse .product-text {
-    direction: ltr;
+  .product-section--reverse .product-content {
+    flex-direction: row-reverse;
   }
 
   .product-text {
@@ -409,11 +471,11 @@ const base = import.meta.env.BASE_URL;
     }
 
     .product-content {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
 
     .product-section--reverse .product-content {
-      direction: ltr;
+      flex-direction: column;
     }
 
     .product-text {
@@ -435,6 +497,144 @@ const base = import.meta.env.BASE_URL;
     .product-button {
       width: 100%;
       min-width: 100%;
+    }
+  }
+
+  /* Achievements Section */
+  .achievements-section {
+    padding: 5rem 0 5rem;
+    background: linear-gradient(to bottom, #2a2f38 0%, #3a4048 100%);
+    position: relative;
+  }
+
+  .achievements-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #444 50%, transparent);
+  }
+
+  .achievements-section .section-title {
+    color: #ffffff;
+  }
+
+  .achievements-section .section-subtitle {
+    color: #9ca3af;
+  }
+
+  .achievements-wrapper {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .achievements-content {
+    margin-top: 3rem;
+  }
+
+  .achievements-category {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin: 0 0 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 0.6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .achievements-divider {
+    height: 2rem;
+  }
+
+  .achievement-item {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55px;
+  }
+
+  .achievement-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f39813, #ffa714);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .achievement-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(243, 152, 19, 0.12);
+    border-color: #ffa714;
+    background: #ffffff;
+  }
+
+  .achievement-item:hover::before {
+    transform: scaleX(1);
+  }
+
+  .achievement-logo {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .achievement-logo:hover {
+    color: #f39813;
+  }
+
+  @media (max-width: 768px) {
+    .achievements-section {
+      padding: 3rem 0 4rem;
+    }
+
+    .achievements-wrapper {
+      padding: 0 1rem;
+    }
+
+    .achievements-grid {
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .achievement-item {
+      padding: 0.6rem 0.8rem;
+      min-height: 50px;
+    }
+
+    .achievement-logo {
+      font-size: 0.75rem;
+    }
+
+    .achievements-category {
+      font-size: 0.7rem;
+      margin-bottom: 1rem;
     }
   }
 </style>
