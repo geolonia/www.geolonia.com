@@ -124,6 +124,10 @@ www.geolonia.com/
 │   └── support/
 │       └── world.cjs                # テストコンテキスト（Playwright）
 │
+├── .github/
+│   └── workflows/
+│       └── deploy.yml               # GitHub Pages自動デプロイ
+│
 ├── .gitignore                       # Git除外設定
 ├── astro.config.mjs                 # Astro設定
 ├── cucumber.cjs                     # Cucumber設定
@@ -582,6 +586,52 @@ npm run test:ci
 
 ## デプロイ
 
+### GitHub Pages へのデプロイ
+
+このサイトはGitHub Pagesに自動デプロイされます。
+
+#### 自動デプロイの仕組み
+
+1. **mainブランチにプッシュ**すると自動的にデプロイが開始されます
+2. GitHub Actionsが自動的にビルドを実行
+3. ビルド結果が`gh-pages`ブランチにデプロイ
+4. GitHub Pagesで公開
+
+#### デプロイ手順
+
+```bash
+# 変更をコミット
+git add .
+git commit -m "Update content"
+
+# mainブランチにプッシュ（自動デプロイ開始）
+git push origin main
+```
+
+#### デプロイ状況の確認
+
+GitHub Actionsのステータスを確認：
+
+```bash
+# ブラウザでActionsページを開く
+gh repo view --web
+```
+
+または：https://github.com/geolonia/www.geolonia.com/actions
+
+#### 手動デプロイ
+
+必要に応じて手動でデプロイを実行できます：
+
+```bash
+# GitHub Actionsで手動実行
+gh workflow run deploy.yml
+```
+
+#### デプロイ設定ファイル
+
+`.github/workflows/deploy.yml` - GitHub Actionsワークフロー
+
 ### デプロイ前チェックリスト
 
 デプロイ前に以下を**必ず**確認してください：
@@ -653,8 +703,13 @@ npm run preview
 # mainブランチにマージ
 git checkout main
 git merge [feature-branch]
+
+# プッシュすると自動的にGitHub Pagesにデプロイされます
 git push origin main
 ```
+
+デプロイ状況はGitHub Actionsで確認できます：
+- https://github.com/geolonia/www.geolonia.com/actions
 
 #### ✅ 7. デプロイ後確認
 - [ ] 本番サイトが正しく表示される
