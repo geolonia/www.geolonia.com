@@ -30,26 +30,29 @@ www.geolonia.com/
 │   │
 │   ├── content/                     # コンテンツコレクション
 │   │   ├── config.ts                # コレクション定義
-│   │   ├── blog/                    # ブログ記事
-│   │   ├── news/                    # ニュース
-│   │   └── pages/                   # ページコンテンツ（Markdown）
-│   │       ├── company/
-│   │       │   ├── index.md         # 会社概要
-│   │       │   └── recruit.md       # 採用情報
-│   │       ├── products.md
-│   │       ├── developer.md
-│   │       ├── resources/
-│   │       └── ...
+│   │   ├── pages/                   # 静的ページ（Markdown）
+│   │   │   ├── company/
+│   │   │   │   ├── index.md         # 会社概要
+│   │   │   │   └── recruit.md       # 採用情報
+│   │   │   ├── products.md
+│   │   │   ├── developer.md
+│   │   │   └── ...
+│   │   ├── blog/                    # ブログ記事（日付順）
+│   │   ├── news/                    # お知らせ（日付順）
+│   │   └── press/                   # プレスリリース（日付順）
 │   │
 │   └── pages/                       # ページルーティング
 │       ├── index.astro              # トップページ
-│       ├── company/
-│       │   ├── index.astro          # Markdownを読み込んで表示
-│       │   └── recruit/
-│       │       └── index.astro
-│       ├── products/
-│       ├── developer/
-│       └── ...
+│       ├── [...slug].astro          # 静的ページ（動的ルート）
+│       ├── blog/
+│       │   ├── index.astro          # ブログ一覧
+│       │   └── [slug].astro         # ブログ記事詳細
+│       ├── news/
+│       │   ├── index.astro          # お知らせ一覧
+│       │   └── [slug].astro         # お知らせ詳細
+│       └── press/
+│           ├── index.astro          # プレスリリース一覧
+│           └── [slug].astro         # プレスリリース詳細
 │
 ├── features/                        # E2Eテスト（Cucumber）
 │   ├── navigation.feature           # ナビゲーションテスト
@@ -92,29 +95,55 @@ const isHome = Astro.url.pathname === '/';
 <header class={`site-header ${isHome ? 'site-header--home' : 'site-header--page'}`}>
 ```
 
-### 2. Markdownベースのコンテンツ管理
+### 2. コンテンツタイプ
 
-すべてのページコンテンツは `src/content/pages/` 配下のMarkdownファイルで管理されています。
+このサイトには4種類のコンテンツタイプがあります：
 
-**コンテンツ編集の流れ:**
-1. `src/content/pages/` 配下のMarkdownファイルを編集
-2. ファイルを保存
-3. 開発サーバーが自動的に変更を検知して反映
+#### 静的ページ（Pages）
+`src/content/pages/` - 会社概要、製品紹介など、日付に依存しないページ
 
-**ページの実装パターン:**
-```astro
+**特徴:**
+- マークダウンファイルを追加するだけで自動的にページ生成
+- `src/pages/[...slug].astro` が動的にルーティング
+- URL: `/company/`, `/products/` など
+
+**新規ページの追加方法:**
+```bash
+# 例: /services/ ページを作成
+cat > src/content/pages/services.md <<EOF
 ---
-import MarkdownPageLayout from '../../layouts/MarkdownPageLayout.astro';
-import { getEntry } from 'astro:content';
-
-const entry = await getEntry('pages', 'company/index');
-const { Content } = await entry.render();
+title: "サービス"
+description: "提供サービス一覧"
 ---
 
-<MarkdownPageLayout title={entry.data.title} description={entry.data.description}>
-  <Content />
-</MarkdownPageLayout>
+## サービス内容
+...
+EOF
 ```
+
+#### ブログ（Blog）
+`src/content/blog/` - 技術ブログ、開発者向け記事
+
+**特徴:**
+- 日付順にソート表示
+- タグ、カテゴリ機能
+- URL: `/blog/`, `/blog/post-name/`
+
+#### お知らせ（News）
+`src/content/news/` - 一般的なお知らせ、更新情報
+
+**特徴:**
+- 日付順にソート表示
+- カテゴリ機能
+- URL: `/news/`, `/news/announcement-name/`
+
+#### プレスリリース（Press）
+`src/content/press/` - 正式なプレスリリース
+
+**特徴:**
+- 日付順にソート表示
+- カテゴリ機能
+- URL: `/press/`, `/press/release-name/`
 
 ### 3. Content Collections
 
@@ -122,11 +151,47 @@ Astro Content Collectionsを使用してコンテンツを管理しています�
 
 **定義:** `src/content/config.ts`
 ```typescript
+// 静的ページ
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+    lead: z.string().optional(),
+  }),
+});
+
+// ブログ記事
+const blog = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    author: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
+// お知らせ
+const news = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: z.string().optional(),
+  }),
+});
+
+// プレスリリース
+const press = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: z.string().optional(),
   }),
 });
 ```
@@ -143,17 +208,72 @@ npm run dev
 - ファイル変更を自動検知
 - ホットリロード有効
 
-### コンテンツの編集
+### コンテンツの追加・編集
 
-1. **ページコンテンツの編集:**
-   - `src/content/pages/` 配下のMarkdownファイルを編集
-   - フロントマター（YAML）でメタデータを管理
-   - Markdown本文でコンテンツを記述
+#### 静的ページの追加
+マークダウンファイルを追加するだけで自動的にページが生成されます。
 
-2. **新しいページの追加:**
-   - `src/content/pages/` にMarkdownファイルを作成
-   - `src/pages/` に対応するAstroファイルを作成
-   - `getEntry()` でMarkdownを読み込み
+```bash
+# 例: /services/ ページを作成
+cat > src/content/pages/services.md <<EOF
+---
+title: "サービス"
+description: "提供サービス一覧"
+lead: "Geoloniaが提供するサービス"
+---
+
+## サービス内容
+...
+EOF
+```
+
+→ 自動的に `/services/` でアクセス可能になります
+
+#### ブログ記事の追加
+```bash
+cat > src/content/blog/2024-02-08-new-feature.md <<EOF
+---
+title: "新機能をリリースしました"
+description: "○○機能の追加について"
+pubDate: 2024-02-08
+author: "Geolonia"
+tags: ["お知らせ", "新機能"]
+---
+
+## 新機能について
+...
+EOF
+```
+
+#### お知らせの追加
+```bash
+cat > src/content/news/2024-02-08-maintenance.md <<EOF
+---
+title: "メンテナンスのお知らせ"
+description: "定期メンテナンス実施について"
+pubDate: 2024-02-08
+category: "メンテナンス"
+---
+
+## メンテナンス内容
+...
+EOF
+```
+
+#### プレスリリースの追加
+```bash
+cat > src/content/press/2024-02-08-funding.md <<EOF
+---
+title: "シリーズA資金調達を実施"
+description: "○○億円の資金調達について"
+pubDate: 2024-02-08
+category: "資金調達"
+---
+
+## 概要
+...
+EOF
+```
 
 ### テストの実行
 

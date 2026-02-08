@@ -22,6 +22,16 @@ const news = defineCollection({
   }),
 });
 
+const press = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    category: z.string().optional(),
+  }),
+});
+
 const pages = defineCollection({
   type: 'content',
   schema: z.object({
@@ -32,4 +42,4 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { blog, news, pages };
+export const collections = { blog, news, press, pages };

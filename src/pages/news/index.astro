@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('news')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="お知らせ | 株式会社Geolonia">
+  <div class="page-container">
+    <div class="hero-section">
+      <div class="container">
+        <h1>お知らせ</h1>
+        <p class="lead">最新のお知らせをお届けします</p>
+      </div>
+    </div>
+    <div class="content-section">
+      <div class="container">
+        <div class="posts">
+          {
+            posts.map((post) => (
+              <article class="post-card">
+                <a href={`/news/${post.slug}/`}>
+                  <p class="date">{post.data.pubDate.toLocaleDateString('ja-JP')}</p>
+                  <h2>{post.data.title}</h2>
+                  <p class="description">{post.data.description}</p>
+                  {post.data.category && (
+                    <span class="category">{post.data.category}</span>
+                  )}
+                </a>
+              </article>
+            ))
+          }
+        </div>
+        {posts.length === 0 && (
+          <p class="no-posts">お知らせはまだありません。</p>
+        )}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .posts {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .post-card {
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+  }
+
+  .post-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-card h2 {
+    margin: 0 0 0.5rem 0;
+    color: #667eea;
+    font-size: 1.3rem;
+  }
+
+  .description {
+    color: #333;
+    margin-bottom: 0.75rem;
+  }
+
+  .category {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+
+  .no-posts {
+    text-align: center;
+    color: #666;
+    padding: 3rem 0;
+  }
+</style>

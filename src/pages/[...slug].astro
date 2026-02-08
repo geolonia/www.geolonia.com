@@ -1,4 +1,17 @@
 ---
+/**
+ * 静的ページの動的ルート
+ *
+ * src/content/pages/ 内のマークダウンファイルから自動的にページを生成します。
+ *
+ * このルートは以下のパスには適用されません：
+ * - /blog/* - ブログ記事（日付順）
+ * - /news/* - お知らせ（日付順）
+ * - /press/* - プレスリリース（日付順）
+ *
+ * 新しい静的ページを追加するには、src/content/pages/ に
+ * マークダウンファイルを作成するだけです。
+ */
 import { getCollection } from 'astro:content';
 import MarkdownPageLayout from '../layouts/MarkdownPageLayout.astro';
 
