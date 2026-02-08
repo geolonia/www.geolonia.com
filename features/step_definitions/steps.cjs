@@ -183,3 +183,128 @@ Then('コンテンツが読みやすい幅で表示される', async function() 
   expect(width).toBeLessThanOrEqual(1140);
   expect(width).toBeGreaterThan(0);
 });
+
+// Hamburger menu steps
+Given('ブラウザサイズを {int} x {int} に設定', async function(width, height) {
+  await this.page.setViewportSize({ width, height });
+});
+
+When('ブラウザサイズを {int} x {int} に変更', async function(width, height) {
+  await this.page.setViewportSize({ width, height });
+  await this.page.waitForTimeout(500); // Wait for resize event
+});
+
+Then('ハンバーガーメニューボタンが表示されない', async function() {
+  const btn = await this.page.locator('.vk-mobile-nav-menu-btn');
+  const display = await btn.evaluate(el => window.getComputedStyle(el).display);
+  expect(display).toBe('none');
+});
+
+Then('通常のナビゲーションメニューが表示される', async function() {
+  const nav = await this.page.locator('.global-nav');
+  const display = await nav.evaluate(el => window.getComputedStyle(el).display);
+  expect(display).not.toBe('none');
+});
+
+Then('ハンバーガーメニューボタンが表示される', async function() {
+  const btn = await this.page.locator('.vk-mobile-nav-menu-btn');
+  const display = await btn.evaluate(el => window.getComputedStyle(el).display);
+  expect(display).toBe('flex');
+});
+
+Then('通常のナビゲーションメニューが表示されない', async function() {
+  const nav = await this.page.locator('.global-nav');
+  const display = await nav.evaluate(el => window.getComputedStyle(el).display);
+  expect(display).toBe('none');
+});
+
+When('ハンバーガーメニューボタンをクリック', async function() {
+  const btn = await this.page.locator('#mobile-menu-btn');
+  await btn.click();
+  await this.page.waitForTimeout(300); // Wait for animation
+});
+
+When('ハンバーガーメニューボタンを再度クリック', async function() {
+  const btn = await this.page.locator('#mobile-menu-btn');
+  await btn.click();
+  await this.page.waitForTimeout(300); // Wait for animation
+});
+
+Then('モバイルメニューオーバーレイが表示される', async function() {
+  const overlay = await this.page.locator('#mobile-nav-overlay');
+  await expect(overlay).toHaveClass(/active/);
+  const opacity = await overlay.evaluate(el => window.getComputedStyle(el).opacity);
+  expect(parseFloat(opacity)).toBeGreaterThan(0);
+});
+
+Then('モバイルメニューオーバーレイが非表示になる', async function() {
+  const overlay = await this.page.locator('#mobile-nav-overlay');
+  const classes = await overlay.getAttribute('class');
+  expect(classes).not.toContain('active');
+});
+
+Then('ハンバーガーアイコンがXマークに変わる', async function() {
+  const btn = await this.page.locator('#mobile-menu-btn');
+  await expect(btn).toHaveClass(/active/);
+});
+
+Then('ハンバーガーアイコンが元の形に戻る', async function() {
+  const btn = await this.page.locator('#mobile-menu-btn');
+  const classes = await btn.getAttribute('class');
+  expect(classes).not.toContain('active');
+});
+
+When('オーバーレイの背景をクリック', async function() {
+  // Click on the overlay itself (not on the menu inside)
+  await this.page.evaluate(() => {
+    const overlay = document.getElementById('mobile-nav-overlay');
+    if (overlay) {
+      overlay.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    }
+  });
+  await this.page.waitForTimeout(300);
+});
+
+Then('モバイルメニューに {string} が表示される', async function(text) {
+  const menu = await this.page.locator('.mobile-nav-list');
+  const content = await menu.textContent();
+  expect(content).toContain(text);
+});
+
+When('モバイルメニューで {string} をクリック', async function(menuText) {
+  const menuItem = await this.page.locator('.mobile-menu-item-has-children > a').filter({ hasText: menuText });
+  await menuItem.click();
+  await this.page.waitForTimeout(300); // Wait for animation
+});
+
+When('モバイルメニューで {string} を再度クリック', async function(menuText) {
+  const menuItem = await this.page.locator('.mobile-menu-item-has-children > a').filter({ hasText: menuText });
+  await menuItem.click();
+  await this.page.waitForTimeout(300); // Wait for animation
+});
+
+Then('{string} のサブメニューが展開される', async function(menuText) {
+  const parentLi = await this.page.locator('.mobile-menu-item-has-children').filter({ hasText: menuText });
+  await expect(parentLi).toHaveClass(/active/);
+  const submenu = await parentLi.locator('.mobile-sub-menu');
+  const maxHeight = await submenu.evaluate(el => window.getComputedStyle(el).maxHeight);
+  expect(maxHeight).not.toBe('0px');
+});
+
+Then('{string} のサブメニューが折りたたまれる', async function(menuText) {
+  const parentLi = await this.page.locator('.mobile-menu-item-has-children').filter({ hasText: menuText });
+  const classes = await parentLi.getAttribute('class');
+  expect(classes).not.toContain('active');
+});
+
+Then('サブメニューに {string} が表示される', async function(text) {
+  const submenu = await this.page.locator('.mobile-sub-menu').first();
+  const content = await submenu.textContent();
+  expect(content).toContain(text);
+});
+
+When('サブメニューで {string} をクリック', async function(linkText) {
+  const link = await this.page.locator('.mobile-sub-menu a').filter({ hasText: linkText });
+  await link.click();
+  await this.page.waitForLoadState('networkidle');
+});

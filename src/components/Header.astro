@@ -118,7 +118,76 @@ const logoColor = `${base}images/geolonia_logo.png`;
       </ul>
     </nav>
 
-    <button class="vk-mobile-nav-menu-btn" id="mobile-menu-btn" aria-label="MENU">MENU</button>
+    <button class="vk-mobile-nav-menu-btn" id="mobile-menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li class="mobile-menu-item">
+          <a href="/">ホーム</a>
+        </li>
+        <li class="mobile-menu-item mobile-menu-item-has-children">
+          <a href="/products/" class="mobile-menu-toggle">プロダクト</a>
+          <ul class="mobile-sub-menu">
+            <li><a href="/maps/">Geolonia Maps</a></li>
+            <li><a href="/maps-dev/">コードサンプル</a></li>
+            <li><a href="/geolonia-maps-for-smartcity/">スマートシティのための「地理空間データ連携基盤」</a></li>
+            <li><a href="/geolonia-maps-for-smartcity/seminar2025/">自治体職員向けセミナー</a></li>
+            <li><a href="/smartmap/">公開型GIS「スマートマップ」</a></li>
+            <li><a href="https://quicknja.com/">クイック住所変換</a></li>
+            <li><a href="/address-normalization/">住所正規化ソリューション</a></li>
+            <li><a href="https://chizubouken-lab.jp">地図ぼうけんラボ</a></li>
+            <li><a href="/products/faq/">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item mobile-menu-item-has-children">
+          <a href="/developer/" class="mobile-menu-toggle">開発者向け</a>
+          <ul class="mobile-sub-menu">
+            <li><a href="https://docs.geolonia.com/">Geolonia Maps ドキュメント</a></li>
+            <li><a href="/maps-dev/">コードサンプル</a></li>
+            <li><a href="https://blog.geolonia.com/">開発者 blog</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item mobile-menu-item-has-children">
+          <a href="/company" class="mobile-menu-toggle">会社情報</a>
+          <ul class="mobile-sub-menu">
+            <li><a href="/company/">会社概要</a></li>
+            <li><a href="/company/recruit/">採用情報</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item mobile-menu-item-has-children">
+          <a href="/resources/" class="mobile-menu-toggle">各種DX資料</a>
+          <ul class="mobile-sub-menu">
+            <li><a href="/resources/geolonia-maps-for-smartcity/">スマートシティ実現のための地理空間データ連携基盤</a></li>
+            <li><a href="/resources/wp-jad-dx/">日本の住所におけるデジタル化の課題</a></li>
+            <li><a href="/resources/github-for-governments/">GitHub for Governments</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item mobile-menu-item-has-children">
+          <a href="/information" class="mobile-menu-toggle">新着情報</a>
+          <ul class="mobile-sub-menu">
+            <li><a href="/newsrelease/">ニュースリリース</a></li>
+            <li><a href="/information/">お知らせ</a></li>
+            <li><a href="/blog/">スマートシティブログ</a></li>
+          </ul>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="/contact/" class="mobile-contact-btn">お問い合わせ</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="https://app.geolonia.com/?lang=ja#/signin">サインイン</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="https://app.geolonia.com/?lang=ja#/signup">ユーザー登録</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -457,18 +526,154 @@ const logoColor = `${base}images/geolonia_logo.png`;
   /* Mobile Menu Button */
   .vk-mobile-nav-menu-btn {
     position: fixed;
-    top: 5px;
-    right: 5px;
-    z-index: 2100;
-    overflow: hidden;
-    border: 1px solid #333;
-    border-radius: 2px;
-    width: 34px;
-    height: 34px;
+    top: 15px;
+    right: 15px;
+    z-index: 10001;
+    border: none;
+    border-radius: 4px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
-    font-size: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(243, 152, 19, 0.95);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .vk-mobile-nav-menu-btn:hover {
+    background: rgba(243, 152, 19, 1);
+  }
+
+  .hamburger-line {
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .vk-mobile-nav-menu-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .vk-mobile-nav-menu-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .vk-mobile-nav-menu-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Mobile Navigation Overlay */
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-nav {
+    padding: 80px 20px 40px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-menu-item > a {
+    display: block;
+    padding: 16px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  }
+
+  .mobile-menu-item > a:hover {
+    color: #f39813;
+    padding-left: 10px;
+  }
+
+  .mobile-contact-btn {
+    background: #f39813;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    border-radius: 4px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700 !important;
+  }
+
+  .mobile-contact-btn:hover {
+    background: #ffa714 !important;
+    padding-left: 24px !important;
+  }
+
+  /* Mobile Submenu */
+  .mobile-sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-menu-item-has-children.active .mobile-sub-menu {
+    max-height: 1000px;
+  }
+
+  .mobile-sub-menu li {
+    padding-left: 20px;
+  }
+
+  .mobile-sub-menu li a {
+    display: block;
+    padding: 12px 0;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-sub-menu li a:hover {
+    color: #f39813;
+  }
+
+  .mobile-menu-item-has-children > a::after {
+    content: '▼';
+    float: right;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-menu-item-has-children.active > a::after {
+    transform: rotate(180deg);
   }
 
   /* Desktop Layout */
@@ -526,7 +731,7 @@ const logoColor = `${base}images/geolonia_logo.png`;
     }
 
     .vk-mobile-nav-menu-btn {
-      display: block;
+      display: flex;
     }
 
     .site-header-logo {
@@ -548,8 +753,54 @@ const logoColor = `${base}images/geolonia_logo.png`;
 </style>
 
 <script>
-  // Mobile menu toggle (placeholder for future implementation)
-  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-    console.log('Mobile menu clicked');
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+  const body = document.body;
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    const isActive = mobileMenuBtn.classList.toggle('active');
+    mobileNavOverlay?.classList.toggle('active');
+
+    // Prevent body scroll when menu is open
+    if (isActive) {
+      body.style.overflow = 'hidden';
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      body.style.overflow = '';
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close menu when clicking overlay background
+  mobileNavOverlay?.addEventListener('click', (e) => {
+    if (e.target === mobileNavOverlay) {
+      mobileMenuBtn?.classList.remove('active');
+      mobileNavOverlay.classList.remove('active');
+      body.style.overflow = '';
+      mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Submenu toggle
+  document.querySelectorAll('.mobile-menu-item-has-children > a').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      // Only toggle submenu if clicking the parent link itself
+      const parentLi = link.parentElement;
+      if (parentLi) {
+        e.preventDefault();
+        parentLi.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close mobile menu on window resize to desktop size
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) {
+      mobileMenuBtn?.classList.remove('active');
+      mobileNavOverlay?.classList.remove('active');
+      body.style.overflow = '';
+      mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>

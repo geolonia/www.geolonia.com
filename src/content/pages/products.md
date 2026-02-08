@@ -12,34 +12,99 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 
 ## Geolonia Maps
 
-![Geolonia Maps](/images/icon-map-api.svg)
+[![Geolonia Maps](/images/geolonia-maps.png)](https://maps.geolonia.com/)
 
 ### 高性能な地図表示ライブラリ
 
 ウェブサイトやアプリケーションに簡単に組み込める、高性能な地図表示ライブラリです。
 
-#### 主な特徴
+<style>
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 100%;
+}
 
-- **シンプルで使いやすいAPI** - 数行のコードで美しい地図を表示
-- **高速なレンダリング** - ベクタータイルによる軽快な動作
-- **豊富なカスタマイズオプション** - デザインを自由にカスタマイズ
-- **モバイル対応** - スマートフォン・タブレットでも快適に動作
-- **オープンソース** - 透明性の高い開発プロセス
+.feature-block {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #f39813;
+}
 
-#### 使用例
+.feature-block h4 {
+  color: #f39813;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
 
-- **店舗検索システム** - 複数店舗の位置を地図上に表示
-- **配送ルート表示** - リアルタイムの配送状況を可視化
-- **エリアマーケティング** - 商圏分析や顧客分布の可視化
-- **観光案内アプリ** - 観光スポットやイベント情報の地図表示
-- **不動産物件検索** - 物件情報を地図上で検索・比較
+.feature-block ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: none;
+}
 
-#### 技術サポート
+.feature-block li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
 
-- 詳細なドキュメント
-- 豊富なコードサンプル
-- メールサポート
-- コミュニティフォーラム
+.feature-block li strong {
+  color: #333;
+}
+
+@media (max-width: 991px) {
+  .feature-grid {
+    display: block;
+  }
+
+  .feature-block {
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-block:last-child {
+    margin-bottom: 0;
+  }
+}
+</style>
+
+<div class="feature-grid">
+  <div class="feature-block">
+    <h4>主な特徴</h4>
+    <ul>
+      <li><strong>シンプルで使いやすいAPI</strong> - 数行のコードで美しい地図を表示</li>
+      <li><strong>高速なレンダリング</strong> - ベクタータイルによる軽快な動作</li>
+      <li><strong>豊富なカスタマイズオプション</strong> - デザインを自由にカスタマイズ</li>
+      <li><strong>モバイル対応</strong> - スマートフォン・タブレットでも快適に動作</li>
+      <li><strong>オープンソース</strong> - 透明性の高い開発プロセス</li>
+    </ul>
+  </div>
+
+  <div class="feature-block">
+    <h4>使用例</h4>
+    <ul>
+      <li><strong>店舗検索システム</strong> - 複数店舗の位置を地図上に表示</li>
+      <li><strong>配送ルート表示</strong> - リアルタイムの配送状況を可視化</li>
+      <li><strong>エリアマーケティング</strong> - 商圏分析や顧客分布の可視化</li>
+      <li><strong>観光案内アプリ</strong> - 観光スポットやイベント情報の地図表示</li>
+      <li><strong>不動産物件検索</strong> - 物件情報を地図上で検索・比較</li>
+    </ul>
+  </div>
+
+  <div class="feature-block">
+    <h4>技術サポート</h4>
+    <ul>
+      <li>詳細なドキュメント</li>
+      <li>豊富なコードサンプル</li>
+      <li>メールサポート</li>
+      <li>コミュニティフォーラム</li>
+    </ul>
+  </div>
+</div>
 
 [Geolonia Maps の詳細を見る →](/maps/)
 
