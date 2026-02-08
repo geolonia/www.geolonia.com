@@ -4,7 +4,7 @@
   "description": "株式会社Geoloniaのウェブサイト",
   "type": "module",
   "scripts": {
-    "start": "astro dev",
+    "start": "astro dev --open",
     "build": "astro check && astro build",
     "build:staging": "STAGING=true astro check && STAGING=true astro build",
     "build:production": "astro check && astro build",
