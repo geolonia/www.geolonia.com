@@ -435,6 +435,63 @@ export const collections = { pages, blog, news, press };
 - ✅ IDEの自動補完
 - ✅ ビルド時エラー検出
 
+### 4. サイトマップの自動生成
+
+Astroの公式サイトマップ統合（`@astrojs/sitemap`）により、ビルド時に自動的にサイトマップが生成されます。
+
+#### 動作フロー
+
+1. **コンテンツ追加・更新** - `src/content/` にマークダウンファイルを追加・編集
+2. **ビルド実行** - `npm run build` でサイトをビルド
+3. **サイトマップ生成** - すべてのページを自動的にスキャンしてサイトマップを生成
+4. **ファイル出力** - `dist/` に以下のファイルが出力される
+   - `sitemap-index.xml` - サイトマップインデックス（目次）
+   - `sitemap-0.xml` - 実際のURLリストを含むサイトマップ
+
+#### 生成されるサイトマップ
+
+```xml
+<!-- sitemap-0.xml の例 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.geolonia.com/</loc></url>
+  <url><loc>https://www.geolonia.com/company/</loc></url>
+  <url><loc>https://www.geolonia.com/products/</loc></url>
+  <!-- すべてのページが自動的に含まれる -->
+</urlset>
+```
+
+#### 設定ファイル
+
+**`astro.config.mjs`** にサイトマップ統合が設定されています：
+
+```javascript
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://www.geolonia.com',
+  integrations: [mdx(), sitemap()],
+  // ...
+});
+```
+
+#### 重要なポイント
+
+- ✅ **自動更新** - コンテンツを追加・削除すると、次のビルドで自動的にサイトマップも更新されます
+- ✅ **手動メンテナンス不要** - URLを手動で追加・削除する必要はありません
+- ✅ **SEO最適化** - 検索エンジンがすべてのページを効率的にクロールできます
+- ✅ **ステージング/本番対応** - 環境に応じて正しいURLが生成されます
+  - ステージング: `https://geolonia.github.io/www.geolonia.com/`
+  - 本番: `https://www.geolonia.com/`
+
+#### サイトマップの確認
+
+ビルド後、以下のURLでアクセス可能です：
+- 本番: https://www.geolonia.com/sitemap-index.xml
+- ステージング: https://geolonia.github.io/www.geolonia.com/sitemap-index.xml
+
+**注意:** サイトマップはビルド時にのみ生成されます。開発サーバー（`npm start`）では生成されません。
+
 ---
 
 ## 開発ワークフロー
