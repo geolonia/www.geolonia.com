@@ -1,6 +1,6 @@
 ---
 title: "「Code for Japan Summit 2023」出展のお知らせ"
-description: "11月25日(土)に開催される「Code for Japan Summit 2023」にGeoloniaブースを出展します。 「Code for Japan Summit 2023」ウェブサイト  https://summit2023."
+description: "11月25日(土)に開催される「Code for Japan Summit 2023」にGeoloniaブースを出展します。"
 pubDate: 2023-11-20
 category: "お知らせ"
 ---

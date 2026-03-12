@@ -1,6 +1,6 @@
 ---
 title: "大阪・関西万博出展のお知らせ"
-description: "Geoloniaは、大阪・関西万博へ、5月12(月)〜14(水)の3日間、出展いたします。 大阪・関西万博の公式サイト https://www.expo2025."
+description: "Geoloniaは、大阪・関西万博へ、5月12(月)〜14(水)の3日間、出展いたします。"
 pubDate: 2025-04-28
 category: "お知らせ"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TSUNAGU CITY 2026 in NAGO出展のお知らせ"
-description: "Geoloniaは、2月13日(金)・14日(土)に開催される「TSUNAGU CITY 2026 in NAGO」に出展いたします。 TSUNAGU CITY 2026 in NAGOウェブサイト https://www."
+description: "Geoloniaは、2月13日(金)・14日(土)に開催される「TSUNAGU CITY 2026 in NAGO」に出展いたします。デジタル技術を活用し、市民のウェルビーイング向上と持続可能なスマートシティ実現を目指すイベントです。"
 pubDate: 2026-02-04
 category: "お知らせ"
 ---

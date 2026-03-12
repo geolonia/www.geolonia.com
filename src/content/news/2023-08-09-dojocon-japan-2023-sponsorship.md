@@ -1,6 +1,6 @@
 ---
 title: "「DojoCon Japan 2023 」への協賛のお知らせ"
-description: "当社は、8月27日（日）に開催される「DojoCon Japan 2023 」にスポンサーとして協賛いたします。 https://dojocon2023.coderdojo."
+description: "当社は、8月27日（日）に開催される「DojoCon Japan 2023」にスポンサーとして協賛いたします。"
 pubDate: 2023-08-09
 category: "お知らせ"
 ---

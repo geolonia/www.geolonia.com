@@ -1,6 +1,6 @@
 ---
 title: "Geolonia、Medical DOCの「新型コロナワクチンマップ」開発に協力"
-description: "株式会社Geolonia(ジオロニア)は、株式会社GENOVAが運営する医療分野のオンラインプラットフォーム「Medical DOC（メディカルドキュメント）」（https://medicaldoc."
+description: "株式会社Geoloniaは、株式会社GENOVAが運営する医療分野のオンラインプラットフォーム「Medical DOC」が公開した「新型コロナワクチンマップ」に開発協力しました。"
 pubDate: 2021-06-01
 category: "お知らせ"
 ---

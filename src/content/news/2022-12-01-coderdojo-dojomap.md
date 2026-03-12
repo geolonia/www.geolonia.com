@@ -1,6 +1,6 @@
 ---
 title: "CoderDojoの場所を地図から探せる「DojoMap」への開発協力を行いました"
-description: "12月1日に公開された、「CoderDojo」を地図から探せる「DojoMap」への開発協力を行いました。 DojoMap 地図から探す (DojoMap) - CoderDojo Japan https://map."
+description: "12月1日に公開された、「CoderDojo」を地図から探せる「DojoMap」への開発協力を行いました。"
 pubDate: 2022-12-01
 category: "お知らせ"
 ---

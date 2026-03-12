@@ -1,6 +1,6 @@
 ---
 title: "地域×Tech東北出展のお知らせ"
-description: "Geoloniaは、8月27日(水)・28日(木)に開催される「第６回地域×Tech東北」に、ジオテクノロジーズ株式会社と合同出展いたします。 地域×Tech東北のウェブサイト https://localtech."
+description: "Geoloniaは、8月27日(水)・28日(木)に開催される「第６回地域×Tech東北」に、ジオテクノロジーズ株式会社と合同出展いたします。"
 pubDate: 2025-07-28
 category: "お知らせ"
 ---

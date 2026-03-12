@@ -1,6 +1,6 @@
 ---
 title: "TOHOKU DX GATEWAY出展のお知らせ"
-description: "Geoloniaは、11月26日(水)に開催される「TOHOKU DX GATEWAY」に、高松市と合同出展いたします。 TOHOKU DX GATEWAYウェブサイト https://tohoku-dx-gateway."
+description: "Geoloniaは、11月26日(水)に開催される「TOHOKU DX GATEWAY」に、高松市と合同出展いたします。"
 pubDate: 2025-11-13
 category: "お知らせ"
 ---
