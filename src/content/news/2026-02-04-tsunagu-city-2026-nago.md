@@ -1,0 +1,18 @@
+---
+title: "TSUNAGU CITY 2026 in NAGO出展のお知らせ"
+description: "Geoloniaは、2月13日(金)・14日(土)に開催される「TSUNAGU CITY 2026 in NAGO」に出展いたします。 TSUNAGU CITY 2026 in NAGOウェブサイト https://www."
+pubDate: 2026-02-04
+category: "お知らせ"
+---
+
+Geoloniaは、2月13日(金)・14日(土)に開催される「TSUNAGU CITY 2026 in NAGO」に出展いたします。
+TSUNAGU CITY 2026 in NAGOウェブサイト
+https://www.tsunagucity-nago.com/
+TSUNAGU CITY 2026 in NAGOは、デジタル技術を活用し、市民のウェルビーイング向上と持続可能なスマートシティ実現を目指すイベントです。産官学民が「つながる」ことで、地域課題の解決や新たなビジネス共創の機会を創出することを目的として開催されます。
+当日は、Geoloniaが提供する「デジタルツイン基盤」や、自治体・企業のDXを支援するアプリケーション事例等についてご紹介します。会場にお越しの際は、ぜひブースへお立ち寄りください。
+イベント概要
+日時：2026年2月13日(金)・ 14日(土)9時30分から17時まで
+場所：名護市民会館、名護中央公民館
+参加費：無料（来場には事前登録が必要です）
+主催：名護市
+※詳細については、TSUNAGU CITY 2026 in NAGOのサイトをご覧ください。
