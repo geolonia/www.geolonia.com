@@ -1,7 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
+
+const allNews = await getCollection('news');
+const latestNews = allNews
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 5);
 ---
 
 <BaseLayout title="株式会社Geolonia">
@@ -115,6 +121,31 @@ const base = import.meta.env.BASE_URL;
         <div class="product-image">
           <img src={`${base}images/address-normalization.png`} alt="住所ソリューション" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news-section">
+    <div class="news-wrapper">
+      <h2 class="section-title">お知らせ</h2>
+      <p class="section-subtitle">NEWS</p>
+      <ul class="news-list">
+        {latestNews.map((entry) => {
+          const date = entry.data.pubDate;
+          const dateStr = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
+          return (
+            <li class="news-item">
+              <a href={`/news/${entry.slug}/`} class="news-link">
+                <time class="news-date" datetime={date.toISOString().split('T')[0]}>{dateStr}</time>
+                <span class="news-title">{entry.data.title}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <div class="news-more">
+        <a href="/news/" class="news-more-link">お知らせ一覧へ →</a>
       </div>
     </div>
   </section>
@@ -531,6 +562,99 @@ const base = import.meta.env.BASE_URL;
     .product-button {
       width: 100%;
       min-width: 100%;
+    }
+  }
+
+  /* News Section */
+  .news-section {
+    padding: 5rem 0;
+    background: #f9fafb;
+  }
+
+  .news-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .news-list {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+  }
+
+  .news-item {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .news-item:first-child {
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .news-link {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .news-link:hover {
+    background: #f0f1f3;
+  }
+
+  .news-date {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .news-link:hover .news-title {
+    color: #f39813;
+  }
+
+  .news-more {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .news-more-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #f39813;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+  }
+
+  .news-more-link:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .news-section {
+      padding: 3rem 0;
+    }
+
+    .news-link {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .news-date {
+      font-size: 0.8rem;
+    }
+
+    .news-title {
+      font-size: 0.9rem;
     }
   }
 
