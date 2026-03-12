@@ -2,10 +2,11 @@
 title: "Geolonia、ベクトルタイル形式の地図開発を支援する2つのツールを開発"
 description: "国土地理院との契約により開発、オープンソースソフトウェアとして公開 株式会社Geolonia（ジオロニア）は、ベクトルタイル形式の地図開発を支援する2つの NPMパッケージ「itoma（イトマ）」「k"
 pubDate: 2022-03-29
-category: "お知らせ"
+category: "ニュースリリース"
 ---
 
 国土地理院との契約により開発、オープンソースソフトウェアとして公開
+
 株式会社Geolonia（ジオロニア）は、ベクトルタイル形式の地図開発を支援する2つの NPMパッケージ「itoma（イトマ）」「kata（カタ）」を3月28日に公開しました。同サービスはいずれもオープンソースとして公開、誰でも無料で利用できます。
 
 itoma、kataは、国土地理院との契約により開発した NPMパッケージです。どちらも国連OpenGIS イニシアチブが推進する国連ベクトルタイルツールキットプロジェクトの一部としてMITライセンスで公開するもので、弊社としましては政府機関からオープンソース化を前提して受注した初めての事例となります。
@@ -14,23 +15,35 @@ itomaは、ベクトルタイルベースの地図をプレビューするため
 
 kataは、地図データとして利用されるデータを他の形式に変換できるコマンドラインツールです。「metadata.json」形式のファイルを表形式に変換、「YAML」形式のファイルを、地図サービスを提供するMapboxがオープンソースとして提供している「Tippecanoe」形式に変換といった機能が利用できます。
 
-kataの利用イメージ
+![kataの利用イメージ](/images/news/2022-03-29-vector-tile-dev-tools-1.png)
+
 Geoloniaは今後も、デジタル地図のオープンソース化を推進するために活動して参ります。
 
-itoma
-https://github.com/unvt/itoma
-kata
-https://github.com/unvt/kata
-Geoloniaについて
+> itoma
+> https://github.com/unvt/itoma[](https://github.com/unvt/kata)
+> 
+> 
+> 
+> 
+> 
+> 
+> kata
+> https://github.com/unvt/kata
+
+### Geoloniaについて
+
 Geoloniaは、位置情報基盤を通じて、社会が抱える様々な課題を解決できる企業を目指す、位置情報テクノロジーを扱うスタートアップです。IoT、スマートシティーなど、国、自治体、企業のDXが進むにつれて重要な「地図」「地理空間情報」「ロケーションデータ」の分野で、ウェブ地図提供事業、位置情報開発支援事業、ロケーションプラットフォーム事業を展開しています。
 
-会社概要
+### 会社概要
+
 名称: 株式会社 Geolonia
 代表取締役社長: 宮内 隆行
 所在地: 〒112−0011 東京都文京区千石 4-15-7
 設立: 2019年8月
-URL: https://geolonia.com/
+URL: https://geolonia.com/
 事業内容 : ウェブ地図提供事業、位置情報開発支援事業、ロケーションプラットフォーム
-本件に関する問い合わせ先
+
+#### 本件に関する問い合わせ先
+
 株式会社 Geolonia
-mail: press@geolonia.com
+mail: [press@geolonia.com](mailto:press@geolonia.com)

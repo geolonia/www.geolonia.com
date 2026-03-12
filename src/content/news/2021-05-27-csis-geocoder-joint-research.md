@@ -2,13 +2,14 @@
 title: "Geolonia、東京大学 CSISと次世代ジオコーダーの共同研究に着手"
 description: "株式会社Geolonia(ジオロニア)は、東京大学 空間情報科学研究センター（Center for Spatial Information Science, CSIS）と共同で、次世代ジオコーダーに関する共同研究に着手しました。"
 pubDate: 2021-05-27
-category: "お知らせ"
+category: "ニュースリリース"
 ---
 
 株式会社Geolonia(ジオロニア)は、東京大学 空間情報科学研究センター（Center for Spatial Information Science, CSIS）と共同で、次世代ジオコーダーに関する共同研究に着手しました。
 
-東京大学 空間情報科学研究センター（Center for Spatial Information Science, CSIS）
-https://www.csis.u-tokyo.ac.jp/
+> 東京大学 空間情報科学研究センター（Center for Spatial Information Science, CSIS）
+> https://www.csis.u-tokyo.ac.jp/
+
 ジオコーダーは、住所や地名、施設名などの情報に対して緯度経度のような地理座標を付与する仕組みです。地図サービスの目的地検索やルート検索などさまざまな用途で活用されており、地図サービスにおいて必要不可欠な機能になっています。
 
 現在のジオコーダーは、住所を入力して検索する手法が一般的ですが、ドローンや自動運転など位置情報の活用が見込まれる今後を見すえ、さらなる機能を持った次世代のジオコーダーが求められると判断、次世代のジオコーダーに向けた研究を東京大学 CSISと共同で行うことで合意しました。
@@ -19,7 +20,14 @@ https://www.csis.u-tokyo.ac.jp/
 
 次世代ジオコーダーの研究は2021年5月より着手、2022年度末にベータ版の公開を予定しています。
 
-ジオコーダーについては、Geoloniaが運営する地図・位置情報の専門メディア「graphia」の用語解説も併せてご覧ください。
+> ジオコーダーについては、Geoloniaが運営する地図・位置情報の専門メディア「graphia」の用語解説も併せてご覧ください。
+> 
+> 
+> 
+> 
+> 
+> 
+> 【ジオ関連用語解説】ジオコーディング：デジタル地図で住所や地名から場所を表示するための仕組み | Graphia
+> [https://graphia.jp/2021/04/16/geoterm-geocoding/](https://graphia.jp/2021/04/16/geoterm-geocoding/?__hstc=26520418.c4bb5f1b69ef90070d7f621b850dfd7a.1682567928933.1684303820223.1684308788596.9&amp;__hssc=26520418.54.1684308788596&amp;__hsfp=3867641505)
 
-【ジオ関連用語解説】ジオコーディング：デジタル地図で住所や地名から場所を表示するための仕組み | Graphia
-https://graphia.jp/2021/04/16/geoterm-geocoding/
+###
