@@ -16,19 +16,15 @@ itomaは、ベクトルタイルベースの地図をプレビューするため
 kataは、地図データとして利用されるデータを他の形式に変換できるコマンドラインツールです。「metadata.json」形式のファイルを表形式に変換、「YAML」形式のファイルを、地図サービスを提供するMapboxがオープンソースとして提供している「Tippecanoe」形式に変換といった機能が利用できます。
 
 ![kataの利用イメージ](/images/news/2022-03-29-vector-tile-dev-tools-1.png)
+*kataの利用イメージ*
 
 Geoloniaは今後も、デジタル地図のオープンソース化を推進するために活動して参ります。
 
-> itoma
-> https://github.com/unvt/itoma[](https://github.com/unvt/kata)
+> itoma  
+> [https://github.com/unvt/itoma](https://github.com/unvt/itoma)[](https://github.com/unvt/kata)
 > 
-> 
-> 
-> 
-> 
-> 
-> kata
-> https://github.com/unvt/kata
+> kata  
+> [https://github.com/unvt/kata](https://github.com/unvt/kata)
 
 ### Geoloniaについて
 
@@ -36,14 +32,14 @@ Geoloniaは、位置情報基盤を通じて、社会が抱える様々な課題
 
 ### 会社概要
 
-名称: 株式会社 Geolonia
-代表取締役社長: 宮内 隆行
-所在地: 〒112−0011 東京都文京区千石 4-15-7
-設立: 2019年8月
-URL: https://geolonia.com/
+名称: 株式会社 Geolonia  
+代表取締役社長: 宮内 隆行  
+所在地: 〒112−0011 東京都文京区千石 4-15-7  
+設立: 2019年8月  
+URL: [https://geolonia.com/](https://geolonia.com/)  
 事業内容 : ウェブ地図提供事業、位置情報開発支援事業、ロケーションプラットフォーム
 
 #### 本件に関する問い合わせ先
 
-株式会社 Geolonia
-mail: [press@geolonia.com](mailto:press@geolonia.com)
+株式会社 Geolonia  
+mail: [press@geolonia.com](mailto:press@geolonia.com)

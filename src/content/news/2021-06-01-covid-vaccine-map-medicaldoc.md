@@ -5,26 +5,30 @@ pubDate: 2021-06-01
 category: "ニュースリリース"
 ---
 
-株式会社Geolonia(ジオロニア)は、株式会社GENOVAが運営する医療分野のオンラインプラットフォーム「Medical DOC（メディカルドキュメント）」（https://medicaldoc.jp/）が6月1日に公開した「新型コロナワクチンマップ」に開発協力しました。
+株式会社Geolonia(ジオロニア)は、株式会社GENOVAが運営する医療分野のオンラインプラットフォーム「Medical DOC（メディカルドキュメント）」（[https://medicaldoc.jp/](https://medicaldoc.jp/)）が6月1日に公開した「新型コロナワクチンマップ」に開発協力しました。
 
 ![新型コロナワクチンマップ](/images/news/2021-06-01-covid-vaccine-map-medicaldoc-1.png)
+*新型コロナワクチンマップ*
 
-> 新型コロナワクチンマップ
-> https://medicaldoc.jp/clinic_map/vaccine/
+> 新型コロナワクチンマップ  
+> [https://medicaldoc.jp/clinic\_map/vaccine/](https://medicaldoc.jp/clinic_map/vaccine/)
 
 新型コロナワクチンマップは、新型コロナワクチンの接種が受けられる医療機関・施設を地図上で探すことができるサービスです。
 
 厚生労働省が公開している情報及び、GENOVAと協力関係にある医療機関から提供を受けた情報に基づき、日本全国約4万件の医療機関や施設の情報を掲載しており、位置情報を利用して現在地周辺の医療機関・施設を探すことができます。地図の広域表示時には、周辺の医療機関・施設を市区町村単位で表示できるクラスター表示により、周辺地域の施設数が一目でわかります。
 
 ![クラスター表示の例](/images/news/2021-06-01-covid-vaccine-map-medicaldoc-2.png)
+*クラスター表示の例*
 
 医療機関や施設をクリックすると、住所や受付時間、予約の可否、ワクチンの種類が確認できるほか、Medical DOCに掲載されている医療機関の情報へのリンクも用意されています。新規の医療機関・施設は毎週更新で追加されます。
 
 ![医療施設の表示例](/images/news/2021-06-01-covid-vaccine-map-medicaldoc-3.png)
+*医療施設の表示例*
 
 新型コロナワクチンマップに合わせて「自費PCR検査マップ」も公開。新型コロナワクチンマップ同様、位置情報を利用して最寄りの医療機関・施設を確認できます。今後は歯医者や病院・クリニックのマップも順次公開を予定しています。
 
 ![自費PCR検査マップも公開。今後は歯医者や病院・クリニックのマップも順次公開](/images/news/2021-06-01-covid-vaccine-map-medicaldoc-4.png)
+*自費PCR検査マップも公開。今後は歯医者や病院・クリニックのマップも順次公開*
 
 Geoloniaでは、マップで使用するベクトルタイルのホスティングおよびJavaScriptの開発で協力。地図のベクトルタイル化によって約4万件あるデータの軽快な表示を実現したほか、アイコンのカスタマイズ、市区町村ごとの施設をクラスタリング表示、対象外の病院を非表示といったカスタマイズを実現しました。
 
@@ -32,19 +36,19 @@ Geoloniaでは、マップで使用するベクトルタイルのホスティン
 
 本件については株式会社GENOVAのニュースリリースも合わせてご覧ください。
 
-> 新型コロナワクチン接種会場を地図で確認・予約できる新機能の提供開始｜株式会社GENOVAのプレスリリース
-> https://prtimes.jp/main/html/rd/p/000000026.000016520.html
+> 新型コロナワクチン接種会場を地図で確認・予約できる新機能の提供開始｜株式会社GENOVAのプレスリリース  
+> [https://prtimes.jp/main/html/rd/p/000000026.000016520.html](https://prtimes.jp/main/html/rd/p/000000026.000016520.html)
 
 ### Geoloniaについて
 
-名称: 株式会社 Geolonia
-代表取締役社長: 宮内 隆行
-所在地: 〒112−0011 東京都文京区千石 4-15-7
-設立: 2019年8月
-URL: https://geolonia.com/
+名称: 株式会社 Geolonia  
+代表取締役社長: 宮内 隆行  
+所在地: 〒112−0011 東京都文京区千石 4-15-7  
+設立: 2019年8月  
+URL: [https://geolonia.com/](https://geolonia.com/)  
 事業内容 : ウェブ地図提供事業、位置情報開発支援事業、ロケーションプラットフォーム
 
 #### 本件に関する問い合わせ先
 
-株式会社 Geolonia
-mail: [info@geolonia.com](mailto:info@geolonia.com)
+株式会社 Geolonia  
+mail: [info@geolonia.com](mailto:info@geolonia.com)

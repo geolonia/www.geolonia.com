@@ -8,8 +8,9 @@ category: "お知らせ"
 Webメディア「高田馬場経済新聞」が1月7日に公開した「馬場経マップ」に、Geoloniaが開発協力しました。
 
 ![高田馬場経済新聞](/images/news/2023-01-18-babakei-map-1.png)
+*高田馬場経済新聞*
 
-馬場経マップ
+馬場経マップ  
 [https://babamap.net](https://babamap.net/)
 
 高田馬場経済新聞は、高田馬場エリアを中心としたビジネスやカルチャーニュースを配信するWebメディアです。Webサイトは高田馬場でシェアオフィス・コワーキングスペース「CASE Shinjuku」を運営する有限会社そーほっとが運営しています。
@@ -20,5 +21,5 @@ Geoloniaは馬場経マップの地図データを提供したほか、弊社エ
 
 馬場経マップの詳細は高田馬場経済新聞の記事もご覧ください。
 
-> 高田馬場経済新聞、街のニュースを地図で見る「馬場経マップ」スタート - 高田馬場経済新聞
-> https://takadanobaba.keizai.biz/headline/1021/
+> 高田馬場経済新聞、街のニュースを地図で見る「馬場経マップ」スタート - 高田馬場経済新聞  
+> [https://takadanobaba.keizai.biz/headline/1021/](https://takadanobaba.keizai.biz/headline/1021/)

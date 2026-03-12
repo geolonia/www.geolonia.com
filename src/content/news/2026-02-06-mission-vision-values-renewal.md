@@ -21,17 +21,13 @@ Geoloniaはこれまで「物理世界とデジタル世界をリンクし、オ
 
 **VALUE ：**
 
-- **[Make the World Better] **社会にとって心から良いと思える価値の提供
+-   **[Make the World Better]** 社会にとって心から良いと思える価値の提供
+-   **[Velocity]** 意思決定と実行のスピード
+-   **[Simplicity & Clarity]** 本質を捉えたシンプルで明快な解決策の探究
+-   **[Keep Learning, Keep Challenging]** 常に学び、変化に挑戦し続ける
+-   **[Diversity]** 多様な価値観の受容
 
-- **[Velocity] **意思決定と実行のスピード
-
-- **[Simplicity &amp; Clarity] **本質を捉えたシンプルで明快な解決策の探究
-
-- **[Keep Learning, Keep Challenging] **常に学び、変化に挑戦し続ける
-
-- **[Diversity] **多様な価値観の受容
-
-> [MVV掲載ページ](/company/)
+＞[MVV掲載ページ](/company/)
 
 ## 公式キャラクター「ロア」と「ポポイ」の誕生
 
@@ -39,7 +35,7 @@ Geoloniaはこれまで「物理世界とデジタル世界をリンクし、オ
 
 ![](/images/news/2026-02-06-mission-vision-values-renewal-1.png)
 
-### 1. ロア（LOA） 
+### 1\. ロア（LOA）
 
 地理の知恵を代々受け継いできた「GEOLOWL（ジオロウル）」というフクロウ一族の末裔。若く好奇心旺盛で、地図を見る目だけは誰にも負けません。
 
@@ -47,7 +43,7 @@ Geoloniaはこれまで「物理世界とデジタル世界をリンクし、オ
 
 ![](/images/news/2026-02-06-mission-vision-values-renewal-2.png)
 
-### 2. ポポイ（POPOI） 
+### 2\. ポポイ（POPOI）
 
 Point Of Interest（POI）から生まれた、地図上に現れるマーカーの精霊。ロアの頼れる相棒です。
 

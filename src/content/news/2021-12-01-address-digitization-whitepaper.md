@@ -21,30 +21,20 @@ Geoloniaでは日本の住所のデジタル化に関する現状、課題、既
 
 ### 目次
 
-- 住所の基礎知識
+-   住所の基礎知識
+-   住所の構造
+-   住所は自治体が管理している
+-   住所コード
+-   住所の課題
+-   表記ゆれ
+-   正規化
+-   その他の課題
+-   利用可能な各種ソリューションの紹介
+-   政府・行政による住所に関する取り組み
+-   Geoloniaの取り組み・サービス紹介
 
-- 住所の構造
-
-- 住所は自治体が管理している
-
-- 住所コード
-
-- 住所の課題
-
-- 表記ゆれ
-
-- 正規化
-
-- その他の課題
-
-- 利用可能な各種ソリューションの紹介
-
-- 政府・行政による住所に関する取り組み
-
-- Geoloniaの取り組み・サービス紹介
-
-ダウンロードURL
-https://geolonia.com/wp-jad-dx/
+ダウンロードURL  
+[https://geolonia.com/wp-jad-dx/](https://geolonia.com/wp-jad-dx/)
 
 ### Geoloniaについて
 
@@ -52,14 +42,14 @@ Geoloniaは、位置情報基盤を通じて、社会が抱える様々な課題
 
 ### 会社概要
 
-名称: 株式会社 Geolonia
-代表取締役社長: 宮内 隆行
-所在地: 〒112−0011 東京都文京区千石 4-15-7
-設立: 2019年8月
-URL: https://geolonia.com/
+名称: 株式会社 Geolonia  
+代表取締役社長: 宮内 隆行  
+所在地: 〒112−0011 東京都文京区千石 4-15-7  
+設立: 2019年8月  
+URL: [https://geolonia.com/](https://geolonia.com/)  
 事業内容 : ウェブ地図提供事業、位置情報開発支援事業、ロケーションプラットフォーム
 
 #### 本件に関する問い合わせ先
 
-株式会社 Geolonia
-mail: [info@geolonia.com](mailto:info@geolonia.com)
+株式会社 Geolonia  
+mail: [info@geolonia.com](mailto:info@geolonia.com)

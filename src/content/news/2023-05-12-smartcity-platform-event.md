@@ -9,25 +9,22 @@ category: "お知らせ"
 
 5月19日(金)に、スマートシティ基盤「Geolonia Maps for SmartCity」のサービスをご紹介するイベントをオンライン開催します。
 
-お申し込み・詳細はこちらPeatixページから
-https://peatix.com/event/3570519/view
+お申し込み・詳細はこちらPeatixページから  
+[https://peatix.com/event/3570519/view](https://peatix.com/event/3570519/view)
 
 [](https://peatix.com/event/3570519/view)地理空間情報基盤について知りたい方、自治体データの活用に困っている方等、お気軽にご参加ください。
 
 ![スマートシティ基盤「Geolonia Maps for SmartCity」](/images/news/2023-05-12-smartcity-platform-event-1.png)
+*スマートシティ基盤「Geolonia Maps for SmartCity」*
 
 ## イベント概要
 
-- イベント名：スマートシティ基盤「Geolonia Maps for SmartCity」のサービス紹介。機械判読可能な地図で実現できる都市モデルとは?
-
-- 開催日：5月19日(金)18:00〜19:30
-
-- 会場：Zoom(オンライン)
-
-- 費用：無料
-
-- 申し込みURL：https://peatix.com/event/3570519/view
-人数確認のため、無料チケットを発行しています。チケットをお申し込みの上、ご参加ください。
+-   イベント名：スマートシティ基盤「Geolonia Maps for SmartCity」のサービス紹介。機械判読可能な地図で実現できる都市モデルとは?
+-   開催日：5月19日(金)18:00〜19:30
+-   会場：Zoom(オンライン)
+-   費用：無料
+-   申し込みURL：[https://peatix.com/event/3570519/view](https://peatix.com/event/3570519/view)  
+    人数確認のため、無料チケットを発行しています。チケットをお申し込みの上、ご参加ください。
 
 ### 「Geolonia Maps for SmartCity」とは？
 
@@ -37,9 +34,9 @@ https://peatix.com/event/3570519/view
 
 実際の導入事例やデモを通してサービスについてご紹介し、「Geolonia Maps for SmartCity」で提供している機械判読可能な地図が持つ可能性（シミュレーションやAIの活用）についてお話する予定です。
 
-【タイムテーブル】※時間は目安となります。
-18:00〜 Geoloniaの紹介
-18:10〜「Geolonia Maps for SmartCity」のご紹介、デモ、導入事例等
-19:00〜Q&amp;A
+【タイムテーブル】※時間は目安となります。  
+18:00〜 Geoloniaの紹介  
+18:10〜「Geolonia Maps for SmartCity」のご紹介、デモ、導入事例等  
+19:00〜Q&A
 
 皆様のご参加お待ちしております。

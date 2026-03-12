@@ -9,26 +9,18 @@ Geoloniaは、7月2日(水)〜4日(金)に開催される「自治体・公共We
 
 > 自治体・公共Weekのウェブサイト
 > 
-> 
-> 
-> 
-> 
-> 
-> https://www.publicweek.jp/
+> [https://www.publicweek.jp/](https://www.publicweek.jp/)
 
 自治体DX展示、地方創生EXPO等で構成される自治体・公共Weekでは、Geoloniaが開発し、内閣府のスマートシティ・リファレンスアーキテクチャで横展開の仕組みとして採用・掲載された地理空間データ連携基盤の活用事例や実際のデモ画面等をご紹介するほか、ジオテクノロジーズが誇る高精度な位置情報データベースと、ビジネス戦略に不可欠な人流ビッグデータをご紹介します。
 
-<s>また、イベント初日となる7月2日には、イベント会場近くの会場にて、先進的な取り組みを進めていらっしゃる自治体である那須塩原市様・焼津市様・高松市様を講師にお招きし、自治体関係者様向けのスマートシティ勉強会の開催を予定しております。</s>
+また、イベント初日となる7月2日には、イベント会場近くの会場にて、先進的な取り組みを進めていらっしゃる自治体である那須塩原市様・焼津市様・高松市様を講師にお招きし、自治体関係者様向けのスマートシティ勉強会の開催を予定しております。  
 ※勉強会は、主催者の都合により中止とさせていただきました。参加を予定・検討いただいていましたみなさまには、直前のご案内となりましたこと、またご迷惑をおかけしますことを深くお詫び申し上げます。
 
 皆様のご来場をお待ちしております。
 
 ## イベント概要
 
-- 日時：2025年7月2日(水)-4日(金) 10時から17時まで
-
-- 当社ブース：東京ビッグサイト 南1〜4ホール　（スマートシティ推進EXPO南展示棟4階　南３ホール　小間番号：16-16）
-
-- 参加費：無料（来場には[事前登録が必要です](https://www.publicweek.jp/ja-jp/register.html?cat=visitor&amp;ct=U2FsdGVkX1%2FbrYuVUp07%2FpmVJCPjgXtGy9Lk1rg4yQY%3D&amp;T=M&amp;utm_campaign=top&amp;utm_medium=referral&amp;utm_source=top&amp;mpDistinctId=JGRldmljZTo2ZmVmYWI1NS0xNTBhLTQ5YzQtODZkZS0zYzI1MmMxNGNmZDQ%3D)）
-
-- 主催：自治体・公共Week実行委員会
+-   日時：2025年7月2日(水)-4日(金) 10時から17時まで
+-   当社ブース：東京ビッグサイト 南1〜4ホール　（スマートシティ推進EXPO南展示棟4階　南３ホール　小間番号：16-16）
+-   参加費：無料（来場には[事前登録が必要です](https://www.publicweek.jp/ja-jp/register.html?cat=visitor&ct=U2FsdGVkX1%2FbrYuVUp07%2FpmVJCPjgXtGy9Lk1rg4yQY%3D&T=M&utm_campaign=top&utm_medium=referral&utm_source=top&mpDistinctId=JGRldmljZTo2ZmVmYWI1NS0xNTBhLTQ5YzQtODZkZS0zYzI1MmMxNGNmZDQ%3D)）
+-   主催：自治体・公共Week実行委員会

@@ -7,7 +7,7 @@ category: "お知らせ"
 
 株式会社Geolonia(ジオロニア)と一般社団法人不動産テック協会は、国内の土地や建物等の不動産情報に対して付与する共通ID（以下、不動産共通ID）のベータ版提供を4月15日に提供、これに先駆けて本日3月15日より事前利用登録の受付を開始します。
 
- コメント
+ コメント
 
 ![Geoloniaと不動産テック協会ロゴ](/images/news/2021-03-15-serverless-operations-case-study-1.png)
 
@@ -21,31 +21,31 @@ category: "お知らせ"
 
 不動産共通IDの詳細、および事前利用登録のお申し込みは不動産テック協会のリリースをご覧下さい。
 
-> 不動産テック協会とGeolonia社が不動産共通ID利用登録を開始～住所が関わるサービス連携をスムーズにし社会のインフラサービスとなることを目指す～｜不動産テック協会 – Real Estate Tech Association for Japan
-> https://retechjapan.org/news/archives/210315/
+> 不動産テック協会とGeolonia社が不動産共通ID利用登録を開始～住所が関わるサービス連携をスムーズにし社会のインフラサービスとなることを目指す～｜不動産テック協会 – Real Estate Tech Association for Japan  
+> [https://retechjapan.org/news/archives/210315/](https://retechjapan.org/news/archives/210315/)
 
 GDPにして61兆円の規模を持ち、膨大なビッグデータを保有する不動産産業において、不動産の基盤データを構築することで業界全体における情報連携を推し進め、データ活用の幅を広げてまいります。
 
-**不動産テック協会について**
+**不動産テック協会について**  
+  
+名称: 一般社団法人不動産テック協会  
+  
+代表理事: 赤木 正幸、同代表理事: 巻口 成憲  
+  
+事業内容: 不動産とテクノロジーの融合を促進し、不動産に係る事業並びに不動産業の健全 な発展を図り、国民経済と国民生活の向上並びに公共の福祉の増進に寄与するための活動  
+  
+URL: [https://retechjapan.org/](https://retechjapan.org/)
 
-名称: 一般社団法人不動産テック協会
+**Geoloniaについて**  
+  
+名称: 株式会社 Geolonia  
+  
+代表取締役社長: 宮内 隆行  
+  
+事業内容: WebGLを利用した自由度の高い地図と、お客様が持つ位置情報を検索・解析する ためのAPIを提供するホスティングサービスを提供  
+URL: [https://geolonia.com/](https://geolonia.com/)
 
-代表理事: 赤木 正幸、同代表理事: 巻口 成憲
-
-事業内容: 不動産とテクノロジーの融合を促進し、不動産に係る事業並びに不動産業の健全 な発展を図り、国民経済と国民生活の向上並びに公共の福祉の増進に寄与するための活動
-
-URL: https://retechjapan.org/
-
-**Geoloniaについて**
-
-名称: 株式会社 Geolonia
-
-代表取締役社長: 宮内 隆行
-
-事業内容: WebGLを利用した自由度の高い地図と、お客様が持つ位置情報を検索・解析する ためのAPIを提供するホスティングサービスを提供
-URL: https://geolonia.com/
-
-**本件に関する問い合わせ先**
-担当: 甲斐
-
-mail: [info@geolonia.com](mailto:info@geolonia.com)
+**本件に関する問い合わせ先**  
+担当: 甲斐  
+  
+mail: [info@geolonia.com](mailto:info@geolonia.com)

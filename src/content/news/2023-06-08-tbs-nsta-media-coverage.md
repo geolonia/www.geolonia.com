@@ -15,22 +15,21 @@ category: "お知らせ"
 
 放送の内容はこちらからご覧いただけます。
 
-「日本の住所が“ヤバい”！？“河野大臣発言”で注目、難しすぎる AIも把握困難？【Nスタ解説】」
-
+「日本の住所が“ヤバい”！？“河野大臣発言”で注目、難しすぎる AIも把握困難？【Nスタ解説】」  
+  
 TBS NEWS DIG Powered by JNN
 
-- YouTubeチャンネル｜
-https://youtu.be/_1mBWR7DKEM
-
-- 記事｜https://newsdig.tbs.co.jp/articles/-/534030
+-   YouTubeチャンネル｜  
+    [https://youtu.be/\_1mBWR7DKEM](https://youtu.be/_1mBWR7DKEM)
+-   記事｜[https://newsdig.tbs.co.jp/articles/-/534030](https://newsdig.tbs.co.jp/articles/-/534030)
 
 ## 関連記事：
 
-ホワイトペーパー「日本の住所におけるデジタル化の課題とは」
-https://geolonia.com/wp-jad-dx/
+ホワイトペーパー「日本の住所におけるデジタル化の課題とは」  
+[https://geolonia.com/wp-jad-dx/](https://geolonia.com/wp-jad-dx/)
 
-Geolonia がオープンソース化している「住所正規化エンジン」
-https://github.com/geolonia/normalize-japanese-addresses
+Geolonia がオープンソース化している「住所正規化エンジン」  
+[https://github.com/geolonia/normalize-japanese-addresses](https://github.com/geolonia/normalize-japanese-addresses)
 
-[](https://github.com/geolonia/normalize-japanese-addresses)正規化サービス
-https://geolonia.com/address-normalization/
+[](https://github.com/geolonia/normalize-japanese-addresses)正規化サービス  
+[https://geolonia.com/address-normalization/](https://geolonia.com/address-normalization/)

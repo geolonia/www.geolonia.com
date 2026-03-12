@@ -9,9 +9,9 @@ category: "お知らせ"
 
 ![](/images/news/2021-04-20-serverless-operations-case-study-1.png)
 
-> ウェブ系サービスに必要なAPI課金システムをサーバーレスで構築、スタートアップ企業のスピード感とコストとニーズを満たすためAWSとStripeを活用 | Serverless Operations
-> 
-> https://serverless.co.jp/works/358/
+> ウェブ系サービスに必要なAPI課金システムをサーバーレスで構築、スタートアップ企業のスピード感とコストとニーズを満たすためAWSとStripeを活用 | Serverless Operations  
+>   
+> [https://serverless.co.jp/works/358/](https://serverless.co.jp/works/358/)
 
 Geoloniaが提供する地図サービスの課金システム実装をServerless Operationsが担当しており、開発に至る経緯やシステムの概要についてGeolonia代表の宮内やServerless Operations代表の堀家さん、担当エンジニアが語っています。
 

@@ -7,7 +7,7 @@ category: "お知らせ"
 
 9月18日(月・祝)に開催される、一般社団法人OSGeo日本支部主催の「FOSS4G 2023 Japan at FUKUI」のコアデイで、弊社宮内が「データ連携基盤としてのベクトルタイル」をテーマに登壇します。
 
-> FOSS4G 2023 Japan at FUKUI コアデイ　テイムテーブル
+> FOSS4G 2023 Japan at FUKUI コアデイ　テイムテーブル  
 > [https://www.osgeo.jp/events/foss4g-2023/foss4g-2023-japan-at-fukui/foss4g-coreday]( https://www.osgeo.jp/events/foss4g-2023/foss4g-2023-japan-at-fukui/foss4g-coreday)
 
 ## 登壇内容について
@@ -20,11 +20,9 @@ category: "お知らせ"
 
 ## イベント概要
 
-- 日程：2023年9月17日(日)・18日(月・祝)
-
-- 場所：福井県産業情報センター(17日)、福井市地域交流プラザ(18日)
-
-- 主催：一般社団法人OSGeo日本支部
+-   日程：2023年9月17日(日)・18日(月・祝)
+-   場所：福井県産業情報センター(17日)、福井市地域交流プラザ(18日)
+-   主催：一般社団法人OSGeo日本支部
 
 17日に開催される[ハンズオン](https://www.osgeo.jp/events/foss4g-2023/foss4g-2023-japan-at-fukui/foss4g-handson)では、GISソフトウェアを利用したセッションが終日開催されます。
 

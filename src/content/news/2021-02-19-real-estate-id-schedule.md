@@ -32,4 +32,4 @@ Geoloniaについて
 
 事業内容: 位置情報に関連するクラウド事業、位置情報に関連するシステム開発、各種データ販売
 
-URL: https://geolonia.com/</pre>
+URL: https://geolonia.com/

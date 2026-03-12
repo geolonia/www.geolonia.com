@@ -11,8 +11,8 @@ category: "お知らせ"
 
 ![](/images/news/2023-01-23-odewan-map-1.png)
 
-おでわんMAP – おでかけわんこ部 | 愛犬とのおでかけスポット（カフェ・宿）を紹介
-https://odekake-wanko-bu.com/odewan-map/
+おでわんMAP – おでかけわんこ部 | 愛犬とのおでかけスポット（カフェ・宿）を紹介  
+[https://odekake-wanko-bu.com/odewan-map/](https://odekake-wanko-bu.com/odewan-map/)
 
 おでわんMAPは、愛犬と一緒に入店できる施設を地図から検索できるサービスです。Geoloniaが現在ベータ版として提供している「PWAマップ」をベースに、スポットのアイコンといったデザイン面を中心としたカスタマイズをGeoloniaが担当しました。
 
@@ -30,8 +30,8 @@ https://odekake-wanko-bu.com/odewan-map/
 
 おでわんMAPのベースとなっているPWAマップは、Google スプレッドシートに名前や住所などを入力するだけで、オリジナルの地図アプリを作成することができます。利用は無料で、独自ドメインでの利用や、おでわんマップのようなカスタマイズも有償にて承ります。PWAマップの詳細については以前のリリースをご覧ください。
 
-> Geolonia、オリジナルの地図アプリを簡単に作成できる「Geolonia PWAマップ」ベータ版を公開 - 株式会社 Geolonia (ジオロニア)
-> https://geolonia.com/pressrelease/2022/05/17/pwamap.html
+> Geolonia、オリジナルの地図アプリを簡単に作成できる「Geolonia PWAマップ」ベータ版を公開 - 株式会社 Geolonia (ジオロニア)  
+> [https://geolonia.com/pressrelease/2022/05/17/pwamap.html](https://geolonia.com/pressrelease/2022/05/17/pwamap.html)
 
 ## Geoloniaについて
 
@@ -39,14 +39,14 @@ Geoloniaは、位置情報基盤を通じて、社会が抱える様々な課題
 
 ### 会社概要
 
-名称: 株式会社 Geolonia
-代表取締役社長: 宮内 隆行
-所在地: 〒112−0011 東京都文京区千石 4-15-7
-設立: 2019年8月
-URL: https://geolonia.com/
+名称: 株式会社 Geolonia  
+代表取締役社長: 宮内 隆行  
+所在地: 〒112−0011 東京都文京区千石 4-15-7  
+設立: 2019年8月  
+URL: [https://geolonia.com/](https://geolonia.com/)  
 事業内容 : ウェブ地図提供事業、位置情報開発支援事業、ロケーションプラットフォーム
 
 #### 本件に関する問い合わせ先
 
-株式会社 Geolonia
-mail: [press@geolonia.com](mailto:press@geolonia.com)
+株式会社 Geolonia  
+mail: [press@geolonia.com](mailto:press@geolonia.com)

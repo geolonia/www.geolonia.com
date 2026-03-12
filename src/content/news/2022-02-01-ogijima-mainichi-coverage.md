@@ -8,6 +8,7 @@ category: "お知らせ"
 Geoloniaが参画する「男木島スマート交流プロジェクト」が、毎日新聞の取材を受けました。
 
 ![男木島](/images/news/2022-02-01-ogijima-mainichi-coverage-1.png)
+*男木島*
 
 男木島スマート交流プロジェクトは、国土交通省「令和3年度　スマートアイランド推進実証調査業務」の採択を受けた、スマートシティたかまつ推進協議会が推進するプロジェクトです。Geoloniaは同協議会に参画、IoTセンサーとデジタル地図を活用した実証調査として、LoRaWANネットワークを活用した高齢者の見守りセンサーの実証調査を担当しています。
 
@@ -15,10 +16,10 @@ Geoloniaが参画する「男木島スマート交流プロジェクト」が、
 
 記事の内容は下記URLからご覧いただけます。
 
-> 離島の課題解決にICT活用　教育や高齢者見守り　瀬戸内海の男木島 | 毎日新聞
-> https://mainichi.jp/articles/20220126/k00/00m/040/105000c
+> 離島の課題解決にICT活用　教育や高齢者見守り　瀬戸内海の男木島 | 毎日新聞  
+> [https://mainichi.jp/articles/20220126/k00/00m/040/105000c](https://mainichi.jp/articles/20220126/k00/00m/040/105000c)
 
 プロジェクトの詳細は下記リリースをご覧ください。
 
-> Geolonia、「男木島スマート交流プロジェクト」に参画 - Geolonia
-> https://geolonia.com/pressrelease/2021/08/25/ogijima-smart-island.html
+> Geolonia、「男木島スマート交流プロジェクト」に参画 - Geolonia  
+> [https://geolonia.com/pressrelease/2021/08/25/ogijima-smart-island.html](https://geolonia.com/pressrelease/2021/08/25/ogijima-smart-island.html)

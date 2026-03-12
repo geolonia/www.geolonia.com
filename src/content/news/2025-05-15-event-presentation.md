@@ -9,12 +9,7 @@ category: "お知らせ"
 
 > Geoloniaの共創チャレンジページ
 > 
-> 
-> 
-> 
-> 
-> 
-> https://team.expo2025.or.jp/ja/challenge/C10456
+> [https://team.expo2025.or.jp/ja/challenge/C10456](https://team.expo2025.or.jp/ja/challenge/C10456)
 
 Geoloniaは、テクノロジーによって都市と暮らしをよりよくすることを目指し、「共創チャレンジ」に参画しました。ブースでは、地理空間データ連携基盤の仕組みや、地理空間データ連携基盤を活用して生まれたアプリ事例を日本語と英語資料を用いて紹介しました。
 
@@ -30,5 +25,10 @@ Geoloniaは、テクノロジーによって都市と暮らしをよりよくす
 
 ![](/images/news/2025-05-15-event-presentation-4.jpg)
 
-<aside class="veu_relatedPosts veu_contentAddSection"><h1 class="mainSection-title relatedPosts_title">関連記事</h1>[![](/images/news/2025-05-15-event-presentation-5.jpg)](/archives/5593/)[大阪・関西万博出展のお知らせ](/archives/5593/)<i class="fa fa-calendar"></i> 2025年4月28日
-</aside>
+# 関連記事
+
+[![](/images/news/2025-05-15-event-presentation-5.jpg)](/archives/5593/)
+
+[大阪・関西万博出展のお知らせ](/archives/5593/)
+
+ 2025年4月28日

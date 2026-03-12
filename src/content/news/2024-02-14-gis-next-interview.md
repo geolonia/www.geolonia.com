@@ -9,5 +9,5 @@ category: "お知らせ"
 
 ![](/images/news/2024-02-14-gis-next-interview-1.png)
 
-詳細はこちらをご覧ください。
- GIS NEXT Webページ：http://nextpb.com/gisnext/backnumber/no86.html
+詳細はこちらをご覧ください。  
+GIS NEXT Webページ：[http://nextpb.com/gisnext/backnumber/no86.html](http://nextpb.com/gisnext/backnumber/no86.html)

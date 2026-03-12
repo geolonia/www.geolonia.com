@@ -7,32 +7,35 @@ category: "お知らせ"
 
 和歌山県および和歌山県教育委員会が開催するプログラミングコンテスト「きのくにICTプログラミングコンテスト Switch Up WAKAYAMA」で、弊社エンジニアの大橋がメンターを担当した県立串本古座高等学校が最優秀賞を受賞しました。
 
-> Microsoft PowerPoint - きのくにICTプログラミングコンテスト概要資料（チラシ）
-> https://www.pref.wakayama.lg.jp/prefg/063100/d00202376_d/fil/2021gaiyo_2.pdf
+> Microsoft PowerPoint - きのくにICTプログラミングコンテスト概要資料（チラシ）  
+> [https://www.pref.wakayama.lg.jp/prefg/063100/d00202376\_d/fil/2021gaiyo\_2.pdf](https://www.pref.wakayama.lg.jp/prefg/063100/d00202376_d/fil/2021gaiyo_2.pdf)
 
 「きのくにICTプログラミングコンテスト Switch Up WAKAYAMA」は、2019年度から全国に先駆けて県内全域でプログラミング教育を実施している和歌山県が開催するコンテストです。2021年度開催の今回は「小学校の部」「中学校の部」「高等学校の部」の3部門で開催され、「2021宇宙の旅」をテーマにした串本古座高等学校のグループ「つれもていこら！スペースポート紀伊！」が、最優秀賞を受賞しました。
 
 「つれもていこら！スペースポート紀伊！」の作品「ロケット観光マップ」は国際宇宙ステーション（ISS）の現在の場所と世界各国のロケット発射場が掲載された地図サービスです。地図データはGeoloniaの「Geolonia Maps」をベースとし、次の発射日や衛星のミッション（2021/12/19時点）などの情報が確認できます。
 
 ![ロケット観光マップ](/images/news/2022-01-24-kinokuni-ict-contest-award-1.png)
+*ロケット観光マップ*
 
-> ISSの現在の場所と各国のロケット打ち上げ場の情報が載っている地図です。ロケット観光や宇宙教育にご利用ください。
-> https://kentarokiyono.github.io/iss-map-for-kids/
+> ISSの現在の場所と各国のロケット打ち上げ場の情報が載っている地図です。ロケット観光や宇宙教育にご利用ください。  
+> [https://kentarokiyono.github.io/iss-map-for-kids/](https://kentarokiyono.github.io/iss-map-for-kids/)
 
 1月19日には県立串本古座高等学校で最優秀賞の授与が行われ、同校の清野健太郎さんが代表として賞状や盾を受け取りました。
 
 ![最優秀賞授与の模様](/images/news/2022-01-24-kinokuni-ict-contest-award-2.png)
+*最優秀賞授与の模様*
 
 ![清野健太郎さん](/images/news/2022-01-24-kinokuni-ict-contest-award-3.png)
+*清野健太郎さん*
 
 ISS観光マップの概要はこちらの発表資料をご覧ください。
 
-> ISS観光マップ - Google スライド
-> https://docs.google.com/presentation/d/189EY42PDkFsJpvN61S7hNTBRRlhvrjLyDEudpt-feQU/
+> ISS観光マップ - Google スライド  
+> [https://docs.google.com/presentation/d/189EY42PDkFsJpvN61S7hNTBRRlhvrjLyDEudpt-feQU/](https://docs.google.com/presentation/d/189EY42PDkFsJpvN61S7hNTBRRlhvrjLyDEudpt-feQU/)
 
 **【2022年2月17日更新】**
 
 きのくにICTプログラミングコンテストについて紀伊民報に記事を掲載していただきました。
 
-> ロケットアプリで最優秀賞　プログラミングコンテストで清野君：紀伊民報AGARA
-> https://www.agara.co.jp/sp/article/180481
+> ロケットアプリで最優秀賞　プログラミングコンテストで清野君：紀伊民報AGARA  
+> [https://www.agara.co.jp/sp/article/180481](https://www.agara.co.jp/sp/article/180481)

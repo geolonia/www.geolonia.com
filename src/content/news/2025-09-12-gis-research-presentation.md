@@ -11,15 +11,9 @@ category: "お知らせ"
 
 > GIS基礎技術研究会のウェブサイト
 > 
-> 
-> 
-> 
-> 
-> 
-> https://asia.doc.kyushu-u.ac.jp/geotechlabo/NPO/gis.html
+> [https://asia.doc.kyushu-u.ac.jp/geotechlabo/NPO/gis.html](https://asia.doc.kyushu-u.ac.jp/geotechlabo/NPO/gis.html)
 
 ## イベント概要
 
-- 日程：2025年9月20日(土) 10:00-12:00
-
-- テーマ：「リアルタイム人流と地理空間情報を活用した市民のためのデジタルツイン」
+-   日程：2025年9月20日(土) 10:00-12:00
+-   テーマ：「リアルタイム人流と地理空間情報を活用した市民のためのデジタルツイン」
