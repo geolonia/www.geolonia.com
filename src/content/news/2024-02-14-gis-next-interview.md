@@ -6,5 +6,7 @@ category: "お知らせ"
 ---
 
 地理・GISの専門情報誌「GIS NEXT」第86号の「DXを阻む住所問題」にてインタビューいただきました。弊社の住所DXへの取り組みや、「クイック住所変換」サービスリリースに至った思いをお話させていただきました。ぜひご覧ください。
+
 詳細はこちらをご覧ください。
+
  GIS NEXT Webページ：http://nextpb.com/gisnext/backnumber/no86.html
