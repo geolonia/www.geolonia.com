@@ -1,6 +1,6 @@
 ---
 title: "SCI-Japan Webサロン登壇のお知らせ"
-description: "5月16日（火）にオンライン開催されるSCI-Japan第22回WEBサロンにCEOの宮内とCOOの西川が登壇します。 SCI-Japanは、スマートシティの拡大と高度化を推進するためのナレッジ＆公民学連携プラットフォームとして、"
+description: "5月16日（火）にオンライン開催されるSCI-Japan第22回WEBサロンにCEOの宮内とCOOの西川が登壇します。"
 pubDate: 2023-05-10
 category: "お知らせ"
 ---
