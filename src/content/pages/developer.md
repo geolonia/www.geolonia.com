@@ -7,7 +7,7 @@ description: "Geolonia製品の開発者向け情報とリソース"
 
 Geolonia Maps を使えば、たった数行のコードで地図をウェブサイトに埋め込めます。
 
-#### 1. JavaScript SDK を読み込む
+### 1. JavaScript SDK を読み込む
 
 `</body>` の直前に以下のスクリプトタグを追加してください。
 
@@ -15,7 +15,7 @@ Geolonia Maps を使えば、たった数行のコードで地図をウェブサ
 <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
 ```
 
-#### 2. 地図を表示する
+### 2. 地図を表示する
 
 HTML に以下の要素を追加するだけで、地図が表示されます。
 
@@ -28,7 +28,7 @@ HTML に以下の要素を追加するだけで、地図が表示されます。
 >東京スカイツリー</div>
 ```
 
-#### 3. カスタマイズ
+### 3. カスタマイズ
 
 マーカーの追加、GeoJSON データの表示、地図スタイルの変更など、`data-*` 属性やJavaScript API を使って柔軟にカスタマイズできます。詳しくは[ドキュメント](https://docs.geolonia.com/)をご覧ください。
 
