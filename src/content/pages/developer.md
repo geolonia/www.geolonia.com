@@ -15,7 +15,7 @@ Geoloniaの製品を使った開発に役立つ情報をまとめています。
 
 Geolonia Mapsを使った開発は非常にシンプルです。HTMLファイルにスクリプトタグを追加するだけで地図を表示できます。
 
-#### 1. &lt;/body&gt; の直前で JavaSCript SDK を読み込む
+#### 1. &lt;/body&gt; の直前で JavaScript SDK を読み込む
 
 ```html
 <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
@@ -23,7 +23,7 @@ Geolonia Mapsを使った開発は非常にシンプルです。HTMLファイル
 
 #### 2. 地図を表示
 
-```
+```html
 <div
   class="geolonia"
   data-lat="35.7101"
