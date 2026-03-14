@@ -7,7 +7,7 @@ category: "ニュースリリース"
 
 地図サービスを提供する株式会社 Geolonia （本社: 東京都千代田区、代表取締役社長: 宮内 隆行）は、国土地理院が主催する地理院地図パートナーネットワークに参加いたしました。
 
-## [](https://hackmd.io/VmVJ9vdtQnid6Zu91ANeJg#%E5%9C%B0%E7%90%86%E9%99%A2%E5%9C%B0%E5%9B%B3%E3%83%91%E3%83%BC%E3%83%88%E3%83%8A%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%81%A8%E3%81%AF%EF%BC%9F)地理院地図パートナーネットワークとは？
+##地理院地図パートナーネットワークとは？
 
 地理院地図パートナーネットワークについての説明は、公式サイトに以下のように記載されています。
 
@@ -16,11 +16,11 @@ category: "ニュースリリース"
 
 [http://maps.gsi.go.jp/pn/](http://maps.gsi.go.jp/pn/)
 
-## [](https://hackmd.io/VmVJ9vdtQnid6Zu91ANeJg#%E7%99%BB%E9%8C%B2%E5%86%85%E5%AE%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)登録内容について
+##登録内容について
 
 地理院地図パートナーネットワークのリストには、弊社が提供する以下のサービス及びオープンソースプロジェクトが登録されました。
 
-### [](https://hackmd.io/VmVJ9vdtQnid6Zu91ANeJg#Geoloniacom)[Geolonia.com](http://geolonia.com/)
+###[Geolonia.com](http://geolonia.com/)
 
 ![](/images/news/2020-06-04-gsi-partner-network-1.png)
 
@@ -28,7 +28,7 @@ category: "ニュースリリース"
 
 扱いやすい JavaScript API と、WebGL による自由度が高いデザイン性や、地図上のマーカーを複数人で編集できるエディターが特徴です。
 
-### [](https://hackmd.io/VmVJ9vdtQnid6Zu91ANeJg#%E3%82%A4%E3%82%A8%E3%83%A1%E3%82%B7)イエメシ
+###イエメシ
 
 ![](/images/news/2020-06-04-gsi-partner-network-2.png)
 
@@ -36,7 +36,7 @@ category: "ニュースリリース"
 
 Google Spreadsheet をバックエンドとすることで、複数の人たちで登録店舗をメンテナンスすることが可能です。
 
-## [](https://hackmd.io/VmVJ9vdtQnid6Zu91ANeJg#%E5%9C%B0%E7%90%86%E9%99%A2%E5%9C%B0%E5%9B%B3-Vector-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E6%8F%90%E4%BE%9B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)地理院地図 Vector を使ったスタイルの提供について
+##地理院地図 Vector を使ったスタイルの提供について
 
 弊社の地図は、Mapbox 社の Mapbox GL JS をベースにしており、スタイル用の JSON を編集することで複数のデータソースを組み合わせて、自由度の高い地図をつくることができます。
 
