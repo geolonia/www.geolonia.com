@@ -283,6 +283,11 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
             btn.textContent = 'Copy';
             btn.classList.remove('copied');
           }, 2000);
+        }).catch(() => {
+          btn.textContent = 'Failed';
+          setTimeout(() => {
+            btn.textContent = 'Copy';
+          }, 2000);
         });
       }
     });
