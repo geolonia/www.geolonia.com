@@ -203,11 +203,6 @@ const latestNews = allNews
         <h3 class="achievements-category">民間企業</h3>
         <div class="achievements-grid">
           <div class="achievement-item">
-            <a href="https://www.nhk.or.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/nhk.svg" alt="日本放送協会" />
-            </a>
-          </div>
-          <div class="achievement-item">
             <a href="https://www.softbank.jp/" target="_blank" rel="noopener" class="achievement-logo">
               <img src="/images/clients/softbank.png" alt="ソフトバンク株式会社" />
             </a>
@@ -215,6 +210,11 @@ const latestNews = allNews
           <div class="achievement-item">
             <a href="https://jpn.nec.com/" target="_blank" rel="noopener" class="achievement-logo">
               <img src="/images/clients/nec.svg" alt="日本電気株式会社" />
+            </a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.ntt.com/" target="_blank" rel="noopener" class="achievement-logo">
+              <img src="/images/clients/ntt-communications.svg" alt="NTTコミュニケーションズ株式会社" />
             </a>
           </div>
           <div class="achievement-item">
@@ -228,28 +228,13 @@ const latestNews = allNews
             </a>
           </div>
           <div class="achievement-item">
+            <a href="https://www.nhk.or.jp/" target="_blank" rel="noopener" class="achievement-logo">
+              <img src="/images/clients/nhk.svg" alt="日本放送協会" />
+            </a>
+          </div>
+          <div class="achievement-item">
             <a href="https://www.pwc.com/jp/ja.html" target="_blank" rel="noopener" class="achievement-logo">
               <img src="/images/clients/pwc.svg" alt="PwC Japan合同会社" />
-            </a>
-          </div>
-          <div class="achievement-item">
-            <a href="https://sanix.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/sanix.png" alt="サニックス株式会社" />
-            </a>
-          </div>
-          <div class="achievement-item">
-            <a href="https://www.pasco.co.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/pasco.svg" alt="株式会社パスコ" />
-            </a>
-          </div>
-          <div class="achievement-item">
-            <a href="https://www.axelspace.com/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/axelspace.svg" alt="株式会社アクセルスペース" />
-            </a>
-          </div>
-          <div class="achievement-item">
-            <a href="https://www.aerotoyota.co.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/aerotoyota.png" alt="エアロトヨタ株式会社" />
             </a>
           </div>
           <div class="achievement-item">
@@ -258,8 +243,13 @@ const latestNews = allNews
             </a>
           </div>
           <div class="achievement-item">
-            <a href="https://www.ntt.com/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/ntt-communications.svg" alt="NTTコミュニケーションズ株式会社" />
+            <a href="https://www.pasco.co.jp/" target="_blank" rel="noopener" class="achievement-logo">
+              <img src="/images/clients/pasco.svg" alt="株式会社パスコ" />
+            </a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://sanix.jp/" target="_blank" rel="noopener" class="achievement-logo">
+              <img src="/images/clients/sanix.png" alt="サニックス株式会社" />
             </a>
           </div>
           <div class="achievement-item">
@@ -270,6 +260,16 @@ const latestNews = allNews
           <div class="achievement-item">
             <a href="https://www.anabuki-housing.co.jp/" target="_blank" rel="noopener" class="achievement-logo">
               <img src="/images/clients/anabuki-housing.webp" alt="あなぶきハウジングサービス" />
+            </a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.axelspace.com/" target="_blank" rel="noopener" class="achievement-logo">
+              <img src="/images/clients/axelspace.svg" alt="株式会社アクセルスペース" />
+            </a>
+          </div>
+          <div class="achievement-item">
+            <a href="https://www.aerotoyota.co.jp/" target="_blank" rel="noopener" class="achievement-logo">
+              <img src="/images/clients/aerotoyota.png" alt="エアロトヨタ株式会社" />
             </a>
           </div>
         </div>
@@ -736,9 +736,9 @@ const latestNews = allNews
 
   .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(7, 1fr);
     gap: 0.6rem;
-    max-width: 1400px;
+    max-width: 1140px;
     margin: 0 auto;
   }
 
@@ -813,7 +813,7 @@ const latestNews = allNews
     }
 
     .achievements-grid {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
     }
 
