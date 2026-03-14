@@ -995,13 +995,19 @@ npm run astro check
 - **X-Frame-Options** — DENY
 - **Cross-Origin-Opener-Policy / Cross-Origin-Resource-Policy** — same-origin
 
+### 画像の管理
+
+- **フォーマットは WebP 統一** — PNG/JPG/GIF は使用しない。SVG はそのまま使用可
+- **画像の追加時は `cwebp` で変換する** — `cwebp -q 85 -m 6 input.png -o output.webp`
+- **最大幅を守る** — ヒーロー/フルワイド画像は 1920px、コンテンツ画像（ニュース等）は 1600px。リサイズ例: `cwebp -q 85 -m 6 -resize 1600 0 input.png -o output.webp`
+- **テンプレートリテラル内のパスに注意** — `${base}images/...` の形式は `sed` による一括置換でマッチしないため、手動確認が必要
+
 ### 守るべきルール
 
 - **外部 CSS/JS を追加しない** — SRI 減点を避けるためセルフホスティングを優先する（例: Google Fonts → `@fontsource-variable`）
 - **インラインスクリプトを書かない** — CSP で `script-src` に `'unsafe-inline'` を許可していない。JS は外部ファイル化すること（`public/js/` に配置）
 - **リンク色のコントラスト比 4.5:1 以上を維持する** — WCAG AA 準拠（現在のリンク色: `#b37000`）
 - **LCP 要素には `<link rel="preload">` と `fetchpriority="high"` を設定する**
-- **画像は WebP/AVIF を優先し、`width`/`height` を明示する**
 - **環境変数は `.env` で管理**（`.gitignore` 済み）— APIキーをコミットしない
 - **依存関係は定期的に更新する**（`npm audit`）
 
