@@ -46,8 +46,8 @@ www.geolonia.com/
 │   ├── llms.txt                     # AI向けサイト概要（/llms.txt でアクセス可能）
 │   ├── llms-full.txt                # AI向けサイト詳細（/llms-full.txt でアクセス可能）
 │   └── images/
-│       ├── geolonia_logo.png        # カラーロゴ（子ページ用）
-│       ├── geolonia_logo_white.png  # 白ロゴ（ホーム用）
+│       ├── geolonia_logo.webp        # カラーロゴ（子ページ用）
+│       ├── geolonia_logo_white.webp  # 白ロゴ（ホーム用）
 │       └── ...
 │
 ├── src/
@@ -312,13 +312,13 @@ EOF
 #### ホームページ (`/`)
 - **背景**: 透明（`transparent`）
 - **テキスト**: 白色
-- **ロゴ**: 白色（`geolonia_logo_white.png`）
+- **ロゴ**: 白色（`geolonia_logo_white.webp`）
 - **配置**: `position: absolute`（ヒーロー画像の上に重なる）
 
 #### 子ページ (`/company/`, `/products/` など)
 - **背景**: 白色（`#fff`）
 - **テキスト**: 暗色（`#444`）
-- **ロゴ**: カラー（`geolonia_logo.png`）
+- **ロゴ**: カラー（`geolonia_logo.webp`）
 - **配置**: `position: relative`（通常のフロー）
 - **効果**: Box-shadow付き
 
@@ -334,7 +334,7 @@ const isHome = Astro.url.pathname === '/';
 <header class={`site-header ${isHome ? 'site-header--home' : 'site-header--page'}`}>
   <h1 class="site-header-logo">
     <a href="/">
-      <img src={isHome ? "/images/geolonia_logo_white.png" : "/images/geolonia_logo.png"} />
+      <img src={isHome ? "/images/geolonia_logo_white.webp" : "/images/geolonia_logo.webp"} />
     </a>
   </h1>
 </header>
