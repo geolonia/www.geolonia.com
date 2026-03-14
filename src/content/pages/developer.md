@@ -3,25 +3,21 @@ title: "開発者向け情報"
 description: "Geolonia製品の開発者向け情報とリソース"
 ---
 
-## 開発者向けリソース
+## 開発を始める
 
-Geoloniaの製品を使った開発に役立つ情報をまとめています。技術ドキュメント、コードサンプル、開発者ブログなど、開発に必要な情報を提供しています。
+Geolonia Maps を使えば、たった数行のコードで地図をウェブサイトに埋め込めます。
 
-### 主要リソース
+### 1. JavaScript SDK を読み込む
 
-- [**Geolonia Maps ドキュメント**](https://docs.geolonia.com/) - APIリファレンスやチュートリアル
-
-### 開発を始める
-
-Geolonia Mapsを使った開発は非常にシンプルです。HTMLファイルにスクリプトタグを追加するだけで地図を表示できます。
-
-#### 1. &lt;/body&gt; の直前で JavaScript SDK を読み込む
+`</body>` の直前に以下のスクリプトタグを追加してください。
 
 ```html
 <script src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
 ```
 
-#### 2. 地図を表示
+### 2. 地図を表示する
+
+HTML に以下の要素を追加するだけで、地図が表示されます。
 
 ```html
 <div
@@ -32,15 +28,20 @@ Geolonia Mapsを使った開発は非常にシンプルです。HTMLファイル
 >東京スカイツリー</div>
 ```
 
-### 技術サポート
+### 3. カスタマイズ
 
-開発中の技術的な質問や問題については、以下の方法でサポートを受けられます：
+マーカーの追加、GeoJSON データの表示、地図スタイルの変更など、`data-*` 属性やJavaScript API を使って柔軟にカスタマイズできます。詳しくは[ドキュメント](https://docs.geolonia.com/)をご覧ください。
 
-- ドキュメントの検索
-- コミュニティフォーラム
-- メールサポート
-- GitHub Issues
+## リソース
 
-### オープンソース
+- [**Geolonia Maps ドキュメント**](https://docs.geolonia.com/) - APIリファレンス、チュートリアル、設定オプション
+- [**コードサンプル**](/maps-dev/) - コピー&ペーストで使える実装例
+- [**開発者ブログ**](https://blog.geolonia.com/) - 技術記事、アップデート情報、活用事例
 
-Geoloniaは、オープンソースコミュニティを積極的にサポートしています。GitHubで公開しているプロジェクトへの貢献を歓迎します。
+## 技術サポート
+
+開発中の技術的な質問や問題については、以下の方法でサポートを受けられます。
+
+- [**Geolonia Maps ドキュメント**](https://docs.geolonia.com/) - よくある質問や設定例を掲載
+- [**GitHub Issues**](https://github.com/orgs/geolonia/issues) - バグ報告や機能リクエスト
+- [**お問い合わせ**](/contact/) - 導入相談やテクニカルサポート
