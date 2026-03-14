@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "astro dev --open",
-    "build": "astro check && astro build",
-    "build:staging": "STAGING=true astro check && STAGING=true astro build",
-    "build:production": "astro check && astro build",
+    "build": "astro check && astro build && npm run minify:js",
+    "build:staging": "STAGING=true astro check && STAGING=true astro build && npm run minify:js",
+    "build:production": "astro check && astro build && npm run minify:js",
+    "minify:js": "esbuild dist/js/*.js --minify --outdir=dist/js --allow-overwrite",
     "preview": "astro preview",
     "astro": "astro",
     "test": "cucumber-js",
