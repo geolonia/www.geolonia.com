@@ -148,4 +148,40 @@ const websiteSchema = {
     height: auto;
     display: block;
   }
+
+  .markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+  }
+
+  .markdown-content th,
+  .markdown-content td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  .markdown-content th {
+    background-color: #f5f5f5;
+    font-weight: 700;
+  }
+
+  .markdown-content td {
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .markdown-content table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .markdown-content th,
+    .markdown-content td {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
 </style>
