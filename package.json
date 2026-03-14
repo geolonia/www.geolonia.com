@@ -32,6 +32,7 @@
     "@astrojs/check": "^0.9.6",
     "@cucumber/cucumber": "^12.6.0",
     "@playwright/test": "^1.58.2",
+    "esbuild": "^0.27.4",
     "puppeteer": "^24.37.2",
     "rehype-rewrite": "^4.0.4",
     "typescript": "^5.9.3",
