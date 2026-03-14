@@ -38,15 +38,15 @@ category: "お知らせ"
 
 今回のリリースで追加された【3D表示の追加】を使うと、地図が立体表示になります。
 
-![](/images/news/2025-09-09-map-bouken-lab-2025-09-update-1.png)
+![](/images/news/2025-09-09-map-bouken-lab-2025-09-update-1.webp)
 *[新機能1] ：【3D表示の追加】*
 
 ズームを13以上にし、山などの高低差がある場所を表示すると、平面地図に立体的な要素が加わり地形をよりわかりやすく確認することができます。
 
-![](/images/news/2025-09-09-map-bouken-lab-2025-09-update-2.png)
+![](/images/news/2025-09-09-map-bouken-lab-2025-09-update-2.webp)
 *[新機能] 緯度/経度に関するブロック、回転など*
 
-![](/images/news/2025-09-09-map-bouken-lab-2025-09-update-3.png)
+![](/images/news/2025-09-09-map-bouken-lab-2025-09-update-3.webp)
 *[新機能] 移動、カスタムポイントへのジャンプ*
 
 緯度/経度 変数ブロックの追加や、移動、回転など、より地図を扱いやすくなる機能も新規追加しました。ぜひお試しください！

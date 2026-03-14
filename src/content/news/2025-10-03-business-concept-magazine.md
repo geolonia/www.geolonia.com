@@ -9,7 +9,7 @@ category: "お知らせ"
 
 月刊事業構想　2025年11月号　[https://www.projectdesign.jp/202511](https://www.projectdesign.jp/202511)
 
-![](/images/news/2025-10-03-business-concept-magazine-1.png)
+![](/images/news/2025-10-03-business-concept-magazine-1.webp)
 
 月刊事業構想のオンラインでも「広域データ活用・連携のエンジン 地図データで変わる自治体DX」と題した記事が公開されています。
 

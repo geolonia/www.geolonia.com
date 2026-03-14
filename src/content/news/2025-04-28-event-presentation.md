@@ -32,7 +32,7 @@ Geoloniaが開発した地理空間データ連携基盤を横展開の仕組み
 
 # 関連記事
 
-[![](/images/news/2025-04-28-event-presentation-1.jpg)](/archives/5912/)
+[![](/images/news/2025-04-28-event-presentation-1.webp)](/archives/5912/)
 
 [Geolonia、大阪・関西万博へ出展してきました](/archives/5912/)
 

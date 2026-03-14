@@ -8,7 +8,7 @@ category: "ニュースリリース"
 株式会社 Geolonia（ジオロニア）は、位置情報をテーマとしたWebメディア「graphia（グラフィア）」を4月19日にリニューアルしました。
 
 ![地図や位置情報に特化したWebメディア「graphia（グラフィア）」
-https://graphia.jp/](/images/news/2023-04-18-graphia-media-renewal-1.png)
+https://graphia.jp/](/images/news/2023-04-18-graphia-media-renewal-1.webp)
 
 graphiaは、地図や地理空間情報、ロケーションデータに関する知見を共有し、位置情報の可能性を切り拓くことを目的としたWebメディアです。2021年1月の開設以降、地図・位置情報に関する用語や業界のキーマンインタビュー、地図・位置情報の最新トレンドなどを紹介してきました。
 

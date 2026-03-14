@@ -7,7 +7,7 @@ category: "お知らせ"
 
 12月1日に公開された、「CoderDojo」を地図から探せる「DojoMap」への開発協力を行いました。
 
-![DojoMap](/images/news/2022-12-01-coderdojo-dojomap-1.png)
+![DojoMap](/images/news/2022-12-01-coderdojo-dojomap-1.webp)
 *DojoMap*
 
 地図から探す (DojoMap) - CoderDojo Japan  

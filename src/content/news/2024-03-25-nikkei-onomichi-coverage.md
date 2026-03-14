@@ -11,4 +11,4 @@ category: "お知らせ"
 
 日本経済新聞オンライン [https://www.nikkei.com/article/DGXZQOCC296L20Z20C24A2000000/](https://www.nikkei.com/article/DGXZQOCC296L20Z20C24A2000000/)
 
-![](/images/news/2024-03-25-nikkei-onomichi-coverage-1.png)
+![](/images/news/2024-03-25-nikkei-onomichi-coverage-1.webp)

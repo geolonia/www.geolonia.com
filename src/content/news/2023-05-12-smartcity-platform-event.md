@@ -14,7 +14,7 @@ category: "お知らせ"
 
 [](https://peatix.com/event/3570519/view)地理空間情報基盤について知りたい方、自治体データの活用に困っている方等、お気軽にご参加ください。
 
-![スマートシティ基盤「Geolonia Maps for SmartCity」](/images/news/2023-05-12-smartcity-platform-event-1.png)
+![スマートシティ基盤「Geolonia Maps for SmartCity」](/images/news/2023-05-12-smartcity-platform-event-1.webp)
 *スマートシティ基盤「Geolonia Maps for SmartCity」*
 
 ## イベント概要

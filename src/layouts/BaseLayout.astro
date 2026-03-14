@@ -17,7 +17,7 @@ const {
   description = '株式会社Geoloniaは、地図・位置情報サービスを提供しています。',
   ogTitle,
   ogDescription,
-  ogImage = '/images/geolonia_logo.png',
+  ogImage = '/images/geolonia_logo.webp',
   preloadImage,
 } = Astro.props;
 
@@ -36,7 +36,7 @@ const organizationSchema = {
   "@type": "Organization",
   "name": "株式会社Geolonia",
   "url": siteUrl,
-  "logo": new URL("/images/geolonia_logo.png", siteUrl).toString(),
+  "logo": new URL("/images/geolonia_logo.webp", siteUrl).toString(),
   "description": "地図・位置情報テクノロジーを提供する企業",
   "sameAs": [
     "https://twitter.com/geoloniamaps",

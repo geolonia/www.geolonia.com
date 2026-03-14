@@ -7,7 +7,7 @@ category: "ニュースリリース"
 
 株式会社Geoloniaは、政府や行政機関向けのGitHub解説書「GitHub for Governments」を公開しました。
 
-[![](/images/news/2023-01-25-github-for-governments-1.png)](https://geolonia.com/github-for-governments/)
+[![](/images/news/2023-01-25-github-for-governments-1.webp)](https://geolonia.com/github-for-governments/)
 
 「GitHub for Governments」は、プログラムのソースコードをオンラインで管理できるソフトウェア開発プラットフォーム「GitHub」の活用方法について政府・行政の機関に向けて解説したホワイトペーパーです。
 

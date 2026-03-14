@@ -12,7 +12,7 @@ Geoloniaは、地図・位置情報に関する様々なプロダクトとサー
 
 ## Geolonia Maps
 
-[![Geolonia Maps](/images/geolonia-maps.png)](https://maps.geolonia.com/)
+[![Geolonia Maps](/images/geolonia-maps.webp)](https://maps.geolonia.com/)
 
 ### 高性能な地図表示ライブラリ
 

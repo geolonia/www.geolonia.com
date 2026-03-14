@@ -9,7 +9,7 @@ category: "ニュースリリース"
 
 株式会社Geolonia（東京都渋谷区、代表取締役社長：宮内 隆行、以下Geolonia）および、Ultimatrust株式会社（東京都千代田区、代表取締役社長：小澤 巌、以下Ultimatrust）はこのたび、業務提携を開始いたしました。今後両社協力のもと、空間情報分野においてスマートシティ基盤の構築、ドローンおよびロボティックス分野での空間 ID の普及を目指していきます。
 
-![](/images/news/2023-08-18-ultimatrust-spatial-ai-partnership-1.png)
+![](/images/news/2023-08-18-ultimatrust-spatial-ai-partnership-1.webp)
 
 協業イメージ図
 

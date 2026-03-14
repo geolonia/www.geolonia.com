@@ -19,7 +19,7 @@ Geoloniaは、内閣府が発行した「スマートシティ・リファレン
 
 [https://www8.cao.go.jp/cstp/society5\_0/smartcity/en\_scra-gs\_2\_4.pdf](https://www8.cao.go.jp/cstp/society5_0/smartcity/en_scra-gs_2_4.pdf)
 
-![](/images/news/2025-05-23-scra5-smartcity-guidelines-1.png)
+![](/images/news/2025-05-23-scra5-smartcity-guidelines-1.webp)
 
 ## 1. 背景と目的
 
@@ -33,7 +33,7 @@ Geoloniaは、「地理空間データ連携基盤」のアーキテクチャの
 
 「地理空間データ連携基盤」第2版では、以下のポイントを中心に最新の構造と実装要件を整理しています。
 
-![](/images/news/2025-05-23-scra5-smartcity-guidelines-2.png)
+![](/images/news/2025-05-23-scra5-smartcity-guidelines-2.webp)
 
 ### 「地理空間データ連携基盤」の全体構成を示したアーキテクチャ図
 

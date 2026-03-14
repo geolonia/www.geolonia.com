@@ -13,7 +13,7 @@ Geoloniaは「物理世界とデジタル世界をリンクし、オープン＆
 
 今回新たに平川秀年を社外監査役に迎えた新たな経営体制により、今後加速する市場ニーズの拡大に向け、コーポレートガバナンスと事業成長の両面を強化してまいります。
 
-![](/images/news/2024-01-16-auditor-hirakawa-appointment-1.png)
+![](/images/news/2024-01-16-auditor-hirakawa-appointment-1.webp)
 
 **■社外監査役紹介平川秀年（ひらかわ ひでとし）**
 

@@ -14,7 +14,7 @@ category: "ニュースリリース"
 
 Geolonia Mapsは、オリジナルの地図を自由に作成できるサービスです。HTML/JavaScriptのカスタマイズでテーマに沿った地図をオリジナルデザインで作成できるほか、データ形式にベクトルタイルを採用し、大量のデータ表示でも軽快な動作を実現しました。
 
-![Geolonia Maps](/images/news/2021-09-07-geolonia-maps-pricing-update-1.png)
+![Geolonia Maps](/images/news/2021-09-07-geolonia-maps-pricing-update-1.webp)
 *Geolonia Maps*
 
 Geolonia Mapsの詳細は以前のニュースリリースをご覧ください。

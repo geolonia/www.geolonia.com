@@ -7,7 +7,7 @@ category: "お知らせ"
 
 代表の宮内がTBS「Nスタ」の取材を受け、コメントが放映されました。
 
-![TBS「Nスタ」2023年6月8日放送](/images/news/2023-06-08-tbs-nsta-media-coverage-1.png)
+![TBS「Nスタ」2023年6月8日放送](/images/news/2023-06-08-tbs-nsta-media-coverage-1.webp)
 
 ■TBS「Nスタ」2023年6月8日放送
 

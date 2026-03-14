@@ -7,7 +7,7 @@ category: "お知らせ"
 
 クラウドサービスを使ったサーバーレス・アプリケーションの開発運用支援を手がける株式会社Serverless Operationsの利用事例に、Geoloniaが掲載されました。
 
-![](/images/news/2021-04-20-serverless-operations-case-study-1.png)
+![](/images/news/2021-04-20-serverless-operations-case-study-1.webp)
 
 > ウェブ系サービスに必要なAPI課金システムをサーバーレスで構築、スタートアップ企業のスピード感とコストとニーズを満たすためAWSとStripeを活用 | Serverless Operations  
 >   

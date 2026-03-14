@@ -7,7 +7,7 @@ category: "お知らせ"
 
 株式会社Geoloniaは、自社の経営体制強化を目的として、小賀浩通氏が社外取締役に就任したことをお知らせします。
 
-![小賀浩通氏](/images/news/2022-05-11-new-director-1.png)  
+![小賀浩通氏](/images/news/2022-05-11-new-director-1.webp)  
 小賀浩通氏
 
 ## プロフィール

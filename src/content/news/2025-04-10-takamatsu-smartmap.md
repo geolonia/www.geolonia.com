@@ -9,7 +9,7 @@ category: "ニュースリリース"
 
 公開型GIS「スマートマップ」サービスページ：[https://www.geolonia.com/smartmap](/smartmap)
 
-![](/images/news/2025-04-10-takamatsu-smartmap-1.png)
+![](/images/news/2025-04-10-takamatsu-smartmap-1.webp)
 *スマートマップ焼津*
 
 スマートマップ焼津：[https://maps.yaizu-smartcity.jp/](https://maps.yaizu-smartcity.jp/)

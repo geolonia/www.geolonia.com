@@ -15,7 +15,7 @@ itomaは、ベクトルタイルベースの地図をプレビューするため
 
 kataは、地図データとして利用されるデータを他の形式に変換できるコマンドラインツールです。「metadata.json」形式のファイルを表形式に変換、「YAML」形式のファイルを、地図サービスを提供するMapboxがオープンソースとして提供している「Tippecanoe」形式に変換といった機能が利用できます。
 
-![kataの利用イメージ](/images/news/2022-03-29-vector-tile-dev-tools-1.png)
+![kataの利用イメージ](/images/news/2022-03-29-vector-tile-dev-tools-1.webp)
 *kataの利用イメージ*
 
 Geoloniaは今後も、デジタル地図のオープンソース化を推進するために活動して参ります。

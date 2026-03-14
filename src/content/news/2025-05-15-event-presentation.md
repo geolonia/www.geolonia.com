@@ -17,17 +17,17 @@ Geoloniaは、テクノロジーによって都市と暮らしをよりよくす
 
 また、豪華パビリオンの創意工夫から今後のイベントへの学びを得たり、来場した参加者のみなさんの高揚感を味わったり、万博スタッフ・ボランティアの方々の丁寧で懸命な姿に心が温まりました。ありがとうございました！
 
-![](/images/news/2025-05-15-event-presentation-1.jpeg)
+![](/images/news/2025-05-15-event-presentation-1.webp)
 
-![](/images/news/2025-05-15-event-presentation-2.jpeg)
+![](/images/news/2025-05-15-event-presentation-2.webp)
 
-![](/images/news/2025-05-15-event-presentation-3.jpg)
+![](/images/news/2025-05-15-event-presentation-3.webp)
 
-![](/images/news/2025-05-15-event-presentation-4.jpg)
+![](/images/news/2025-05-15-event-presentation-4.webp)
 
 # 関連記事
 
-[![](/images/news/2025-05-15-event-presentation-5.jpg)](/archives/5593/)
+[![](/images/news/2025-05-15-event-presentation-5.webp)](/archives/5593/)
 
 [大阪・関西万博出展のお知らせ](/archives/5593/)
 

@@ -7,7 +7,7 @@ category: "ニュースリリース"
 
 位置情報テクノロジーをハブとして世界中の情報をデジタル化する株式会社Geolonia（ジオロニア、本社: 東京都文京区、代表取締役社長: 宮内 隆行、以下「Geolonia」）は、地図や位置情報をテーマとしたWebメディア「graphia（グラフィア）」を1月29日に開設しました。
 
-![](/images/news/2021-01-29-graphia-launch-1.png)
+![](/images/news/2021-01-29-graphia-launch-1.webp)
 
 > graphia
 > [https://graphia.jp/](https://graphia.jp/)
