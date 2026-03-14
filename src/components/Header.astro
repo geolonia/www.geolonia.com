@@ -481,7 +481,7 @@ const internalLink = (path: string): string => {
     border: 10px solid transparent;
     z-index: 9999;
     opacity: 0;
-    border-bottom-color: var(--vk-color-primary);
+    border-bottom-color: #2d3239;
   }
 
   .global-nav-list > li.menu-item-has-children:hover::after {
@@ -491,20 +491,24 @@ const internalLink = (path: string): string => {
 
   /* Submenu */
   .global-nav-list > li > ul.sub-menu {
-    background-color: var(--vk-color-primary);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    background-color: #2d3239;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     left: 50%;
-    margin-left: -120px;
-    width: 240px;
+    margin-left: -130px;
+    width: 260px;
     margin-top: -1px;
-    border-radius: var(--vk-size-radius);
+    border-radius: 8px;
+    overflow: hidden;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #f39813, #ff6b35, #ff4444) 1;
+    border-image-slice: 1;
   }
 
   .global-nav-list .sub-menu {
     margin: 0;
     padding: 0;
     text-align: left;
-    transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in, transform 0.3s ease-in;
     position: absolute;
     z-index: 10000;
     display: block;
@@ -512,6 +516,7 @@ const internalLink = (path: string): string => {
     opacity: 0;
     visibility: hidden;
     list-style: none;
+    transform: translateY(-8px);
   }
 
   .global-nav-list > li:hover > .sub-menu {
@@ -519,13 +524,16 @@ const internalLink = (path: string): string => {
     visibility: visible;
     overflow-y: auto;
     max-height: 90vh;
+    transform: translateY(0);
   }
 
   .global-nav-list .sub-menu li a {
-    color: #fff;
-    padding: 14px 1.2em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 12px 1.2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     display: block;
+    font-size: 13px;
+    transition: all 0.2s ease;
   }
 
   .global-nav-list .sub-menu li:not(.menu-item-has-children):last-child > a {
@@ -533,12 +541,13 @@ const internalLink = (path: string): string => {
   }
 
   .global-nav-list .sub-menu li a:hover {
-    background-color: var(--vk-color-primary-vivid);
+    background: linear-gradient(90deg, rgba(243, 152, 19, 0.15), transparent);
     color: #fff;
+    padding-left: 1.5em;
   }
 
   .global-nav-list .sub-menu li.menu-item-has-children > a {
-    padding: 14px 3.5em 14px 1.2em;
+    padding: 12px 3.5em 12px 1.2em;
   }
 
   .global-nav-list .sub-menu .sub-menu {
