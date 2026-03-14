@@ -46,8 +46,8 @@ www.geolonia.com/
 │   ├── llms.txt                     # AI向けサイト概要（/llms.txt でアクセス可能）
 │   ├── llms-full.txt                # AI向けサイト詳細（/llms-full.txt でアクセス可能）
 │   └── images/
-│       ├── geolonia_logo.png        # カラーロゴ（子ページ用）
-│       ├── geolonia_logo_white.png  # 白ロゴ（ホーム用）
+│       ├── geolonia_logo.webp        # カラーロゴ（子ページ用）
+│       ├── geolonia_logo_white.webp  # 白ロゴ（ホーム用）
 │       └── ...
 │
 ├── src/
@@ -312,13 +312,13 @@ EOF
 #### ホームページ (`/`)
 - **背景**: 透明（`transparent`）
 - **テキスト**: 白色
-- **ロゴ**: 白色（`geolonia_logo_white.png`）
+- **ロゴ**: 白色（`geolonia_logo_white.webp`）
 - **配置**: `position: absolute`（ヒーロー画像の上に重なる）
 
 #### 子ページ (`/company/`, `/products/` など)
 - **背景**: 白色（`#fff`）
 - **テキスト**: 暗色（`#444`）
-- **ロゴ**: カラー（`geolonia_logo.png`）
+- **ロゴ**: カラー（`geolonia_logo.webp`）
 - **配置**: `position: relative`（通常のフロー）
 - **効果**: Box-shadow付き
 
@@ -334,7 +334,7 @@ const isHome = Astro.url.pathname === '/';
 <header class={`site-header ${isHome ? 'site-header--home' : 'site-header--page'}`}>
   <h1 class="site-header-logo">
     <a href="/">
-      <img src={isHome ? "/images/geolonia_logo_white.png" : "/images/geolonia_logo.png"} />
+      <img src={isHome ? "/images/geolonia_logo_white.webp" : "/images/geolonia_logo.webp"} />
     </a>
   </h1>
 </header>
@@ -977,21 +977,40 @@ npm run astro check
 
 ---
 
-## パフォーマンス最適化
+## パフォーマンス・セキュリティ基準
 
-- ✅ 画像は適切なサイズに最適化
-- ✅ 不要なJavaScriptは含めない（Astroは静的HTML生成）
-- ✅ CSSは必要最小限に
-- ✅ フォントは必要なウェイトのみ読み込み
+以下の2つの外部テストでハイスコアを維持すること。変更を加える際はスコアを下げないよう注意する。
+
+| テスト | URL | 目標 |
+|---|---|---|
+| **PageSpeed Insights** | https://pagespeed.web.dev | Performance 90+, 他カテゴリ 100 |
+| **MDN Observatory** | https://developer.mozilla.org/en-US/observatory | A+ (100/100) |
+
+### セキュリティヘッダー
+
+セキュリティヘッダーは `netlify.toml` で管理している。変更時は Observatory スコアへの影響を確認すること。
+
+- **Content-Security-Policy (CSP)** — Geolonia Maps の利用を想定したドメイン許可済み。新しい外部リソースを追加する場合は CSP の更新が必要
+- **Strict-Transport-Security** — HSTS preload 有効
+- **X-Frame-Options** — DENY
+- **Cross-Origin-Opener-Policy / Cross-Origin-Resource-Policy** — same-origin
+
+### 画像の管理
+
+- **フォーマットは WebP 統一** — PNG/JPG/GIF は使用しない。SVG はそのまま使用可
+- **画像の追加時は `cwebp` で変換する** — `cwebp -q 85 -m 6 input.png -o output.webp`
+- **最大幅を守る** — ヒーロー/フルワイド画像は 1920px、コンテンツ画像（ニュース等）は 1600px。リサイズ例: `cwebp -q 85 -m 6 -resize 1600 0 input.png -o output.webp`
+- **テンプレートリテラル内のパスに注意** — `${base}images/...` の形式は `sed` による一括置換でマッチしないため、手動確認が必要
+
+### 守るべきルール
+
+- **外部 CSS/JS を追加しない** — SRI 減点を避けるためセルフホスティングを優先する（例: Google Fonts → `@fontsource-variable`）
+- **インラインスクリプトを書かない** — CSP で `script-src` に `'unsafe-inline'` を許可していない。JS は外部ファイル化すること（`public/js/` に配置）
+- **リンク色のコントラスト比 4.5:1 以上を維持する** — WCAG AA 準拠（現在のリンク色: `#b37000`）
+- **LCP 要素には `<link rel="preload">` と `fetchpriority="high"` を設定する**
+- **環境変数は `.env` で管理**（`.gitignore` 済み）— APIキーをコミットしない
+- **依存関係は定期的に更新する**（`npm audit`）
 
 ---
 
-## セキュリティ
-
-- ✅ 環境変数は `.env` で管理（`.gitignore` 済み）
-- ✅ APIキーはコミットしない
-- ✅ 依存関係は定期的に更新（`npm audit`）
-
----
-
-**最終更新: 2026-02-08**
+**最終更新: 2026-03-14**

@@ -14,7 +14,7 @@ category: "お知らせ"
 
 「つれもていこら！スペースポート紀伊！」の作品「ロケット観光マップ」は国際宇宙ステーション（ISS）の現在の場所と世界各国のロケット発射場が掲載された地図サービスです。地図データはGeoloniaの「Geolonia Maps」をベースとし、次の発射日や衛星のミッション（2021/12/19時点）などの情報が確認できます。
 
-![ロケット観光マップ](/images/news/2022-01-24-kinokuni-ict-contest-award-1.png)
+![ロケット観光マップ](/images/news/2022-01-24-kinokuni-ict-contest-award-1.webp)
 *ロケット観光マップ*
 
 > ISSの現在の場所と各国のロケット打ち上げ場の情報が載っている地図です。ロケット観光や宇宙教育にご利用ください。  
@@ -22,10 +22,10 @@ category: "お知らせ"
 
 1月19日には県立串本古座高等学校で最優秀賞の授与が行われ、同校の清野健太郎さんが代表として賞状や盾を受け取りました。
 
-![最優秀賞授与の模様](/images/news/2022-01-24-kinokuni-ict-contest-award-2.png)
+![最優秀賞授与の模様](/images/news/2022-01-24-kinokuni-ict-contest-award-2.webp)
 *最優秀賞授与の模様*
 
-![清野健太郎さん](/images/news/2022-01-24-kinokuni-ict-contest-award-3.png)
+![清野健太郎さん](/images/news/2022-01-24-kinokuni-ict-contest-award-3.webp)
 *清野健太郎さん*
 
 ISS観光マップの概要はこちらの発表資料をご覧ください。

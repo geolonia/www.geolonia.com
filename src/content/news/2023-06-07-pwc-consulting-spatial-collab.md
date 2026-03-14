@@ -14,7 +14,7 @@ category: "ニュースリリース"
 \*1 内閣府 スマートシティリファレンスアーキテクチャホワイトペーパー：  
 [https://www8.cao.go.jp/cstp/stmain/a-whitepaper1\_200331.pdf](https://www8.cao.go.jp/cstp/stmain/a-whitepaper1_200331.pdf)
 
-![logo_pwc](/images/news/2023-06-07-pwc-consulting-spatial-collab-1.png)
+![logo_pwc](/images/news/2023-06-07-pwc-consulting-spatial-collab-1.webp)
 
 **【協業の背景】**  
   

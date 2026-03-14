@@ -22,15 +22,15 @@ UN Open GIS Initiativeのプロジェクトの1つが、「国連ベクトルタ
 
 これまでベクトルタイル地図のデザインは、数千行に渡るJSONファイルを編集する必要があるなど可読性や構造理解の面で課題があり、自由な地図デザインのための高いハードルになっていました。
 
-![JSON編集時のサンプル](/images/news/2021-11-15-un-open-gis-initiative-1.png)
+![JSON編集時のサンプル](/images/news/2021-11-15-un-open-gis-initiative-1.webp)
 *JSON編集時のサンプル*
 
 Charitesは、地図のデザインを「海」「線路」「高速道路」といったカテゴリで分類し、CSSを編集する感覚で色やサイズ、ズームレベルなどをカスタマイズできます。Charitesで編集したデータは、Geolonia MapsだけでなくMapboxやMapLibreといった他の地図サービスにも反映でき、編集した結果を地図上でリアルタイムに確認しながらデザインをカスタマイズできます。
 
-![Charitesの編集画面](/images/news/2021-11-15-un-open-gis-initiative-2.png)
+![Charitesの編集画面](/images/news/2021-11-15-un-open-gis-initiative-2.webp)
 *Charitesの編集画面*
 
-![地図をプレビュー表示しながら編集](/images/news/2021-11-15-un-open-gis-initiative-3.png)
+![地図をプレビュー表示しながら編集](/images/news/2021-11-15-un-open-gis-initiative-3.webp)
 *地図をプレビュー表示しながら編集*
 
 CharitesはGitHub上に公開されており、誰でも無料で利用することができます。
@@ -45,7 +45,7 @@ CharitesはGitHub上に公開されており、誰でも無料で利用するこ
 
 Geoloniaでは、Charitesを自社のオープンソースソフトウェアとして公開していましたが、UN Open GIS Initiativeからデザイン編集の容易さが高く評価されたことを受けて、2021年10月にUN Open GIS Initiativeへの寄贈を行い、今後も開発や協力を行っていくために、GeoloniaはUN Open GIS Initiativeのメンバーとして参画することが決定しました。
 
-![10月19日に行われたUN Open GIS Initiativeの月例会議](/images/news/2021-11-15-un-open-gis-initiative-4.png)
+![10月19日に行われたUN Open GIS Initiativeの月例会議](/images/news/2021-11-15-un-open-gis-initiative-4.webp)
 *10月19日に行われたUN Open GIS Initiativeの月例会議*
 
 Geoloniaは今後も、デジタル地図のオープンソース化を推進するために活動して参ります。

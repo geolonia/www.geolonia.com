@@ -11,7 +11,7 @@ category: "ニュースリリース"
 
 **クイック住所変換**　[https://quicknja.com/](https://quicknja.com/)
 
-![](/images/news/2023-08-16-address-normalization-1.png)
+![](/images/news/2023-08-16-address-normalization-1.webp)
 
 「クイック住所変換」は、住所データを取り扱う際の大きな課題である「表記ゆれ」と「座標化」をクイックに解決するサービスです。表記ゆれをしている住所を含むExcelファイル（.xlsx）をアップロードすると、正規化（使いやすい統一されたフォーマットの表記に変換）済みの住所と、座標が付与されたデータをダウンロードできます。
 
@@ -27,7 +27,7 @@ category: "ニュースリリース"
 
 たとえば、以下のような住所表記は人にとっては同じ場所を指しますが、コンピューターが読む場合には7つの違うデータとして認識されます。
 
-![](/images/news/2023-08-16-address-normalization-2.png)
+![](/images/news/2023-08-16-address-normalization-2.webp)
 
 ### 複数パターンの住所表記例
 

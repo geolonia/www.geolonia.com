@@ -22,8 +22,8 @@
 
   シナリオ: ホームページのロゴは白色
     前提 ホームページを開く
-    ならば ロゴ画像が "geolonia_logo_white.png" を使用している
+    ならば ロゴ画像が "geolonia_logo_white.webp" を使用している
 
   シナリオ: 子ページのロゴはカラー
     前提 "/company/" ページを開く
-    ならば ロゴ画像が "geolonia_logo.png" を使用している
+    ならば ロゴ画像が "geolonia_logo.webp" を使用している

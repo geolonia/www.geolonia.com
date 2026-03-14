@@ -18,7 +18,7 @@ SusHi Tech Tokyo 2024 Global Startup Programは、東京都が開催する国際
 
 展示詳細：ブース番号 IN15/Infrastructureセクターに出展
 
-![](/images/news/2024-05-14-event-presentation-1.png)
+![](/images/news/2024-05-14-event-presentation-1.webp)
 
 ## イベント概要
 

@@ -255,47 +255,4 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
   }
 </style>
 
-<script>
-  document.querySelectorAll('.markdown-content pre').forEach((pre) => {
-    const lang = pre.getAttribute('data-language');
-    if (!lang || !pre.parentNode) return;
-
-    const wrapper = document.createElement('div');
-    wrapper.className = 'code-block-wrapper';
-    pre.parentNode.insertBefore(wrapper, pre);
-    wrapper.appendChild(pre);
-
-    const label = document.createElement('span');
-    label.className = 'code-lang-label';
-    label.textContent = lang;
-    wrapper.appendChild(label);
-
-    const btn = document.createElement('button');
-    btn.className = 'code-copy-btn';
-    btn.textContent = 'Copy';
-    btn.addEventListener('click', async () => {
-      const code = pre.querySelector('code');
-      if (!code) return;
-
-      if (!navigator.clipboard?.writeText) {
-        btn.textContent = 'Failed';
-        setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
-        return;
-      }
-
-      try {
-        await navigator.clipboard.writeText(code.textContent || '');
-        btn.textContent = 'Copied!';
-        btn.classList.add('copied');
-        setTimeout(() => {
-          btn.textContent = 'Copy';
-          btn.classList.remove('copied');
-        }, 2000);
-      } catch {
-        btn.textContent = 'Failed';
-        setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
-      }
-    });
-    wrapper.appendChild(btn);
-  });
-</script>
+<script src="/js/code-block.js" defer></script>

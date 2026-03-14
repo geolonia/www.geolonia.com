@@ -10,10 +10,10 @@ const latestNews = allNews
   .slice(0, 5);
 ---
 
-<BaseLayout title="株式会社Geolonia">
+<BaseLayout title="株式会社Geolonia" preloadImage={`${base}images/slider-bg.webp`}>
   <div class="hero-cover">
     <div class="hero-background">
-      <img src={`${base}images/slider-bg.png`} alt="" class="hero-image" />
+      <img src={`${base}images/slider-bg.webp`} alt="" class="hero-image" fetchpriority="high" loading="eager" decoding="async" />
       <span class="hero-gradient" aria-hidden="true"></span>
     </div>
     <div class="hero-content">
@@ -62,7 +62,7 @@ const latestNews = allNews
           </div>
         </div>
         <div class="product-image">
-          <img src={`${base}images/geolonia-maps.png`} alt="Geolonia Maps" />
+          <img src={`${base}images/geolonia-maps.webp`} alt="Geolonia Maps" />
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@ const latestNews = allNews
           </div>
         </div>
         <div class="product-image">
-          <img src={`${base}images/smartcity.png`} alt="Geolonia Maps for SmartCity" />
+          <img src={`${base}images/smartcity.webp`} alt="Geolonia Maps for SmartCity" />
         </div>
       </div>
     </div>
@@ -119,7 +119,7 @@ const latestNews = allNews
           </div>
         </div>
         <div class="product-image">
-          <img src={`${base}images/address-normalization.png`} alt="住所ソリューション" />
+          <img src={`${base}images/address-normalization.webp`} alt="住所ソリューション" />
         </div>
       </div>
     </div>
@@ -183,12 +183,12 @@ const latestNews = allNews
           </div>
           <div class="achievement-item">
             <a href="https://www.maff.go.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/maff.gif" alt="農林水産省" />
+              <img src="/images/clients/maff.webp" alt="農林水産省" />
             </a>
           </div>
           <div class="achievement-item">
             <a href="https://www.gsi.go.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/gsi.png" alt="国土地理院" />
+              <img src="/images/clients/gsi.webp" alt="国土地理院" />
             </a>
           </div>
           <div class="achievement-item">
@@ -209,7 +209,7 @@ const latestNews = allNews
           </div>
           <div class="achievement-item">
             <a href="https://www.softbank.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/softbank.png" alt="ソフトバンク株式会社" />
+              <img src="/images/clients/softbank.webp" alt="ソフトバンク株式会社" />
             </a>
           </div>
           <div class="achievement-item">
@@ -234,7 +234,7 @@ const latestNews = allNews
           </div>
           <div class="achievement-item">
             <a href="https://sanix.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/sanix.png" alt="サニックス株式会社" />
+              <img src="/images/clients/sanix.webp" alt="サニックス株式会社" />
             </a>
           </div>
           <div class="achievement-item">
@@ -249,7 +249,7 @@ const latestNews = allNews
           </div>
           <div class="achievement-item">
             <a href="https://www.aerotoyota.co.jp/" target="_blank" rel="noopener" class="achievement-logo">
-              <img src="/images/clients/aerotoyota.png" alt="エアロトヨタ株式会社" />
+              <img src="/images/clients/aerotoyota.webp" alt="エアロトヨタ株式会社" />
             </a>
           </div>
         </div>

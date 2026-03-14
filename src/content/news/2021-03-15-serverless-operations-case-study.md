@@ -9,7 +9,7 @@ category: "お知らせ"
 
  コメント
 
-![Geoloniaと不動産テック協会ロゴ](/images/news/2021-03-15-serverless-operations-case-study-1.png)
+![Geoloniaと不動産テック協会ロゴ](/images/news/2021-03-15-serverless-operations-case-study-1.webp)
 
 不動産共通IDは、Geoloniaが2020年8月にオープンデータとして公開した日本全国の住所マスターデータを元に、不動産取引における企業間での情報連携やデータ連携などの実現を目的として不動産テック協会が整備するIDです。
 

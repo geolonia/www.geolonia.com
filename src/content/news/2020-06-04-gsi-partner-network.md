@@ -22,7 +22,7 @@ category: "ニュースリリース"
 
 ### [Geolonia.com](http://geolonia.com/)
 
-![Geolonia.comのサービス画面](/images/news/2020-06-04-gsi-partner-network-1.png)
+![Geolonia.comのサービス画面](/images/news/2020-06-04-gsi-partner-network-1.webp)
 
 [Geolonia.com](http://geolonia.com/) は、弊社が提供する地図及び関連サービスの総称です。
 
@@ -30,7 +30,7 @@ category: "ニュースリリース"
 
 ### イエメシ
 
-![イエメシのテイクアウトマップ画面](/images/news/2020-06-04-gsi-partner-network-2.png)
+![イエメシのテイクアウトマップ画面](/images/news/2020-06-04-gsi-partner-network-2.webp)
 
 イエメシは、弊社がオープンソースで開発したテイクアウトマップ用のフレームワークです。
 

@@ -4,8 +4,8 @@ const base = import.meta.env.BASE_URL;
 const isHome = currentPath === '/' || currentPath === base || currentPath === base + '/';
 
 // ロゴ画像のパス（baseを考慮）
-const logoWhite = `${base}images/geolonia_logo_white.png`;
-const logoColor = `${base}images/geolonia_logo.png`;
+const logoWhite = `${base}images/geolonia_logo_white.webp`;
+const logoColor = `${base}images/geolonia_logo.webp`;
 
 // 内部リンク用ヘルパー関数
 const internalLink = (path: string): string => {
@@ -786,55 +786,4 @@ const internalLink = (path: string): string => {
   }
 </style>
 
-<script>
-  // Mobile menu toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
-  const body = document.body;
-
-  mobileMenuBtn?.addEventListener('click', () => {
-    const isActive = mobileMenuBtn.classList.toggle('active');
-    mobileNavOverlay?.classList.toggle('active');
-
-    // Prevent body scroll when menu is open
-    if (isActive) {
-      body.style.overflow = 'hidden';
-      mobileMenuBtn.setAttribute('aria-expanded', 'true');
-    } else {
-      body.style.overflow = '';
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  // Close menu when clicking overlay background
-  mobileNavOverlay?.addEventListener('click', (e) => {
-    if (e.target === mobileNavOverlay) {
-      mobileMenuBtn?.classList.remove('active');
-      mobileNavOverlay.classList.remove('active');
-      body.style.overflow = '';
-      mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  // Submenu toggle
-  document.querySelectorAll('.mobile-menu-item-has-children > a').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      // Only toggle submenu if clicking the parent link itself
-      const parentLi = link.parentElement;
-      if (parentLi) {
-        e.preventDefault();
-        parentLi.classList.toggle('active');
-      }
-    });
-  });
-
-  // Close mobile menu on window resize to desktop size
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 992) {
-      mobileMenuBtn?.classList.remove('active');
-      mobileNavOverlay?.classList.remove('active');
-      body.style.overflow = '';
-      mobileMenuBtn?.setAttribute('aria-expanded', 'false');
-    }
-  });
-</script>
+<script src="/js/mobile-menu.js" defer></script>

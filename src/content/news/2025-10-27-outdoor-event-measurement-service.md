@@ -12,12 +12,12 @@ category: "ニュースリリース"
 本サービスでは、ジオテクノロジーズが保有する匿名化処理された人流データ「Geo-People」と、位置情報履歴に基づくアンケート調査サービス「Geo-Research」を活用した独自手法により、屋外イベントにおいて従来測定が困難であった観客の行動や満足度、地域経済への波及効果などを、定量的かつ直感的に可視化できるようになります。自治体や企業はイベントの実施効果をデータで把握し、施策立案や次回施策の改善、投資判断に活かすことが可能です。  
 \*2025年10月27日時点、当社調べ
 
-![](/images/news/2025-10-27-outdoor-event-measurement-service-1.png)
+![](/images/news/2025-10-27-outdoor-event-measurement-service-1.webp)
 
-![](/images/news/2025-10-27-outdoor-event-measurement-service-2.png)
+![](/images/news/2025-10-27-outdoor-event-measurement-service-2.webp)
 *＜分析ダッシュボードのイメージ＞*
 
-![](/images/news/2025-10-27-outdoor-event-measurement-service-3.png)
+![](/images/news/2025-10-27-outdoor-event-measurement-service-3.webp)
 *＜サマリーのイメージ＞*
 
 ※画像はイメージです。実際の仕様とは異なる場合があります。

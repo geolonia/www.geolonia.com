@@ -37,13 +37,13 @@ category: "お知らせ"
 
 ぜひお試しください！
 
-![](/images/news/2025-08-19-map-bouken-lab-2025-08-update-1.png)
+![](/images/news/2025-08-19-map-bouken-lab-2025-08-update-1.webp)
 *新機能1 ハザードマップを表示を追加、新機能2 国土数値情報の表示を追加*
 
-![](/images/news/2025-08-19-map-bouken-lab-2025-08-update-2.png)
+![](/images/news/2025-08-19-map-bouken-lab-2025-08-update-2.webp)
 *新機能3 触れているレイヤーの情報を取得ブロックを追加、新機能4 レイヤー情報変数を追加*
 
-![](/images/news/2025-08-19-map-bouken-lab-2025-08-update-3.png)
+![](/images/news/2025-08-19-map-bouken-lab-2025-08-update-3.webp)
 *バグ1: 場所の名前を正しくできるよう修正*
 
 ## **参考情報**

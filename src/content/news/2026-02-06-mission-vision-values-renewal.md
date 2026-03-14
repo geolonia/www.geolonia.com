@@ -33,7 +33,7 @@ Geoloniaはこれまで「物理世界とデジタル世界をリンクし、オ
 
 新しいMVVの世界観を象徴する存在として、二人のキャラクターが誕生しました。
 
-![](/images/news/2026-02-06-mission-vision-values-renewal-1.png)
+![](/images/news/2026-02-06-mission-vision-values-renewal-1.webp)
 
 ### 1\. ロア（LOA）
 
@@ -41,7 +41,7 @@ Geoloniaはこれまで「物理世界とデジタル世界をリンクし、オ
 
 伝統ある「地理の知恵」を現代に活かし、未来を切り拓くというミッションを象徴しています。
 
-![](/images/news/2026-02-06-mission-vision-values-renewal-2.png)
+![](/images/news/2026-02-06-mission-vision-values-renewal-2.webp)
 
 ### 2\. ポポイ（POPOI）
 
@@ -49,7 +49,7 @@ Point Of Interest（POI）から生まれた、地図上に現れるマーカー
 
 膨大な地理空間情報を構造化し、誰もが使えるデータ（地点）として可視化するGeoloniaの技術的役割を象徴しています。
 
-![](/images/news/2026-02-06-mission-vision-values-renewal-3.png)
+![](/images/news/2026-02-06-mission-vision-values-renewal-3.webp)
 
 ### **代表取締役 宮内 によるコメント**
 

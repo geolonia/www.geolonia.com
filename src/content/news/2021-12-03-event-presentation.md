@@ -7,7 +7,7 @@ category: "お知らせ"
 
 12月4日、5日にオンラインで開催するイベント「FOSS4G 2021 Japan Online」に、弊社の西川と大橋が登壇します。
 
-![FOSS4G 2021 Japan Online](/images/news/2021-12-03-event-presentation-1.png)
+![FOSS4G 2021 Japan Online](/images/news/2021-12-03-event-presentation-1.webp)
 *FOSS4G 2021 Japan Online*
 
 FOSS4G 2021 Japan Onlineは、OSGeo財団が主催する、オープンソースの地理情報ソフトウェア(GIS)群である「FOSS4G（Free Open Source Software for GeoSpatial）」をテーマにしたイベントです。初日の12月4日はコアデイとして、FOSS4Gのユーザーや開発者に加えて海外からのゲストによる講演や事例紹介を実施。2日目はチュートリアルデイとして、実際にFOSS4Gを体験するハンズオンをオンラインで行います。

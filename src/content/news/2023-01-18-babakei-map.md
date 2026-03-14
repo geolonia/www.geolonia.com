@@ -7,7 +7,7 @@ category: "お知らせ"
 
 Webメディア「高田馬場経済新聞」が1月7日に公開した「馬場経マップ」に、Geoloniaが開発協力しました。
 
-![高田馬場経済新聞](/images/news/2023-01-18-babakei-map-1.png)
+![高田馬場経済新聞](/images/news/2023-01-18-babakei-map-1.webp)
 *高田馬場経済新聞*
 
 馬場経マップ  
