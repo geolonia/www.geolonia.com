@@ -11,13 +11,6 @@
   # Node.jsのバージョン
   NODE_VERSION = "20"
 
-# リダイレクト設定（必要に応じて追加）
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
 # セキュリティヘッダー設定
 [[headers]]
   for = "/*"
