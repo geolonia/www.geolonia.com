@@ -125,6 +125,8 @@ const latestNews = allNews
     </div>
   </section>
 
+  <hr class="gradient-divider" />
+
   <!-- News Section -->
   <section class="news-section animate-on-scroll">
     <div class="news-wrapper">
@@ -293,7 +295,7 @@ const latestNews = allNews
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(1deg, rgba(242, 153, 19, 0) 0%, rgb(243, 152, 19) 52%, rgb(238, 115, 13) 76%, rgb(2, 1, 0) 100%);
+    background: linear-gradient(135deg, #c2790f 0%, #f39813 50%, #ffa714 100%);
     opacity: 0.9;
   }
 
@@ -499,7 +501,7 @@ const latestNews = allNews
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: #ffa714;
+    background: linear-gradient(135deg, #f39813, #ffa714);
     color: #fff;
     padding: 12px 24px;
     border-radius: 4px;
@@ -509,12 +511,14 @@ const latestNews = allNews
     transition: all 0.3s ease;
     width: fit-content;
     min-width: 250px;
+    background-size: 200% 200%;
+    background-position: 0% 50%;
   }
 
   .product-button:hover {
-    background: #ff9500;
+    background-position: 100% 50%;
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(194, 121, 15, 0.3);
   }
 
   .product-button svg {
@@ -563,6 +567,14 @@ const latestNews = allNews
       width: 100%;
       min-width: 100%;
     }
+  }
+
+  /* Gradient section divider */
+  .gradient-divider {
+    height: 3px;
+    background: linear-gradient(90deg, #f39813, #ffa714, #c2790f, #ffa714, #f39813);
+    border: none;
+    margin: 0;
   }
 
   /* News Section */
@@ -736,7 +748,7 @@ const latestNews = allNews
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #f39813, #ffa714);
+    background: linear-gradient(90deg, #f39813, #ffa714, #c2790f);
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
