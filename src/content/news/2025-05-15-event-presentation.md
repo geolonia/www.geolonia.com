@@ -7,7 +7,9 @@ category: "お知らせ"
 
 先日、5月12(月)〜14(水)の3日間、大阪・関西万博へ出展いたしました。
 
-[Geoloniaの共創チャレンジページ](https://team.expo2025.or.jp/ja/challenge/C10456)
+> Geoloniaの共創チャレンジページ
+> 
+> [https://team.expo2025.or.jp/ja/challenge/C10456](https://team.expo2025.or.jp/ja/challenge/C10456)
 
 Geoloniaは、テクノロジーによって都市と暮らしをよりよくすることを目指し、「共創チャレンジ」に参画しました。ブースでは、地理空間データ連携基盤の仕組みや、地理空間データ連携基盤を活用して生まれたアプリ事例を日本語と英語資料を用いて紹介しました。
 
@@ -15,4 +17,18 @@ Geoloniaは、テクノロジーによって都市と暮らしをよりよくす
 
 また、豪華パビリオンの創意工夫から今後のイベントへの学びを得たり、来場した参加者のみなさんの高揚感を味わったり、万博スタッフ・ボランティアの方々の丁寧で懸命な姿に心が温まりました。ありがとうございました！
 
-関連記事: [大阪・関西万博出展のお知らせ](/news/2025-04-28-event-presentation/)（2025年4月28日）
+![](/images/news/2025-05-15-event-presentation-1.jpeg)
+
+![](/images/news/2025-05-15-event-presentation-2.jpeg)
+
+![](/images/news/2025-05-15-event-presentation-3.jpg)
+
+![](/images/news/2025-05-15-event-presentation-4.jpg)
+
+# 関連記事
+
+[![](/images/news/2025-05-15-event-presentation-5.jpg)](/archives/5593/)
+
+[大阪・関西万博出展のお知らせ](/archives/5593/)
+
+ 2025年4月28日

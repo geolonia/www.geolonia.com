@@ -6,9 +6,15 @@ category: "お知らせ"
 ---
 
 12月8日に開催された不動産テック協会の設立3周年記念イベントに、代表取締役CEOの宮内が登壇しました。
-代表取締役CEOの宮内
+
+![代表取締役CEOの宮内](/images/news/2021-12-13-event-presentation-1.png)
+*代表取締役CEOの宮内*
+
 当日は不動産テック協会の顧問による講演や活動報告、今後の活動予定について発表が行われ、代表の宮内からは不動産テック協会と共同で取り組んでいる、不動産共通IDについて講演を行いました。
+
 記念イベントは会場に加えてオンライン配信も行われ、不動産テック協会の会員はイベントの模様や当日の資料をアーカイブで視聴できます。
+
 イベントの概要は下記URLをご覧ください。
-不動産テック協会・設立3周年記念イベント（オン・オフ両参加形式） - 不動産テック協会（Real Estate Tech Association for Japan） | Doorkeeper
-https://retech.doorkeeper.jp/events/130219
+
+> 不動産テック協会・設立3周年記念イベント（オン・オフ両参加形式） - 不動産テック協会（Real Estate Tech Association for Japan） | Doorkeeper  
+> [https://retech.doorkeeper.jp/events/130219](https://retech.doorkeeper.jp/events/130219)

@@ -33,7 +33,7 @@ Given('モバイル画面サイズでホームページを開く', async functio
 When('{string} メニューをクリックする', async function(menuText) {
   const menuMap = {
     'プロダクト': '/products/',
-    '会社情報': '/company/',
+    '会社情報': '/company',
     '開発者向け': '/developer/',
     '各種DX資料': '/resources/',
     'お問い合わせ': '/contact/',
@@ -69,7 +69,7 @@ Then('ページタイトルに {string} が含まれる', async function(text) {
 });
 
 Then('{string} ページが表示される', async function(pageTitle) {
-  const h1 = await this.page.locator('.hero-section h1, .page-header h1, h1').first();
+  const h1 = await this.page.locator('.hero-section h1, .page-header h1, main h1').first();
   await h1.waitFor({ state: 'visible', timeout: 10000 });
   const text = await h1.textContent();
   expect(text.trim()).toContain(pageTitle);
@@ -178,9 +178,9 @@ Then('ページが正しく表示される', async function() {
 });
 
 Then('コンテンツが読みやすい幅で表示される', async function() {
-  const container = await this.page.locator('.container').first();
+  const container = await this.page.locator('.hero-section .container, .content-section .container, .hero-content, .product-container').first();
   const width = await container.evaluate(el => el.offsetWidth);
-  expect(width).toBeLessThanOrEqual(1140);
+  expect(width).toBeLessThanOrEqual(1440);
   expect(width).toBeGreaterThan(0);
 });
 

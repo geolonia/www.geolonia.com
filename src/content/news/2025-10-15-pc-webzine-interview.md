@@ -6,5 +6,6 @@ category: "お知らせ"
 ---
 
 ITビジネス情報サイト、PC-Webzineさんに弊社のスマートシティの取り組み、地理空間データ連携基盤の開発についてインタビューいただきました。開発を担当するエンジニア2名が地理空間データを使った開発の難しさとやりがい、今後の展望についてお話させていただきました。ぜひご覧ください。
-詳細はこちらをご覧ください。
- PC-Webzineページ：https://www.pc-webzine.com/article/3181
+
+詳細はこちらをご覧ください。  
+PC-Webzineページ：[https://www.pc-webzine.com/article/3181](https://www.pc-webzine.com/article/3181)

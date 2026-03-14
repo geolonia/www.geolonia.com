@@ -6,14 +6,23 @@ category: "お知らせ"
 ---
 
 Geoloniaは、11月26日(水)に開催される「TOHOKU DX GATEWAY」に、高松市と合同出展いたします。
-TOHOKU DX GATEWAYウェブサイト
-https://tohoku-dx-gateway.jp/
+
+> TOHOKU DX GATEWAYウェブサイト
+> 
+> [https://tohoku-dx-gateway.jp/](https://tohoku-dx-gateway.jp/)
+
+  
 TOHOKU DX GATEWAYは、先進自治体の取り組み事例やDXソリューション等を紹介するブース展等により、同じ課題を持つ自治体職員に学びの機会を提供するとともに、民間企業には横展開によるビジネス拡大の機会の提供を目的として開催されます。
+
 当日は、Geoloniaが高松市に提案・開発し、内閣府のスマートシティ・リファレンスアーキテクチャで横展開の仕組みとして採用・掲載された地理空間データ連携基盤の仕組みや、基盤を活用して生まれたアプリ事例をご紹介します。
+
 皆様のご来場をお待ちしております。
-イベント概要
-日程：2025年11月26日(水) 10時から17時まで
-場所：仙台国際センター展示棟
-参加費：無料（来場には事前登録が必要です）
-主催：仙台市
-※詳細については、TOHOKU DX GATEWAYのサイトをご覧ください。
+
+## イベント概要
+
+-   日程：2025年11月26日(水) 10時から17時まで
+-   場所：仙台国際センター展示棟
+-   参加費：無料（来場には[事前登録が必要です](https://tdxg2025.event-lab.jp/v4/registration/visitor/form/TDXG/V04?l=japanese)）
+-   主催：仙台市
+
+※詳細については、[TOHOKU DX GATEWAY](https://tohoku-dx-gateway.jp/)のサイトをご覧ください。
