@@ -10,10 +10,10 @@ const latestNews = allNews
   .slice(0, 5);
 ---
 
-<BaseLayout title="株式会社Geolonia">
+<BaseLayout title="株式会社Geolonia" preloadImage={`${base}images/slider-bg.png`}>
   <div class="hero-cover">
     <div class="hero-background">
-      <img src={`${base}images/slider-bg.png`} alt="" class="hero-image" />
+      <img src={`${base}images/slider-bg.png`} alt="" class="hero-image" fetchpriority="high" loading="eager" decoding="async" />
       <span class="hero-gradient" aria-hidden="true"></span>
     </div>
     <div class="hero-content">

@@ -23,11 +23,14 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+    X-XSS-Protection = "0"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    Content-Security-Policy = "default-src 'none'; script-src 'self' https://cdn.geolonia.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https://cdn.geolonia.com https://api.geolonia.com https://geolonia.github.io; connect-src 'self' https://cdn.geolonia.com https://api.geolonia.com https://tileserver.geolonia.com https://*.tiles.geolonia.com https://glyphs.geolonia.com; worker-src blob:; child-src blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
 # 静的ファイルのキャッシュ設定
 [[headers]]
@@ -37,5 +40,10 @@
 
 [[headers]]
   for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"

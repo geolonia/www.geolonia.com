@@ -23,6 +23,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/sitemap": "^3.7.0",
+    "@fontsource-variable/noto-sans-jp": "^5.2.10",
     "astro": "^5.17.1",
     "turndown": "^7.2.2"
   },
