@@ -44,7 +44,7 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
   .hero-section {
     background: linear-gradient(135deg, #f39813 0%, #eb5722 100%);
     color: white;
-    padding: 60px 0;
+    padding: 100px 0 80px;
     margin-bottom: 60px;
   }
 
@@ -58,6 +58,8 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
     font-size: 3rem;
     margin: 0 0 1rem 0;
     font-weight: 700;
+    text-wrap: balance;
+    letter-spacing: 0.02em;
   }
 
   .lead {
@@ -70,109 +72,127 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
     padding: 0 0 80px 0;
   }
 
-  .markdown-content :global(h2) {
+  .markdown-content h2,
+  .markdown-content h3,
+  .markdown-content h4 {
+    text-wrap: balance;
+  }
+
+  .markdown-content h2 {
     color: #f39813;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
+    letter-spacing: 0.01em;
   }
 
-  .markdown-content :global(h2:first-child) {
+  .markdown-content h2:first-child {
     margin-top: 0;
   }
 
-  .markdown-content :global(h3) {
+  .markdown-content h3 {
     color: #333;
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
-  .markdown-content :global(h4) {
+  .markdown-content h4 {
     color: #333;
     font-size: 1.3rem;
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
   }
 
-  .markdown-content :global(p) {
+  .markdown-content p {
     line-height: 1.8;
     margin-bottom: 1rem;
+    max-width: 720px;
   }
 
-  .markdown-content :global(ul),
-  .markdown-content :global(ol) {
+  .markdown-content ul,
+  .markdown-content ol {
     line-height: 1.8;
     margin-bottom: 2rem;
     padding-left: 1.5rem;
   }
 
-  .markdown-content :global(li) {
+  .markdown-content li {
     margin-bottom: 0.5rem;
   }
 
-  .markdown-content :global(table) {
+  .markdown-content table {
     width: 100%;
     border-collapse: collapse;
     margin: 2rem 0;
   }
 
-  .markdown-content :global(th),
-  .markdown-content :global(td) {
+  .markdown-content th,
+  .markdown-content td {
     padding: 1rem;
     border-bottom: 1px solid #e0e0e0;
     text-align: left;
   }
 
-  .markdown-content :global(th) {
+  .markdown-content th {
     background-color: #f5f5f5;
     font-weight: 700;
   }
 
-  .markdown-content :global(td) {
+  .markdown-content td {
     line-height: 1.8;
   }
 
-  .markdown-content :global(a) {
+  .markdown-content a {
     color: #f39813;
     text-decoration: none;
   }
 
-  .markdown-content :global(a:hover) {
+  .markdown-content a:hover {
     text-decoration: underline;
   }
 
-  .markdown-content :global(hr) {
+  .markdown-content hr {
     border: none;
     border-top: 1px solid #e0e0e0;
     margin: 3rem 0;
   }
 
-  .markdown-content :global(blockquote) {
+  .markdown-content blockquote {
     border-left: 4px solid #f39813;
     padding-left: 1.5rem;
     margin: 2rem 0;
     color: #666;
   }
 
-  .markdown-content :global(code) {
-    background-color: #f5f5f5;
+  .markdown-content code {
+    background-color: #f7f7f8;
     padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    font-size: 0.9em;
+    border-radius: 4px;
+    font-size: 0.875em;
+    color: #d63384;
+    border: 1px solid #eee;
   }
 
-  .markdown-content :global(pre) {
-    background-color: #f5f5f5;
-    padding: 1rem;
-    border-radius: 5px;
+  .markdown-content pre {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
     overflow-x: auto;
     margin: 1.5rem 0;
+    border: none;
+    line-height: 1.7;
+    font-size: 0.875rem;
   }
 
-  .markdown-content :global(pre code) {
+  .markdown-content pre code {
     background-color: transparent;
     padding: 0;
+    color: inherit;
+    border: none;
+    font-size: inherit;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
   }
 
   @media (max-width: 768px) {
@@ -184,16 +204,16 @@ const { title, description, lead, ogTitle, ogDescription, ogImage } = Astro.prop
       font-size: 1.2rem;
     }
 
-    .markdown-content :global(h2) {
+    .markdown-content h2 {
       font-size: 1.6rem;
     }
 
-    .markdown-content :global(h3) {
+    .markdown-content h3 {
       font-size: 1.3rem;
     }
 
-    .markdown-content :global(th),
-    .markdown-content :global(td) {
+    .markdown-content th,
+    .markdown-content td {
       padding: 0.8rem;
       font-size: 0.9rem;
     }
