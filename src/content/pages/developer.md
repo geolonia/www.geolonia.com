@@ -43,5 +43,5 @@ HTML に以下の要素を追加するだけで、地図が表示されます。
 開発中の技術的な質問や問題については、以下の方法でサポートを受けられます。
 
 - [**Geolonia Maps ドキュメント**](https://docs.geolonia.com/) - よくある質問や設定例を掲載
-- [**GitHub Issues**](https://github.com/geolonia) - バグ報告や機能リクエスト
+- [**GitHub Issues**](https://github.com/orgs/geolonia/issues) - バグ報告や機能リクエスト
 - [**お問い合わせ**](/contact/) - 導入相談やテクニカルサポート
